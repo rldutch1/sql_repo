@@ -37,3 +37,7 @@ select * from tablename order by columnName;
 
 use database;
 select * from tablename order by columnName;
+
+-- Connect to remote database.
+mysql -h mysql.example.com -u root -p
+
