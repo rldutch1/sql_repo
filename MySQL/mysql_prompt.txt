@@ -1,0 +1,99 @@
+Change the default mysql> prompt to something functional and useful.
+
+1. Display username, hostname and current database name in the mysql prompt
+
+The MYSQL_PS1 in this example displays the following three information in the prompt:
+
+\u – Username
+\h – Hostname
+\d – Current mysql database
+
+$ export MYSQL_PS1="\u@\h [\d]> "
+
+$ mysql -u root -pyour-password -D sugarcrm
+
+root@dev-db [sugarcrm]>
+
+2. Change the mysql> prompt interactively
+
+You can also change the mysql> prompt interactively from inside the mysql as shown below.
+
+$ mysql -u root -pyour-password -D sugarcrm
+
+mysql> prompt \u@\h [\d]>
+PROMPT set to '\u@\h [\d]> '
+
+root@dev-db [sugarcrm]>
+
+3. Change the mysql> prompt from mysql command line
+
+Instead of using the MYSQL_PS1 variable, you can also pass the prompt as an argument to the mysql command line as shown below.
+
+$ mysql --prompt="\u@\h [\d]> " -u root -pyour-password -D sugarcrm
+
+root@dev-db [sugarcrm]>
+
+4. Display Current Time in the mysql> prompt
+
+Use \D to display full date in the mysql prompt as shown below.
+
+$ export MYSQL_PS1="\u@\h [\D]> "
+
+$ mysql -u root -pyour-password -D sugarcrm
+
+root@dev-db [Sat Dec 26 19:56:33 2009]>
+
+5. Change the mysql> prompt using /etc/my.cnf or .my.cnf file
+
+You can also use either the global /etc/my.cnf (or) your local ~/.my.cnf file to set the prompt as shown below.
+
+$ vi ~/.my.cnf
+[mysql]
+prompt=\\u@\\h [\\d]>\\_
+
+$ mysql -u root -pyour-password -D sugarcrm
+
+root@dev-db [sugarcrm]>
+
+6. Customize mysql> prompt any way you want it
+
+Use the following variables and customize the mysql prompt as you see fit. These variables are somewhat similar to the Unix PS1 variables (but not exactly the same).
+
+Generic variables:
+
+\S displays semicolon
+\’ displays single quote
+\” displays double quote
+\v displays server version
+\p displays port
+\\ displays backslash
+\n displays newline
+\t displays tab
+\ displays space (there is a space after \ )
+\d displays default database
+\h displays default host
+\_ displays space (there is a underscore after \ )
+\c displays a mysql statement counter. keeps increasing as you type commands.
+\u displays username
+\U displays username@hostname accountname
+Date related variables:
+
+\D displays full current date (as shown in the above example)
+\w displays 3 letter day of the week (e.g. Mon)
+\y displays the two digit year
+\Y displays the four digit year
+\o displays month in number
+\O displays 3 letter month (e.g. Jan)
+\R displays current time in 24 HR format
+\r displays current time in 12 hour format
+\m displays the minutes
+\s displays the seconds
+\P displays AM or PM
+Note: You can go back to the regular boring mysql> prompt at anytime by simply typing prompt in the mysql> prompt as shown below.
+
+root@dev-db [sugarcrm]> prompt
+Returning to default PROMPT of mysql>
+mysql>
+
+
+<a href='http://www.thegeekstuff.com/2010/02/mysql_ps1-6-examples-to-make-your-mysql-prompt-like-angelina-jolie/'>Source</a>
