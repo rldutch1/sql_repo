@@ -97,3 +97,5 @@ mysql>
 
 
 <a href='http://www.thegeekstuff.com/2010/02/mysql_ps1-6-examples-to-make-your-mysql-prompt-like-angelina-jolie/'>Source</a>
+
+mysql -h localhost -u rob_com1 -p -D robcom1
