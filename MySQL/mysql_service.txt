@@ -1,0 +1,7 @@
+#Stop and Start MySQL Service
+sudo /etc/init.d/mysql start
+sudo service mysql start
+
+sudo /etc/init.d/mysql stop
+sudo service mysql stop
+
