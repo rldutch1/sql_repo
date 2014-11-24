@@ -1,4 +1,4 @@
-/* Shows how to select a varchar as an integer and vise-versa.
+/* Shows how to select a varchar as an integer and vice-versa.
 
 Code Snippet
 SELECT (CAST Col1 AS int) AS Col1
