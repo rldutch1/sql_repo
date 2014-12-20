@@ -1,0 +1,7 @@
+Looking for a way to read the elements of an XML document without knowing what they are. For example, 
+
+php -f readxml.php will show all of the elements of a list of XML documents.
+
+I have done this before but I can't find my code so now I will have to start over.
+
+
