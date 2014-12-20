@@ -1,0 +1,28 @@
+<unitlist>
+<unit>
+<iterator>0</iterator>
+<route>2</route>
+<rt_name>'Riverfront Streetcar'</rt_name>
+<name>457</name>
+<lat>2956.21014</lat>
+<lng>-9004.62839</lng>
+<bearing>2.14501</bearing>
+<car_type>'RTA Street Cars'</car_type>
+<speed>16.57122</speed>
+<GMT>043432</GMT>[/indent]
+</unit>
+
+
+<unit>
+<iterator>1</iterator>
+<route>10</route>
+<rt_name>'Tchoupitoulas'</rt_name>
+<name>250</name>
+<lat>2958.0927</lat>
+<lng>-9005.28724</lng>
+<bearing>1.532399</bearing>
+<car_type>'RTA Buses'</car_type>
+<speed>0.6904677</speed>
+<GMT>104620</GMT>[/indent]
+</unit>
+</unitlist>
