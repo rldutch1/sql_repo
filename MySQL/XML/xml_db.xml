@@ -1,0 +1,53 @@
+LOAD XML LOCAL INFILE '/pathtofile/file.xml' 
+INTO TABLE my_tablename(personal_number, firstname, lastname, email, start_time, end_time, employee_category); 
+
+/*The MySQL load XML query*/
+LOAD XML LOCAL INFILE 'xml_db.xml' 
+INTO TABLE xmlimport(personal_number, firstname, lastname, email, start_time, end_time, employee_category); 
+
+/*The MySQL Create Table Query*/
+create table xmlimport (id int(11) unsigned auto_increment primary key
+,personal_number varchar(5) not null
+,firstname varchar(100) not null
+,lastname varchar(100) not null
+,email varchar(100) not null
+,start_time varchar(15) not null
+,end_time varchar(15) not null
+,employee_category varchar(100)
+) engine=myisam;
+
+
+
+
+/*The Sample XML File*/
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resultset statement="YOUR SQL STATEMENTS TO GENERATE THIS XML FILE" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row>
+    <field name="personal_number">539</field>
+    <field name="firstname">Name</field>
+    <field name="lastname">Surname</field>
+    <field name="email">email.domain.com</field>
+    <field name="start_time">2011-04-02 13:30:00</field>
+    <field name="end_time">2011-04-02 18:15:00</field>
+    <field name="employee_category">1,2,4,5,22,37,38,39,41,43,44</field>
+  </row>
+  <row>
+    <field name="personal_number">539</field>
+    <field name="firstname">Name</field>
+    <field name="lastname">Surname</field>
+    <field name="email">email.domain.com</field>
+    <field name="start_time">2011-04-02 13:30:00</field>
+    <field name="end_time">2011-04-02 18:15:00</field>
+    <field name="employee_category">1,2,4,5,22,37,38,39,41,43,44</field>
+  </row>
+  <row>
+    <field name="personal_number">539</field>
+    <field name="firstname">Name</field>
+    <field name="lastname">Surname</field>
+    <field name="email">email.domain.com</field>
+    <field name="start_time">2011-04-02 13:30:00</field>
+    <field name="end_time">2011-04-02 18:15:00</field>
+    <field name="employee_category">1,2,4,5,22,37,38,39,41,43,44</field>
+  </row>
+  
