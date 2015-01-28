@@ -1,0 +1,55 @@
+I tried to dump the bakbone database but I got an error that said the dataase has crashed:
+mysqldump: Error 1194: Table 'backups' is marked as crashed and should be repaired when dumping table `backups` at row: 1837313
+Compressing Database Dump. Please wait...
+
+I looked at the row where the message said the crash was:
+MariaDB [bakbone]> select * from backups where id = 1837313;
++---------+---------+--------+----------------------------------------------------------------------------------------------+
+| id      | tape_id | log_id | path                                                                                         |
++---------+---------+--------+----------------------------------------------------------------------------------------------+
+| 1837313 |       8 |     45 | E:\Stans_Alienware_Laptop\Pictures\Lightroom\Lightroom 3 Catalog Previews.lrdatXô¤Î\È ¿      |
++---------+---------+--------+----------------------------------------------------------------------------------------------+
+1 row in set (0.12 sec)
+
+I replaced the row from a backup copy of the table:
+MariaDB [bakbone]> update backups set path = 'E:\\Stans_Alienware_Laptop\\Pictures\\Lightroom\\Lightroom 3 Catalog Previews.lrdata\\2\\2452' where id = 1837313;
+Query OK, 1 row affected (0.02 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+MariaDB [bakbone]> select * from backups where id = 1837313;
++---------+---------+--------+-----------------------------------------------------------------------------------------+
+| id      | tape_id | log_id | path                                                                                    |
++---------+---------+--------+-----------------------------------------------------------------------------------------+
+| 1837313 |       8 |     45 | E:\Stans_Alienware_Laptop\Pictures\Lightroom\Lightroom 3 Catalog Previews.lrdata\2\2452 |
++---------+---------+--------+-----------------------------------------------------------------------------------------+
+1 row in set (0.00 sec)
+
+Got the same error after replacing the row:
+mysqldump: Error 1194: Table 'backups' is marked as crashed and should be repaired when dumping table `backups` at row: 1837313
+
+REPAIR TABLE backups;
+Result of Repair table command: (I lost a row of data on Gemini).
+                 MariaDB [bakbone]> REPAIR TABLE backups;
+                 +-----------------+--------+----------+--------------------------------------------------+
+                 | Table           | Op     | Msg_type | Msg_text                                         |
+                 +-----------------+--------+----------+--------------------------------------------------+
+                 | bakbone.backups | repair | info     | Wrong bytesec: 145-144-138 at 248004072; Skipped |
+                 | bakbone.backups | repair | warning  | Number of rows changed from 3392113 to 3392112   |
+                 | bakbone.backups | repair | status   | OK                                               |
+                 +-----------------+--------+----------+--------------------------------------------------+
+                 3 rows in set (30.28 sec)
+
+I did not run the three commands below because the "REPAIR TABLE backups" command worked.
+1. mysqlcheck --verbose --repair backups;
+2. myisamchk -r -q backups
+3. ALTER TABLE forum_users ENGINE=InnoDB
+
+Table data still looked OK after the "REPAIR TABLE" command:
+rob@localhost [bakbone]> select * from backups where id = 1837313;
++---------+---------+--------+-----------------------------------------------------------------------------------------+
+| id      | tape_id | log_id | path                                                                                    |
++---------+---------+--------+-----------------------------------------------------------------------------------------+
+| 1837313 |       8 |     45 | E:\Stans_Alienware_Laptop\Pictures\Lightroom\Lightroom 3 Catalog Previews.lrdata\2\2452 |
++---------+---------+--------+-----------------------------------------------------------------------------------------+
+1 row in set (0.28 sec)
+
