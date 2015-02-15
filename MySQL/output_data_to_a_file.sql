@@ -26,6 +26,11 @@ mysql -u username -p --xml -e 'use databasename; select * from tablename' > outp
 -- You can also put the db_name in your script to avoid typing it on the command line.
 mysql -u username -p --xml < test.sql > output.xml
 
+-- You can create a bash script named getdata and put the following in it.
+mysql -u username -p < test.sql > test.tab
+-- Then chmod +x getdata. then run it from the commandline: sh getdata. 
+-- You will be prompted for your password and the data will get dumped to test.tab.
+
 -- To Dump a database to a file and generate full insert statments:
 mysqldump -p -c -e databasename > DatabaseName.sql
 
