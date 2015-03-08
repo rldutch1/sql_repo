@@ -1,0 +1,23 @@
+-- Create user database.
+CREATE DATABASE mysqlitest;
+-- Create local user.
+CREATE USER 'mysqlitest'@'localhost' IDENTIFIED BY 'mysqlitest';
+GRANT ALL PRIVILEGES ON mysqlitest.* TO 'mysqlitest'@'localhost' WITH GRANT OPTION;
+-- Create remote user.
+CREATE USER 'mysqlitest'@'%' IDENTIFIED BY 'mysqlitest';
+GRANT ALL PRIVILEGES ON mysqlitest.* TO 'mysqlitest'@'%' WITH GRANT OPTION;
+-- Tell the server to reload the GRANT TABLES.
+FLUSH PRIVILEGES;
+
+use mysqlitest;
+create table blah (id int(11) unsigned not null auto_increment primary key
+, name varchar(100) not null
+, pass varchar(100) not null
+)engine=innodb;
+
+insert into blah (name, pass) values
+('aaa','aaa'),
+('bbb','bbb'),
+('ccc','ccc'),
+('ddd','ddd');
+
