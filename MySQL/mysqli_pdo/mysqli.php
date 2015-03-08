@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+MySQLI Method <br /><br />
+Usernames are: aaa, bbb, ccc, ddd. <br />
+Passwords are: bbb, bbb, ccc, ddd. <br />
 </head>
 <body>
 
