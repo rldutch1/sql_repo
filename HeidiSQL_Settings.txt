@@ -1,0 +1,872 @@
+Updatecheck<|||>3<|||>1
+DoUsageStatistics<|||>3<|||>1
+UpdatecheckLastrun<|||>1<|||>2015-03-26 14:19:12
+LastUsageStatisticCall<|||>1<|||>2015-03-26 14:19:12
+LastSessions<|||>1<|||>
+LastActiveSession<|||>1<|||>MSSQL\MPages\PHX04134
+SessionManager_WindowWidth<|||>3<|||>604
+ColWidths_connform.ListSessions<|||>1<|||>163,50,50,50,50,10,10
+ColsVisible_connform.ListSessions<|||>1<|||>0
+ColPositions_connform.ListSessions<|||>1<|||>0,1,2,3,4,5,6
+ColSort_connform.ListSessions<|||>1<|||>0,0
+dbtreewidth<|||>3<|||>321
+MainWinMaximized<|||>3<|||>0
+MainWinOnMonitor<|||>3<|||>0
+ColWidths_MainForm.ListDatabases<|||>1<|||>150,80,50,138,50,50,50,50,50,50,120
+ColsVisible_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
+ColPositions_MainForm.ListDatabases<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10
+ColSort_MainForm.ListDatabases<|||>1<|||>0,0
+ColWidths_MainForm.ListVariables<|||>1<|||>160,200,275
+ColsVisible_MainForm.ListVariables<|||>1<|||>0,1,2
+ColPositions_MainForm.ListVariables<|||>1<|||>0,1,2
+ColSort_MainForm.ListVariables<|||>1<|||>0,0
+ColWidths_MainForm.ListStatus<|||>1<|||>160,275,100,100
+ColsVisible_MainForm.ListStatus<|||>1<|||>0,1,2,3
+ColPositions_MainForm.ListStatus<|||>1<|||>0,1,2,3
+ColSort_MainForm.ListStatus<|||>1<|||>0,0
+ColWidths_MainForm.ListProcesses<|||>1<|||>70,107,80,80,80,50,50,301
+ColsVisible_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
+ColPositions_MainForm.ListProcesses<|||>1<|||>0,1,2,3,4,5,6,7
+ColSort_MainForm.ListProcesses<|||>1<|||>0,1
+ColWidths_MainForm.ListCommandStats<|||>1<|||>120,100,100,100,215
+ColsVisible_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
+ColPositions_MainForm.ListCommandStats<|||>1<|||>0,1,2,3,4
+ColSort_MainForm.ListCommandStats<|||>1<|||>1,1
+ColWidths_MainForm.ListTables<|||>1<|||>247,70,70,120,120,70,278,50,70,70,70,70,70,90,120,70,70,70,50
+ColsVisible_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,18
+ColPositions_MainForm.ListTables<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18
+ColSort_MainForm.ListTables<|||>1<|||>0,0
+MemoEditorWidth<|||>3<|||>132
+ColWidths_frmTableEditor.listColumns<|||>1<|||>38,100,156,90,60,65,50,119,130,140,100,100
+ColsVisible_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColPositions_frmTableEditor.listColumns<|||>1<|||>0,1,2,3,4,5,6,7,8,9,10,11
+ColSort_frmTableEditor.listColumns<|||>1<|||>-1,0
+ColWidths_frmTableEditor.treeIndexes<|||>1<|||>552,100,80
+ColsVisible_frmTableEditor.treeIndexes<|||>1<|||>0,1,2
+ColPositions_frmTableEditor.treeIndexes<|||>1<|||>0,1,2
+ColSort_frmTableEditor.treeIndexes<|||>1<|||>-1,0
+ColWidths_frmTableEditor.listForeignKeys<|||>1<|||>312,80,100,80,80,80
+ColsVisible_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColPositions_frmTableEditor.listForeignKeys<|||>1<|||>0,1,2,3,4,5
+ColSort_frmTableEditor.listForeignKeys<|||>1<|||>-1,0
+SessionManager_WindowHeight<|||>3<|||>497
+CoolBand0Index<|||>3<|||>0
+CoolBand0Break<|||>3<|||>1
+CoolBand0Width<|||>3<|||>1153
+CoolBand1Index<|||>3<|||>1
+CoolBand1Break<|||>3<|||>1
+CoolBand1Width<|||>3<|||>1153
+MainWinWidth<|||>3<|||>1175
+MainWinHeight<|||>3<|||>791
+ColWidths_frmRoutineEditor.listParameters<|||>1<|||>10,340,90,70
+ColsVisible_frmRoutineEditor.listParameters<|||>1<|||>0,1,2,3
+ColPositions_frmRoutineEditor.listParameters<|||>1<|||>0,1,2,3
+ColSort_frmRoutineEditor.listParameters<|||>1<|||>-1,0
+GridExportEncoding<|||>3<|||>4
+GridExportFormat<|||>3<|||>2
+querymemoheight<|||>3<|||>203
+ExportSQL_CreateTables<|||>3<|||>1
+ExportSQL_DataHow<|||>3<|||>2
+ExportSQL_Filenames<|||>1<|||>C:\Users\rlholland\Documents\SQL\request_number_data.sql<{{{><}}}>%host.%db%date.request_number_data.sql<{{{><}}}>
+SQLFile0<|||>1<|||>C:\Users\rlholland\Documents\SQL\getCodeDisplayFilenames.sql
+SQLFile1<|||>1<|||>C:\Users\rlholland\Documents\SQL\MpageRules.sql
+SQLFile2<|||>1<|||>C:\Users\rlholland\Desktop\FilesXXX\request_number_data (mssql).sql
+SQLFile3<|||>1<|||>C:\Users\rlholland\Documents\SQL\Find.Assocate.Monitor.sql
+GridExportOutputCopy<|||>3<|||>0
+GridExportOutputFile<|||>3<|||>1
+GridExportFilename<|||>1<|||>.html
+GridExportRecentFiles<|||>1<|||>.html|.LaTeX
+GridExportIncludeQuery<|||>3<|||>1
+MainWinLeft<|||>3<|||>641
+MainWinTop<|||>3<|||>85
+44<|||>1<|||>2015-01-06 11:14:11|iviewtest|188|select distinct(program) from iview_programs1
+Servers\MSSQL\SessionCreated<|||>1<|||>2013-07-11 14:04:02
+Servers\MSSQL\Folder<|||>3<|||>1
+Servers\MSSQL\BMDI\SessionCreated<|||>1<|||>2013-12-03 16:16:43
+Servers\MSSQL\BMDI\Folder<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SessionCreated<|||>1<|||>2014-03-10 16:16:45
+Servers\MSSQL\BMDI\PHX00231 - Drooper\Host<|||>1<|||>PHX00231
+Servers\MSSQL\BMDI\PHX00231 - Drooper\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00231 - Drooper\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00231 - Drooper\Password<|||>1<|||>3
+Servers\MSSQL\BMDI\PHX00231 - Drooper\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00231 - Drooper\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00231 - Drooper\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00231 - Drooper\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00231 - Drooper\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00231 - Drooper\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00231 - Drooper\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\Comment<|||>1<|||>Drooper.<{{{><}}}>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSHtunnelPassword<|||>1<|||>6
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00231 - Drooper\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.3042.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00231 - Drooper\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00231 - Drooper\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00231 - Drooper\LastConnect<|||>1<|||>2014-03-10 16:17:27
+Servers\MSSQL\BMDI\PHX00231 - Drooper\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\SessionCreated<|||>1<|||>2014-03-10 16:10:55
+Servers\MSSQL\BMDI\PHX00249\Host<|||>1<|||>PHX00249
+Servers\MSSQL\BMDI\PHX00249\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00249\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00249\Password<|||>1<|||>2
+Servers\MSSQL\BMDI\PHX00249\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00249\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00249\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00249\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00249\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00249\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00249\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00249\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00249\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\SSHtunnelPassword<|||>1<|||>6
+Servers\MSSQL\BMDI\PHX00249\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00249\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00249\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00249\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00249\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00249\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00249\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00249\LastConnect<|||>1<|||>2014-03-10 16:11:25
+Servers\MSSQL\BMDI\PHX00249\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\SessionCreated<|||>1<|||>2014-03-10 16:04:41
+Servers\MSSQL\BMDI\PHX00386\Host<|||>1<|||>PHX00386
+Servers\MSSQL\BMDI\PHX00386\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00386\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00386\Password<|||>1<|||>2
+Servers\MSSQL\BMDI\PHX00386\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00386\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00386\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00386\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00386\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00386\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00386\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX00386\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00386\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\SSHtunnelPassword<|||>1<|||>6
+Servers\MSSQL\BMDI\PHX00386\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00386\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00386\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00386\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00386\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00386\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00386\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00386\LastConnect<|||>1<|||>2014-03-10 16:06:18
+Servers\MSSQL\BMDI\PHX00386\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\SessionCreated<|||>1<|||>2014-03-10 16:07:13
+Servers\MSSQL\BMDI\PHX00504\Host<|||>1<|||>PHX00504
+Servers\MSSQL\BMDI\PHX00504\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00504\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00504\Password<|||>1<|||>1
+Servers\MSSQL\BMDI\PHX00504\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00504\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00504\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00504\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00504\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00504\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00504\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00504\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00504\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\SSHtunnelPassword<|||>1<|||>9
+Servers\MSSQL\BMDI\PHX00504\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00504\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00504\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00504\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00504\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00504\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00504\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00504\LastConnect<|||>1<|||>2014-03-10 16:07:43
+Servers\MSSQL\BMDI\PHX00504\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\SessionCreated<|||>1<|||>2014-03-10 16:08:02
+Servers\MSSQL\BMDI\PHX00505\Host<|||>1<|||>PHX00505
+Servers\MSSQL\BMDI\PHX00505\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00505\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00505\Password<|||>1<|||>4
+Servers\MSSQL\BMDI\PHX00505\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00505\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00505\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00505\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00505\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00505\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00505\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX00505\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00505\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\SSHtunnelPassword<|||>1<|||>8
+Servers\MSSQL\BMDI\PHX00505\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00505\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00505\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00505\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00505\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00505\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00505\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00505\LastConnect<|||>1<|||>2014-03-10 16:08:28
+Servers\MSSQL\BMDI\PHX00505\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\SessionCreated<|||>1<|||>2014-03-10 16:08:38
+Servers\MSSQL\BMDI\PHX00513\Host<|||>1<|||>PHX00513
+Servers\MSSQL\BMDI\PHX00513\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00513\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00513\Password<|||>1<|||>5
+Servers\MSSQL\BMDI\PHX00513\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00513\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00513\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00513\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00513\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00513\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00513\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00513\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00513\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\SSHtunnelPassword<|||>1<|||>8
+Servers\MSSQL\BMDI\PHX00513\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00513\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00513\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00513\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00513\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00513\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00513\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00513\LastConnect<|||>1<|||>2014-03-10 16:09:04
+Servers\MSSQL\BMDI\PHX00513\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\SessionCreated<|||>1<|||>2014-03-10 16:09:13
+Servers\MSSQL\BMDI\PHX00514\Host<|||>1<|||>PHX00514
+Servers\MSSQL\BMDI\PHX00514\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00514\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00514\Password<|||>1<|||>6
+Servers\MSSQL\BMDI\PHX00514\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00514\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00514\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00514\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00514\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00514\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00514\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX00514\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00514\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\SSHtunnelPassword<|||>1<|||>5
+Servers\MSSQL\BMDI\PHX00514\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00514\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00514\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00514\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00514\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00514\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00514\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00514\LastConnect<|||>1<|||>2014-03-10 16:09:43
+Servers\MSSQL\BMDI\PHX00514\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\SessionCreated<|||>1<|||>2014-03-10 16:09:51
+Servers\MSSQL\BMDI\PHX00515\Host<|||>1<|||>PHX00514
+Servers\MSSQL\BMDI\PHX00515\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00515\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00515\Password<|||>1<|||>6
+Servers\MSSQL\BMDI\PHX00515\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00515\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00515\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00515\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00515\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00515\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00515\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX00515\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00515\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\SSHtunnelPassword<|||>1<|||>9
+Servers\MSSQL\BMDI\PHX00515\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00515\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00515\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00515\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00515\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00515\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00515\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00515\LastConnect<|||>1<|||>2014-03-10 16:10:04
+Servers\MSSQL\BMDI\PHX00515\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\SessionCreated<|||>1<|||>2013-12-02 11:44:25
+Servers\MSSQL\BMDI\PHX00548\Host<|||>1<|||>PHX00548
+Servers\MSSQL\BMDI\PHX00548\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00548\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00548\Password<|||>1<|||>8
+Servers\MSSQL\BMDI\PHX00548\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00548\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00548\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00548\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00548\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00548\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00548\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\SSHtunnelPassword<|||>1<|||>3
+Servers\MSSQL\BMDI\PHX00548\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00548\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00548\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00548\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00548\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00548\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00548\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00548\LastConnect<|||>1<|||>2013-12-02 12:12:55
+Servers\MSSQL\BMDI\PHX00548\lastUsedDB<|||>1<|||>adreference_prod
+Servers\MSSQL\BMDI\PHX00548\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00548\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00548\QueryHistory\1<|||>1<|||>2013-12-02 12:18:17|adreference_prod|32|use adreference_prod;<{{{><}}}>select * from dbo.acquired_data_track where person_id = 7764835<{{{><}}}>-- delete from dbo.acquired_data_track where person_id = 7764835<{{{><}}}><{{{><}}}>-- Can lookup the results in the code_value table to find out the name of the facility, unit, room, etc.<{{{><}}}>-- select cv.description where code_value cv = 1234567890<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00548\QueryHistory\2<|||>1<|||>2013-12-02 12:18:30|adreference_prod|47|use adreference_prod;<{{{><}}}>select * from dbo.acquired_data_track where person_id = 7764835.00<{{{><}}}>-- delete from dbo.acquired_data_track where person_id = 7764835<{{{><}}}><{{{><}}}>-- Can lookup the results in the code_value table to find out the name of the facility, unit, room, etc.<{{{><}}}>-- select cv.description where code_value cv = 1234567890<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00549\SessionCreated<|||>1<|||>2014-03-10 16:12:00
+Servers\MSSQL\BMDI\PHX00549\Host<|||>1<|||>PHX00549
+Servers\MSSQL\BMDI\PHX00549\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00549\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00549\Password<|||>1<|||>5
+Servers\MSSQL\BMDI\PHX00549\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00549\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00549\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00549\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00549\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00549\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00549\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00549\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX00549\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00549\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00549\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00549\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00549\SSHtunnelPassword<|||>1<|||>8
+Servers\MSSQL\BMDI\PHX00549\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00549\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00549\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00549\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00549\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00549\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00549\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00549\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00549\ConnectCount<|||>3<|||>2
+Servers\MSSQL\BMDI\PHX00549\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00549\LastConnect<|||>1<|||>2014-03-10 16:22:54
+Servers\MSSQL\BMDI\PHX00549\lastUsedDB<|||>1<|||>adreference_prod
+Servers\MSSQL\BMDI\PHX00549\QueryHistory\1<|||>1<|||>2014-03-10 16:23:01|adreference_prod|31|use adreference_prod; select * from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX00623\SessionCreated<|||>1<|||>2013-12-03 16:17:09
+Servers\MSSQL\BMDI\PHX00623\Host<|||>1<|||>PHX00623
+Servers\MSSQL\BMDI\PHX00623\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00623\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00623\Password<|||>1<|||>4
+Servers\MSSQL\BMDI\PHX00623\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00623\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00623\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00623\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00623\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00623\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00623\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00623\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00623\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00623\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00623\SSHtunnelPassword<|||>1<|||>1
+Servers\MSSQL\BMDI\PHX00623\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00623\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00623\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00623\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00623\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00623\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00623\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00623\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00623\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00623\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00623\LastConnect<|||>1<|||>2013-12-03 16:18:11
+Servers\MSSQL\BMDI\PHX00623\lastUsedDB<|||>1<|||>adreference_prod
+Servers\MSSQL\BMDI\PHX00623\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00623\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX00623\QueryHistory\1<|||>1<|||>2013-12-03 16:19:04|adreference_prod|47|use adreference_prod;<{{{><}}}>select * from acquired_data_track order by person_id;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00623\QueryHistory\2<|||>1<|||>2013-12-03 16:20:00|adreference_prod|30|use adreference_prod;<{{{><}}}>select * from acquired_data_track where anesthesia_record_id > 0 order by person_id;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00623\QueryHistory\3<|||>1<|||>2013-12-03 16:29:54|adreference_prod|31|use adreference_prod;<{{{><}}}>select count(*) from acquired_data_track where person_id > 0;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00623\QueryHistory\4<|||>1<|||>2013-12-03 16:30:30|adreference_prod|31|use adreference_prod;<{{{><}}}>select count(*) "Patients associated to this server" from acquired_data_track where person_id > 0;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00623\QueryHistory\5<|||>1<|||>2013-12-03 16:32:20|adreference_prod|31|use adreference_prod;<{{{><}}}>select * from acquired_data_track;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00623\QueryHistory\6<|||>1<|||>2013-12-03 16:34:05|adreference_prod|47|use adreference_prod;<{{{><}}}>-- select * from acquired_data_track; --8678185<{{{><}}}>declare @personID int<{{{><}}}><{{{><}}}><{{{><}}}>
+Servers\MSSQL\BMDI\PHX00623\QueryHistory\7<|||>1<|||>2013-12-03 16:46:18|adreference_prod|32|use adreference_prod;<{{{><}}}>-- select * from acquired_data_track; --8678185<{{{><}}}>declare @personID int<{{{><}}}>set @personID = 8678185<{{{><}}}>select * from acquired_data_track where person_id = @personID<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00623\QueryHistory\8<|||>1<|||>2013-12-03 22:35:12|adreference_prod|47|use adreference_prod;<{{{><}}}><{{{><}}}>declare @personID int<{{{><}}}>set @personID = 0123456789<{{{><}}}>select * from acquired_data_track where person_id = @personID<{{{><}}}>-- delete from acquired_data_track where person_id = @personID
+Servers\MSSQL\BMDI\PHX00624\SessionCreated<|||>1<|||>2014-03-10 16:12:23
+Servers\MSSQL\BMDI\PHX00624\Host<|||>1<|||>PHX00624
+Servers\MSSQL\BMDI\PHX00624\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00624\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX00624\Password<|||>1<|||>7
+Servers\MSSQL\BMDI\PHX00624\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00624\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX00624\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00624\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00624\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00624\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00624\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00624\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX00624\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00624\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00624\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00624\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00624\SSHtunnelPassword<|||>1<|||>6
+Servers\MSSQL\BMDI\PHX00624\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX00624\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00624\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX00624\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX00624\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00624\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00624\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX00624\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX00624\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX00624\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX00624\LastConnect<|||>1<|||>2014-03-10 16:12:50
+Servers\MSSQL\BMDI\PHX00624\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\SessionCreated<|||>1<|||>2014-03-10 16:10:15
+Servers\MSSQL\BMDI\PHX01138\Host<|||>1<|||>PHX01138
+Servers\MSSQL\BMDI\PHX01138\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX01138\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX01138\Password<|||>1<|||>8
+Servers\MSSQL\BMDI\PHX01138\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX01138\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX01138\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX01138\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX01138\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX01138\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX01138\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;<{{{><}}}>
+Servers\MSSQL\BMDI\PHX01138\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX01138\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\SSHtunnelPassword<|||>1<|||>5
+Servers\MSSQL\BMDI\PHX01138\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX01138\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX01138\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX01138\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX01138\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX01138\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX01138\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX01138\LastConnect<|||>1<|||>2014-03-10 16:10:46
+Servers\MSSQL\BMDI\PHX01138\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\SessionCreated<|||>1<|||>2014-03-10 16:13:08
+Servers\MSSQL\BMDI\PHX07064\Host<|||>1<|||>PHX07064
+Servers\MSSQL\BMDI\PHX07064\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07064\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX07064\Password<|||>1<|||>7
+Servers\MSSQL\BMDI\PHX07064\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07064\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX07064\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07064\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07064\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07064\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07064\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX07064\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07064\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\SSHtunnelPassword<|||>1<|||>6
+Servers\MSSQL\BMDI\PHX07064\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07064\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX07064\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07064\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07064\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX07064\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07064\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX07064\LastConnect<|||>1<|||>2014-03-10 16:13:36
+Servers\MSSQL\BMDI\PHX07064\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\SessionCreated<|||>1<|||>2014-03-10 16:13:57
+Servers\MSSQL\BMDI\PHX07089\Host<|||>1<|||>PHX07089
+Servers\MSSQL\BMDI\PHX07089\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07089\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX07089\Password<|||>1<|||>5
+Servers\MSSQL\BMDI\PHX07089\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07089\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX07089\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07089\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07089\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07089\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07089\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX07089\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07089\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\SSHtunnelPassword<|||>1<|||>2
+Servers\MSSQL\BMDI\PHX07089\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07089\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX07089\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07089\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07089\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX07089\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07089\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX07089\LastConnect<|||>1<|||>2014-03-10 16:14:35
+Servers\MSSQL\BMDI\PHX07089\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\SessionCreated<|||>1<|||>2014-03-10 16:14:43
+Servers\MSSQL\BMDI\PHX07090\Host<|||>1<|||>PHX07090
+Servers\MSSQL\BMDI\PHX07090\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07090\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX07090\Password<|||>1<|||>2
+Servers\MSSQL\BMDI\PHX07090\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07090\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX07090\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07090\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07090\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07090\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07090\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX07090\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07090\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\SSHtunnelPassword<|||>1<|||>8
+Servers\MSSQL\BMDI\PHX07090\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07090\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX07090\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07090\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07090\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX07090\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07090\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX07090\LastConnect<|||>1<|||>2014-03-10 16:15:16
+Servers\MSSQL\BMDI\PHX07090\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\SessionCreated<|||>1<|||>2014-03-10 16:15:32
+Servers\MSSQL\BMDI\PHX07091\Host<|||>1<|||>PHX07091
+Servers\MSSQL\BMDI\PHX07091\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07091\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX07091\Password<|||>1<|||>1
+Servers\MSSQL\BMDI\PHX07091\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07091\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX07091\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07091\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07091\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07091\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07091\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX07091\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07091\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\SSHtunnelPassword<|||>1<|||>2
+Servers\MSSQL\BMDI\PHX07091\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07091\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX07091\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07091\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07091\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX07091\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07091\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX07091\LastConnect<|||>1<|||>2014-03-10 16:15:52
+Servers\MSSQL\BMDI\PHX07091\lastUsedDB<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\SessionCreated<|||>1<|||>2014-03-10 16:16:07
+Servers\MSSQL\BMDI\PHX07231\Host<|||>1<|||>PHX07231
+Servers\MSSQL\BMDI\PHX07231\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07231\User<|||>1<|||>root
+Servers\MSSQL\BMDI\PHX07231\Password<|||>1<|||>5
+Servers\MSSQL\BMDI\PHX07231\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07231\Port<|||>1<|||>1433
+Servers\MSSQL\BMDI\PHX07231\NetType<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07231\Compressed<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07231\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07231\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07231\Databases<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\Comment<|||>1<|||>use adreference_prod; select * from acquired_data_track where person_id = 1234567890;<{{{><}}}>-- delete from acquired_data_track where person_id = 1234567890;
+Servers\MSSQL\BMDI\PHX07231\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07231\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\SSHtunnelPassword<|||>1<|||>4
+Servers\MSSQL\BMDI\PHX07231\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\BMDI\PHX07231\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\BMDI\PHX07231\SSL_Active<|||>3<|||>0
+Servers\MSSQL\BMDI\PHX07231\SSL_Key<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\SSL_Cert<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\SSL_CA<|||>1<|||>
+Servers\MSSQL\BMDI\PHX07231\ServerVersionFull<|||>1<|||>Microsoft SQL Server 2005 - 9.00.4035.00 (Intel X86)
+Servers\MSSQL\BMDI\PHX07231\ConnectCount<|||>3<|||>1
+Servers\MSSQL\BMDI\PHX07231\ServerVersion<|||>3<|||>900
+Servers\MSSQL\BMDI\PHX07231\LastConnect<|||>1<|||>2014-03-10 16:16:34
+Servers\MSSQL\BMDI\PHX07231\lastUsedDB<|||>1<|||>
+Servers\MSSQL\MPages\SessionCreated<|||>1<|||>2014-03-10 16:21:14
+Servers\MSSQL\MPages\Folder<|||>3<|||>1
+Servers\MSSQL\MPages\PHX04134\SessionCreated<|||>1<|||>2013-07-11 14:06:38
+Servers\MSSQL\MPages\PHX04134\Host<|||>1<|||>PHX04134
+Servers\MSSQL\MPages\PHX04134\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\MPages\PHX04134\User<|||>1<|||>root
+Servers\MSSQL\MPages\PHX04134\Password<|||>1<|||>4
+Servers\MSSQL\MPages\PHX04134\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\MPages\PHX04134\Port<|||>1<|||>1433
+Servers\MSSQL\MPages\PHX04134\NetType<|||>3<|||>4
+Servers\MSSQL\MPages\PHX04134\Compressed<|||>3<|||>0
+Servers\MSSQL\MPages\PHX04134\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\MPages\PHX04134\Databases<|||>1<|||>
+Servers\MSSQL\MPages\PHX04134\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\MPages\PHX04134\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\MPages\PHX04134\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\MPages\PHX04134\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\MPages\PHX04134\SSHtunnelPassword<|||>1<|||>5
+Servers\MSSQL\MPages\PHX04134\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\MPages\PHX04134\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\MPages\PHX04134\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\MPages\PHX04134\SSL_Active<|||>3<|||>0
+Servers\MSSQL\MPages\PHX04134\SSL_Key<|||>1<|||>
+Servers\MSSQL\MPages\PHX04134\SSL_Cert<|||>1<|||>
+Servers\MSSQL\MPages\PHX04134\SSL_CA<|||>1<|||>
+Servers\MSSQL\MPages\PHX04134\RefusedCount<|||>3<|||>5
+Servers\MSSQL\MPages\PHX04134\ServerVersionFull<|||>1<|||>10.50.2500.0
+Servers\MSSQL\MPages\PHX04134\ConnectCount<|||>3<|||>30
+Servers\MSSQL\MPages\PHX04134\ServerVersion<|||>3<|||>1050
+Servers\MSSQL\MPages\PHX04134\LastConnect<|||>1<|||>2015-03-27 08:41:38
+Servers\MSSQL\MPages\PHX04134\lastUsedDB<|||>1<|||>iviewphase4
+Servers\MSSQL\MPages\PHX04134\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\MPages\PHX04134\Comment<|||>1<|||>exec sp_who2;<{{{><}}}>exec sp_help tablename;
+Servers\MSSQL\MPages\PHX04134\QueryTimeout<|||>3<|||>30
+Servers\MSSQL\MPages\PHX04134\QueryHistory\2<|||>1<|||>2015-03-26 14:22:06|iviewphase4|670|use master;<{{{><}}}>create database iviewphase4;<{{{><}}}>use iviewphase4;<{{{><}}}>create table ivp4_1 (id int identity(1,1) primary key<{{{><}}}>, code_value float not null<{{{><}}}>, code_set int not null<{{{><}}}>, display varchar(500) not null<{{{><}}}>, display_key varchar(500) not null);<{{{><}}}>
+Servers\MSSQL\MPages\PHX04134\QueryHistory\1<|||>1<|||>2015-03-26 14:23:42|master|63|use master;<{{{><}}}>select name, crdate from sysdatabases order by crdate desc;<{{{><}}}>
+Servers\MSSQL\MPages\PHX04134\QueryHistory\5<|||>1<|||>2015-03-26 15:08:11|iviewphase4|344|alter table ivp4_1 alter column code_value float(2) not null;<{{{><}}}>-- select * from ivp4_1;
+Servers\MSSQL\MPages\PHX04134\QueryHistory\6<|||>1<|||>2015-03-26 15:08:33|iviewphase4|93|select * from ivp4_1;
+Servers\MSSQL\MPages\PHX04134\QueryHistory\4<|||>1<|||>2015-03-26 15:12:10|iviewphase4|32|alter table ivp4_1 alter column code_value float(2) not null;
+Servers\MSSQL\MPages\PHX04134\QueryHistory\7<|||>1<|||>2015-03-26 15:13:25|iviewphase4|62|select * from ivp4_1
+Servers\MSSQL\MPages\PHX04134\QueryHistory\8<|||>1<|||>2015-03-27 08:41:57|iviewphase4|31|use iviewphase4;<{{{><}}}>
+Servers\MSSQL\MPages\PHX04134\QueryHistory\3<|||>1<|||>2015-03-27 08:42:15|iviewphase4|1653|use iviewphase4;<{{{><}}}>exec sp_help ivp4_1;
+Servers\MSSQL\MPages\PHX07555\SessionCreated<|||>1<|||>2013-07-11 13:58:36
+Servers\MSSQL\MPages\PHX07555\Host<|||>1<|||>PHX07555
+Servers\MSSQL\MPages\PHX07555\WindowsAuth<|||>3<|||>1
+Servers\MSSQL\MPages\PHX07555\User<|||>1<|||>root
+Servers\MSSQL\MPages\PHX07555\Password<|||>1<|||>2
+Servers\MSSQL\MPages\PHX07555\LoginPrompt<|||>3<|||>0
+Servers\MSSQL\MPages\PHX07555\Port<|||>1<|||>1433
+Servers\MSSQL\MPages\PHX07555\NetType<|||>3<|||>4
+Servers\MSSQL\MPages\PHX07555\Compressed<|||>3<|||>0
+Servers\MSSQL\MPages\PHX07555\LocalTimeZone<|||>3<|||>0
+Servers\MSSQL\MPages\PHX07555\Databases<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\StartupScriptFilename<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\SSHtunnelHost<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\SSHtunnelHostPort<|||>3<|||>0
+Servers\MSSQL\MPages\PHX07555\SSHtunnelUser<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\SSHtunnelPassword<|||>1<|||>4
+Servers\MSSQL\MPages\PHX07555\SSHtunnelTimeout<|||>3<|||>4
+Servers\MSSQL\MPages\PHX07555\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\SSHtunnelPort<|||>3<|||>3307
+Servers\MSSQL\MPages\PHX07555\SSL_Active<|||>3<|||>0
+Servers\MSSQL\MPages\PHX07555\SSL_Key<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\SSL_Cert<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\SSL_CA<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\RefusedCount<|||>3<|||>1
+Servers\MSSQL\MPages\PHX07555\ServerVersionFull<|||>1<|||>10.50.2500.0
+Servers\MSSQL\MPages\PHX07555\ConnectCount<|||>3<|||>12
+Servers\MSSQL\MPages\PHX07555\ServerVersion<|||>3<|||>1050
+Servers\MSSQL\MPages\PHX07555\LastConnect<|||>1<|||>2015-03-27 08:41:28
+Servers\MSSQL\MPages\PHX07555\lastUsedDB<|||>1<|||>
+Servers\MSSQL\MPages\PHX07555\FullTableStatus<|||>3<|||>1
+Servers\MSSQL\MPages\PHX07555\Comment<|||>1<|||>exec sp_who2;<{{{><}}}>exec sp_help tablename;
+Servers\MSSQL\MPages\PHX07555\QueryTimeout<|||>3<|||>30
+Servers\MSSQL\MPages\PHX07555\QueryHistory\2<|||>1<|||>2014-06-30 18:17:47|master|16|use master
+Servers\MSSQL\MPages\PHX07555\QueryHistory\1<|||>1<|||>2014-06-30 18:19:21||499|create database requeset_number;
+Servers\MSSQL\MPages\PHX07555\QueryHistory\3<|||>1<|||>2014-06-30 18:20:43|request_number|250|use master;<{{{><}}}>create database request_number;<{{{><}}}>use request_number;<{{{><}}}>
+Servers\MSSQL\MPages\PHX07555\QueryHistory\4<|||>1<|||>2014-06-30 18:26:03|request_number|78|select * from sysobjects;
+Servers\MSSQL\MPages\PHX07555\QueryHistory\5<|||>1<|||>2014-06-30 18:27:17|request_number|203|exec sp_who2;
+Servers\MSSQL\MPages\PHX07555\QueryHistory\7<|||>1<|||>2014-06-30 18:32:57|request_number|16|use request_number;
+Servers\MySQL\SessionCreated<|||>1<|||>2013-07-11 14:03:49
+Servers\MySQL\Folder<|||>3<|||>1
+Servers\MySQL\Gemini\SessionCreated<|||>1<|||>2014-12-30 01:43:31
+Servers\MySQL\Gemini\Host<|||>1<|||>192.168.11.9
+Servers\MySQL\Gemini\WindowsAuth<|||>3<|||>0
+Servers\MySQL\Gemini\User<|||>1<|||>rob
+Servers\MySQL\Gemini\Password<|||>1<|||>5235736E6866254D3571716673692F5
+Servers\MySQL\Gemini\LoginPrompt<|||>3<|||>0
+Servers\MySQL\Gemini\Port<|||>1<|||>3306
+Servers\MySQL\Gemini\NetType<|||>3<|||>0
+Servers\MySQL\Gemini\Compressed<|||>3<|||>0
+Servers\MySQL\Gemini\LocalTimeZone<|||>3<|||>0
+Servers\MySQL\Gemini\QueryTimeout<|||>3<|||>0
+Servers\MySQL\Gemini\FullTableStatus<|||>3<|||>1
+Servers\MySQL\Gemini\Databases<|||>1<|||>
+Servers\MySQL\Gemini\Comment<|||>1<|||>
+Servers\MySQL\Gemini\StartupScriptFilename<|||>1<|||>
+Servers\MySQL\Gemini\SSHtunnelHost<|||>1<|||>
+Servers\MySQL\Gemini\SSHtunnelHostPort<|||>3<|||>0
+Servers\MySQL\Gemini\SSHtunnelUser<|||>1<|||>
+Servers\MySQL\Gemini\SSHtunnelPassword<|||>1<|||>8
+Servers\MySQL\Gemini\SSHtunnelTimeout<|||>3<|||>4
+Servers\MySQL\Gemini\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MySQL\Gemini\SSHtunnelPort<|||>3<|||>3307
+Servers\MySQL\Gemini\SSL_Active<|||>3<|||>0
+Servers\MySQL\Gemini\SSL_Key<|||>1<|||>
+Servers\MySQL\Gemini\SSL_Cert<|||>1<|||>
+Servers\MySQL\Gemini\SSL_CA<|||>1<|||>
+Servers\MySQL\Gemini\RefusedCount<|||>3<|||>2
+Servers\MySQL\Gemini\ServerVersionFull<|||>1<|||>5.5.40-MariaDB - MariaDB Server
+Servers\MySQL\Gemini\ConnectCount<|||>3<|||>1
+Servers\MySQL\Gemini\ServerVersion<|||>3<|||>50540
+Servers\MySQL\Gemini\LastConnect<|||>1<|||>2014-12-31 00:35:58
+Servers\MySQL\Gemini\lastUsedDB<|||>1<|||>test
+Servers\MySQL\Gemini\QueryHistory\1<|||>1<|||>2014-12-31 00:37:44|test|47|create database test;<{{{><}}}>use test;<{{{><}}}>create table one (id int(11) unsigned auto_increment primary key,<{{{><}}}>column1 varchar(100) null,<{{{><}}}>column2 varchar(100) null) engine=myisam;<{{{><}}}>
+Servers\MySQL\Gemini\QueryHistory\2<|||>1<|||>2014-12-31 00:38:48|test|0|insert into one (column1, column2) values ('Robert','Holland'), ('Rob','Holland');
+Servers\MySQL\Gemini\QueryHistory\3<|||>1<|||>2014-12-31 00:39:02|test|0|select * from one;
+Servers\MySQL\RobDBA4\SessionCreated<|||>1<|||>2013-07-11 13:38:52
+Servers\MySQL\RobDBA4\Host<|||>1<|||>robdba4.db.2627262.hostedresource.com
+Servers\MySQL\RobDBA4\WindowsAuth<|||>3<|||>0
+Servers\MySQL\RobDBA4\User<|||>1<|||>
+Servers\MySQL\RobDBA4\Password<|||>1<|||>1
+Servers\MySQL\RobDBA4\LoginPrompt<|||>3<|||>1
+Servers\MySQL\RobDBA4\Port<|||>1<|||>3306
+Servers\MySQL\RobDBA4\NetType<|||>3<|||>0
+Servers\MySQL\RobDBA4\Compressed<|||>3<|||>0
+Servers\MySQL\RobDBA4\LocalTimeZone<|||>3<|||>0
+Servers\MySQL\RobDBA4\Databases<|||>1<|||>robdba4
+Servers\MySQL\RobDBA4\StartupScriptFilename<|||>1<|||>
+Servers\MySQL\RobDBA4\SSHtunnelHost<|||>1<|||>
+Servers\MySQL\RobDBA4\SSHtunnelHostPort<|||>3<|||>0
+Servers\MySQL\RobDBA4\SSHtunnelUser<|||>1<|||>
+Servers\MySQL\RobDBA4\SSHtunnelPassword<|||>1<|||>3
+Servers\MySQL\RobDBA4\SSHtunnelTimeout<|||>3<|||>4
+Servers\MySQL\RobDBA4\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MySQL\RobDBA4\SSHtunnelPort<|||>3<|||>3307
+Servers\MySQL\RobDBA4\SSL_Active<|||>3<|||>0
+Servers\MySQL\RobDBA4\SSL_Key<|||>1<|||>
+Servers\MySQL\RobDBA4\SSL_Cert<|||>1<|||>
+Servers\MySQL\RobDBA4\SSL_CA<|||>1<|||>
+Servers\MySQL\RobDBA4\RefusedCount<|||>3<|||>3
+Servers\MySQL\RobDBA4\ServerVersionFull<|||>1<|||>5.0.96-log - MySQL Community Server (GPL)
+Servers\MySQL\RobDBA4\ConnectCount<|||>3<|||>2
+Servers\MySQL\RobDBA4\ServerVersion<|||>3<|||>50096
+Servers\MySQL\RobDBA4\LastConnect<|||>1<|||>2013-07-15 12:16:29
+Servers\MySQL\RobDBA4\lastUsedDB<|||>1<|||>robdba4
+Servers\MySQL\RobDBA4\QueryHistory\1<|||>1<|||>2013-07-11 13:45:35|robdba4|15|select count(*) "User Count" from rh_users;
+Servers\MySQL\RobDBA4\QueryHistory\2<|||>1<|||>2013-07-11 13:46:36|robdba4|47|-- select count(*) "User Count" from rh_users;<{{{><}}}>select * from rh_links;
+Servers\MySQL\RobDBA4\QueryHistory\4<|||>1<|||>2013-07-11 13:48:35|robdba4|15|-- select count(*) "User Count" from rh_users;<{{{><}}}>-- select * from rh_links;<{{{><}}}>update rh_links set link_target = '_blank' where link_id in (<{{{><}}}>22<{{{><}}}>,21<{{{><}}}>,24<{{{><}}}>,27<{{{><}}}>,28<{{{><}}}>,30<{{{><}}}>,34<{{{><}}}>);
+Servers\MySQL\RobDBA4\QueryHistory\3<|||>1<|||>2013-07-11 13:54:40|robdba4|15|-- select count(*) "User Count" from rh_users;<{{{><}}}>-- select * from rh_links;<{{{><}}}>insert into rh_links (<{{{><}}}>link_url<{{{><}}}>, link_name<{{{><}}}>, link_target<{{{><}}}>, link_visible<{{{><}}}>, link_owner<{{{><}}}>, link_updated<{{{><}}}>, link_rel<{{{><}}}>) values<{{{><}}}>(<{{{><}}}>'https://azmail.bannerhealth.com'<{{{><}}}>,'Banner Mail'<{{{><}}}>,'_blank'<{{{><}}}>,'Y'<{{{><}}}>,2<{{{><}}}>,'2013-07-11 13:54:30'<{{{><}}}>,'me'<{{{><}}}>);<{{{><}}}><{{{><}}}><{{{><}}}><{{{><}}}>
+Servers\MySQL\RobDBA4\QueryHistory\6<|||>1<|||>2013-07-11 13:54:54|robdba4|31|select * from rh_links;
+Servers\MySQL\RobDBA4\QueryHistory\5<|||>1<|||>2013-07-15 12:17:50|robdba4|77|use robdba4;<{{{><}}}>select * from rh_users limit 0, 10;
+Servers\MySQL\RobDBA4\QueryHistory\8<|||>1<|||>2013-07-15 12:20:41|robdba4|15|select * from rh_users limit 0, 10;
+Servers\MySQL\RobDBA4\QueryHistory\7<|||>1<|||>2013-07-15 12:20:52|robdba4|31|use robdba4;<{{{><}}}>-- select * from rh_users limit 0, 10;<{{{><}}}>select user_login, display_name, user_email, user_registered from rh_users order by user_registered desc limit 0, 15;
+Servers\MySQL\RobDBA4\QueryHistory\9<|||>1<|||>2013-07-15 12:23:54|robdba4|1951|use robdba4;<{{{><}}}>-- select * from rh_users limit 0, 10;<{{{><}}}>select * from rh_users where user_email like '%farm%';
+Servers\MySQL\RobDBA4\QueryHistory\10<|||>1<|||>2013-07-15 12:24:19|robdba4|31|use robdba4;<{{{><}}}>-- select * from rh_users limit 0, 10;<{{{><}}}>select * from rh_users where user_email like '%.gov%';
+Servers\MySQL\RobDBA4\QueryHistory\11<|||>1<|||>2013-07-15 12:24:46|robdba4|654|use robdba4;<{{{><}}}>-- select * from rh_users limit 0, 10;<{{{><}}}>select * from rh_users where user_email like '%state%';
+Servers\MySQL\RobDBA4\QueryHistory\12<|||>1<|||>2013-07-15 12:24:55|robdba4|141|use robdba4;<{{{><}}}>-- select * from rh_users limit 0, 10;<{{{><}}}>select * from rh_users where user_email like '%.edu%';
+Servers\MySQL\RobDBA5\SessionCreated<|||>1<|||>2013-07-11 14:08:23
+Servers\MySQL\RobDBA5\Host<|||>1<|||>robdba5.db.2627262.hostedresource.com
+Servers\MySQL\RobDBA5\WindowsAuth<|||>3<|||>0
+Servers\MySQL\RobDBA5\User<|||>1<|||>
+Servers\MySQL\RobDBA5\Password<|||>1<|||>3
+Servers\MySQL\RobDBA5\LoginPrompt<|||>3<|||>1
+Servers\MySQL\RobDBA5\Port<|||>1<|||>3306
+Servers\MySQL\RobDBA5\NetType<|||>3<|||>0
+Servers\MySQL\RobDBA5\Compressed<|||>3<|||>0
+Servers\MySQL\RobDBA5\LocalTimeZone<|||>3<|||>0
+Servers\MySQL\RobDBA5\Databases<|||>1<|||>robdba5
+Servers\MySQL\RobDBA5\StartupScriptFilename<|||>1<|||>
+Servers\MySQL\RobDBA5\SSHtunnelHost<|||>1<|||>
+Servers\MySQL\RobDBA5\SSHtunnelHostPort<|||>3<|||>0
+Servers\MySQL\RobDBA5\SSHtunnelUser<|||>1<|||>
+Servers\MySQL\RobDBA5\SSHtunnelPassword<|||>1<|||>9
+Servers\MySQL\RobDBA5\SSHtunnelTimeout<|||>3<|||>4
+Servers\MySQL\RobDBA5\SSHtunnelPrivateKey<|||>1<|||>
+Servers\MySQL\RobDBA5\SSHtunnelPort<|||>3<|||>3307
+Servers\MySQL\RobDBA5\SSL_Active<|||>3<|||>0
+Servers\MySQL\RobDBA5\SSL_Key<|||>1<|||>
+Servers\MySQL\RobDBA5\SSL_Cert<|||>1<|||>
+Servers\MySQL\RobDBA5\SSL_CA<|||>1<|||>
+Servers\MySQL\RobDBA5\RefusedCount<|||>3<|||>2
+Servers\MySQL\RobDBA5\ServerVersionFull<|||>1<|||>5.0.96-log - MySQL Community Server (GPL)
+Servers\MySQL\RobDBA5\ConnectCount<|||>3<|||>7
+Servers\MySQL\RobDBA5\ServerVersion<|||>3<|||>50096
+Servers\MySQL\RobDBA5\LastConnect<|||>1<|||>2014-03-10 16:30:11
+Servers\MySQL\RobDBA5\lastUsedDB<|||>1<|||>robdba5
+Servers\MySQL\RobDBA5\QueryHistory\16<|||>1<|||>2014-03-07 10:56:23|robdba5|156|select `tp`.`parent_zone` AS `parent_zone`,`t`.`zone` AS `zone` from (`timezones_parent` `tp` join `timezones` `t` on((`t`.`parent_id` = `tp`.`id`)))
+Servers\MySQL\RobDBA5\QueryHistory\1<|||>1<|||>2014-03-07 10:58:53|robdba5|2090|select * from request_number_data;
+Servers\MySQL\RobDBA5\QueryHistory\2<|||>1<|||>2014-03-07 11:00:06|robdba5|468|select distinct(request_number) from request_number_data;
+Servers\MySQL\RobDBA5\QueryHistory\3<|||>1<|||>2014-03-07 11:01:15|robdba5|437|select * from tasktracker;
+Servers\Testing\SessionCreated<|||>1<|||>2014-11-24 09:12:59
+Servers\Testing\Folder<|||>3<|||>1
+Servers\Testing\Unnamed\SessionCreated<|||>1<|||>2014-11-24 09:13:11
+Servers\Testing\Unnamed\Host<|||>1<|||>phx04134.bhs.bannerhealth.com
+Servers\Testing\Unnamed\WindowsAuth<|||>3<|||>0
+Servers\Testing\Unnamed\User<|||>1<|||>iview
+Servers\Testing\Unnamed\Password<|||>1<|||>3C823C7F723C609
+Servers\Testing\Unnamed\LoginPrompt<|||>3<|||>0
+Servers\Testing\Unnamed\Port<|||>1<|||>1433
+Servers\Testing\Unnamed\NetType<|||>3<|||>4
+Servers\Testing\Unnamed\Compressed<|||>3<|||>0
+Servers\Testing\Unnamed\LocalTimeZone<|||>3<|||>0
+Servers\Testing\Unnamed\QueryTimeout<|||>3<|||>0
+Servers\Testing\Unnamed\FullTableStatus<|||>3<|||>1
+Servers\Testing\Unnamed\Databases<|||>1<|||>
+Servers\Testing\Unnamed\Comment<|||>1<|||>iview user<{{{><}}}>iviewtest database
+Servers\Testing\Unnamed\StartupScriptFilename<|||>1<|||>
+Servers\Testing\Unnamed\SSHtunnelHost<|||>1<|||>
+Servers\Testing\Unnamed\SSHtunnelHostPort<|||>3<|||>0
+Servers\Testing\Unnamed\SSHtunnelUser<|||>1<|||>
+Servers\Testing\Unnamed\SSHtunnelPassword<|||>1<|||>2
+Servers\Testing\Unnamed\SSHtunnelTimeout<|||>3<|||>4
+Servers\Testing\Unnamed\SSHtunnelPrivateKey<|||>1<|||>
+Servers\Testing\Unnamed\SSHtunnelPort<|||>3<|||>3307
+Servers\Testing\Unnamed\SSL_Active<|||>3<|||>0
+Servers\Testing\Unnamed\SSL_Key<|||>1<|||>
+Servers\Testing\Unnamed\SSL_Cert<|||>1<|||>
+Servers\Testing\Unnamed\SSL_CA<|||>1<|||>
+Servers\Testing\Unnamed\RefusedCount<|||>3<|||>2
+Servers\Testing\Unnamed\ServerVersionFull<|||>1<|||>10.50.2500.0
+Servers\Testing\Unnamed\ConnectCount<|||>3<|||>2
+Servers\Testing\Unnamed\ServerVersion<|||>3<|||>1050
+Servers\Testing\Unnamed\LastConnect<|||>1<|||>2014-11-25 08:27:43
+Servers\Testing\Unnamed\lastUsedDB<|||>1<|||>iviewtest
+Servers\Testing\Unnamed\QueryHistory\1<|||>1<|||>2014-11-24 09:22:17|iviewtest|15|use iviewtest;<{{{><}}}>
+Servers\Testing\Unnamed\QueryHistory\2<|||>1<|||>2014-11-24 09:22:26|iviewtest|46|use iviewtest;<{{{><}}}>CREATE TABLE new_employees<{{{><}}}>(<{{{><}}}> id_num int IDENTITY(1,1),<{{{><}}}> fname varchar (20),<{{{><}}}> minit char(1),<{{{><}}}> lname varchar(30)<{{{><}}}>)
+Servers\Testing\Unnamed\QueryHistory\3<|||>1<|||>2014-11-24 09:26:52|iviewtest|46|use iviewtest;<{{{><}}}>create table testing (id int identity(1,1)<{{{><}}}>,column1 varchar(100) null<{{{><}}}>,column2 varchar(100) null<{{{><}}}>,primary key (id)<{{{><}}}>);<{{{><}}}><{{{><}}}>/*<{{{><}}}>CREATE TABLE new_employees<{{{><}}}>(<{{{><}}}> id_num int IDENTITY(1,1),<{{{><}}}> fname varchar (20),<{{{><}}}> minit char(1),<{{{><}}}> lname varchar(30)<{{{><}}}>)<{{{><}}}>*/
+Servers\Testing\Unnamed\QueryHistory\4<|||>1<|||>2014-11-24 09:27:42|iviewtest|47|use iviewtest;<{{{><}}}>drop table testing <{{{><}}}>drop table new_employees<{{{><}}}>
+Servers\Testing\Unnamed\QueryHistory\5<|||>1<|||>2014-11-24 09:28:33|iviewtest|63|select * from sysobjects where xtype = 'u' order by crdate desc;
+Servers\Testing\Unnamed\QueryHistory\6<|||>1<|||>2014-11-24 13:38:17|iviewtest|31|-- select * from sysobjects where xtype = 'u' order by crdate desc;<{{{><}}}>select distinct(term), program, code_snippet from iview_terms5 where term = 'O2 Saturation';
+Servers\Testing\Unnamed\QueryHistory\7<|||>1<|||>2014-11-24 13:41:49|iviewtest|47|-- select * from sysobjects where xtype = 'u' order by crdate desc;<{{{><}}}>select distinct(program), code_snippet from iview_terms5 where term = 'O2 Saturation';
+Servers\Testing\Unnamed\QueryHistory\8<|||>1<|||>2014-11-24 18:55:32|iviewtest|94|-- select * from sysobjects where xtype = 'u' order by crdate desc;<{{{><}}}>-- select distinct(program), code_snippet from iview_terms5 where term = 'O2 Saturation';<{{{><}}}>select * from iview_terms5 where term = 'O2 Saturation';
+Servers\Testing\Unnamed\QueryHistory\9<|||>1<|||>2014-11-24 21:21:28|iviewtest|94|-- select * from sysobjects where xtype = 'u' order by crdate desc;<{{{><}}}>-- select distinct(program), code_snippet from iview_terms5 where term = 'O2 Saturation';<{{{><}}}>-- select * from iview_terms5 where term = 'O2 Saturation';<{{{><}}}>select distinct(program), code_snippet from iview_terms6 where term = 'Weight (kg)' and checked = 0
+Servers\Testing\Unnamed\QueryHistory\10<|||>1<|||>2014-11-25 08:27:50|iviewtest|47|-- select * from sysobjects where xtype = 'u' order by crdate desc;<{{{><}}}>-- select distinct(program), code_snippet from iview_terms5 where term = 'O2 Saturation';<{{{><}}}>-- select * from iview_terms5 where term = 'O2 Saturation';<{{{><}}}>select distinct(program), code_snippet from iview_terms6 where term = 'Weight (kg)' and checked = 0<{{{><}}}>
