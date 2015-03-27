@@ -1,3 +1,5 @@
+#<a href='https://technet.microsoft.com/en-us/library/ms190273(v=sql.105).aspx'>Source</a>
+
 -- Change datatype:
 	alter table tablename alter column columnname varchar(100) not null;
 
@@ -65,3 +67,4 @@ alter table tablename add columnname varchar(20) null;
 	GO
 	DROP TABLE tablename ;
 	GO
+
