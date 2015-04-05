@@ -1,3 +1,4 @@
+-- http://www.mssqltips.com/sqlservertutorial/162/how-to-create-a-sql-server-stored-procedure-with-parameters/
 -- User Stored Procedure - usp_
 create procedure usp_procedurename1
 as
