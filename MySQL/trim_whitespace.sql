@@ -1,3 +1,5 @@
+-- http://stackoverflow.com/questions/6858143/mysql-how-to-remove-white-space-in-a-mysql-field
+
 trim(fieldname)
 TRIM(Replace(Replace(Replace(fieldname,'\t',''),'\n',''),'\r',''));
 
