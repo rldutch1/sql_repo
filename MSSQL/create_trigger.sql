@@ -1,3 +1,4 @@
+-- https://www.youtube.com/watch?v=URs_rnzkmxs
 -- Create trigger to prevent the insertion of data into a table.
 create trigger name_of_trigger
 on name_of_table
