@@ -1,0 +1,1 @@
+https://msdn.microsoft.com/en-us/library/vstudio/bb386580(v=vs.100).aspx
