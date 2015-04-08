@@ -1,1 +1,1 @@
-https://msdn.microsoft.com/en-us/library/vstudio/bb386580(v=vs.100).aspx
+Walkthrough: Creating an Ajax-Enabled Web Site (https://msdn.microsoft.com/en-us/library/vstudio/bb386580(v=vs.100).aspx).
