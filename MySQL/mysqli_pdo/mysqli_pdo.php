@@ -6,7 +6,7 @@ Usernames are: aaa, bbb, ccc, ddd. <br />
 Passwords are: bbb, bbb, ccc, ddd. <br />
 </head>
 <body>
-
+<a href='./'>Home</a><br />
 <form name='form1' method='post' action='mysqli_pdo.php'>
 	Name:<input type='text' name='name' id='name'><br />
 	Pass:<input type='text' name='password' id='password'><br />
@@ -19,9 +19,10 @@ if(isset($_POST['submit'])){
 //Old connect method:
 //	$connect = mysqli_connect('localhost','mysqlitest','mysqlitest','mysqlitest');
 
-//PDO connect method:
-		$connect = new mysqli('localhost','mysqlitest','mysqlitest','mysqlitest');
+////PDO connect method locally in the file. The include method below works too.
+//		$connect = new mysqli('localhost','mysqlitest','mysqlitest','mysqlitest');
 
+include('connect_pdo.php'); //This works so I am going to use it.
 //Old query methd:
 //	$sql = "select id, name, pass from blah where name = '$_POST[name]' and pass = '$_POST[password]';";
 

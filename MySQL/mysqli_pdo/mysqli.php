@@ -4,9 +4,15 @@
 MySQLI Method <br /><br />
 Usernames are: aaa, bbb, ccc, ddd. <br />
 Passwords are: bbb, bbb, ccc, ddd. <br />
+<br />
+The password field on this form is subject to the mysql_injection attack. <br />
+Just enter any username you want and: ' or '1'='1 <br />
+in the password field.<br />
+The result of the injection will be the display of all of the users and passwords from the database table.<br /><br />
+
 </head>
 <body>
-
+<a href='./'>Home</a><br />
 <form name='form1' method='post' action='mysqli.php'>
 	Name:<input type='text' name='name' id='name'><br />
 	Pass:<input type='text' name='password' id='password'><br />
