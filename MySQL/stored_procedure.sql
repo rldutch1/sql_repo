@@ -32,3 +32,6 @@ DELIMITER ;
 
 -- Example, type:
 	call sersearch; -- No parameter.
+
+-- Troubleshooting:
+	I made a mistake creating a procedure because I forgot to make the parameter that I used in the query the same name as I defined it.
