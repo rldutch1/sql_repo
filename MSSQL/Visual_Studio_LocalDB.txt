@@ -1,2 +1,0 @@
-
-http://www.asp.net/mvc/overview/getting-started/introduction/creating-a-connection-string
