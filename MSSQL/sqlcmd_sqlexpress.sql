@@ -11,14 +11,21 @@ select name, crdate from sysobjects where xtype='u' order by crdate desc;
 go
 
 Example of sqlcmd:
-sqlcmd -S %computername%\RLH -d play -i "test.sql" -o outfile.sql & notepad outfile.sql
+sqlcmd -S %computername%\RLH -i "test.sql" -o outfile.sql & notepad outfile.sql
 
+Example 2 of sqlcmd:
+sqlcmd -S %computername%\RLH -d master -i "test.sql" -o outfile.sql & notepad outfile.sql
+	(the above command uses the -d switch to connect to the master database. It is just
+	another way to connect to a database if you are not specifying the database in the test.sql
+	file).
+
+Commandline breakdown:
 The RLH is the database server instance on my computer (%computername%).
-The "d" means to use the play database.
+The "-d" means to use the play database.
 The "-i" means to import the query test.sql.
 The "-o" means to send the query output to a file called outfile.sql.
 The "& notepad" means to open notepad and and display outfile.sql.
 
 There is also free program called HeidiSQL that will allow you to access the SQL Server 2008 Express database instances on your computer.
-HeidiSQL works with MySQL as well. 
+HeidiSQL works with MySQL as well.
 
