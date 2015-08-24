@@ -7,7 +7,7 @@ your query with a new line and type the word 'go'.
 
 Example of query file named test.sql:
 use master;
-select name, crdate from sysdatabases where xtype='u' order by crdate desc;
+select name, crdate from sysobjects where xtype='u' order by crdate desc;
 go
 
 Example of sqlcmd:
