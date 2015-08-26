@@ -1,4 +1,17 @@
--- Source:(https://msdn.microsoft.com/en-us/library/ms189828.aspx);
+-- Source:(https://msdn.microsoft.com/en-us/library/ms189828.aspx):
+
+-- Source: https://msdn.microsoft.com/en-us/library/ms189751.aspx:
+-- Create login (requires ALTER ANY LOGIN permission on the server or membership in the securityadmin fixed server role.)
+	create login <login_name> with password = '<enterStrongPasswordHere>';
+	go
+
+-- Same thing except require a password change:
+	create login <login_name> with password = '<enterStrongPasswordHere>' MUST_CHANGE;
+	go
+
+-- Create a login from a Windows domain account:
+	create login [<domainName>\<login_name>] from WINDOWS;
+	go
 
 -- Enabling a disabled login:
 	alter login robert DISABLE;
@@ -8,9 +21,9 @@
 	alter login robert with password = 'newpassword';
 
 -- Change the password of a login using HASHED (changes the password of the robert login to an already hashed value):
-	ALTER LOGIN robert WITH
-	PASSWORD = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;
-	GO
+	alter login robert WITH
+	password = 0x01000CF35567C60BFB41EBDE4CF700A985A13D773D6B45B90900 HASHED ;
+	go
 
 -- Change the name of a login (from robert to rob):
 	alter login robert with name = rob;
@@ -31,6 +44,12 @@ credential.
 -- select * from sys.database_credentials;
 */
 	alter login robert with credential = windowscredential;
+
+-- Source: https://msdn.microsoft.com/en-us/library/ms189522.aspx
+-- Create a credential (creates the credential called AlterEgo. The credential contains the Windows user Mary5 and a password.):
+	create credential AlterEgo with identity = 'Mary5',
+  secret = '<EnterStrongPasswordHere>';
+	go
 
 -- Map a login to an Extensible Key Management credential.
 	alter login robert
