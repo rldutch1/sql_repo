@@ -25,6 +25,10 @@ Server Authentication to access resources outside the server instance. When the 
 Windows, the user is authenticated as the Windows user specified in the credential. A single credential
 can be mapped to multiple SQL Server logins. However, a SQL Server login can be mapped to only one
 credential.
+
+-- To see credentials already on the server:
+-- select * from sys.credentials;
+-- select * from sys.database_credentials;
 */
 	alter login robert with credential = windowscredential;
 
