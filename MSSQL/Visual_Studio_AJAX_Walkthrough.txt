@@ -1,2 +1,7 @@
 Walkthrough: Creating an Ajax-Enabled Web Site (https://msdn.microsoft.com/en-us/library/vstudio/bb386580(v=vs.100).aspx).
 Youtube video (https://www.youtube.com/watch?v=40yBbXRTnDU).
+How to connect to Visual Studio 2013 with SQL Server 2012 and display data - https://www.youtube.com/watch?v=iv2ztA1md_g
+
+
+How to connect PHP with SQL Server 2012/2014 with sample code and query - https://www.youtube.com/watch?v=72XCFF4YiOw
+
