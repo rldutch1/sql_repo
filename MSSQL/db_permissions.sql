@@ -19,8 +19,22 @@ create user greaseboard for login greaseboard
 with default_schema = AutoIT;
 
 /*I used the greaseboard user and logged in using Excel and I could not see the tables until I added db_datareader and db_datawriter.*/
-/*http://stackoverflow.com/questions/3998634/sql-server-2008-how-do-i-grant-privileges-to-a-username*/
+/*
+	http://stackoverflow.com/questions/3998634/sql-server-2008-how-do-i-grant-privileges-to-a-username
+	https://msdn.microsoft.com/en-us/library/ms188371.aspx
+*/
 use autoit;
 exec sp_addrolemember 'db_datareader', greaseboard;
 exec sp_addrolemember 'db_datawriter', greaseboard;
 
+/*
+See Also
+DENY (Transact-SQL)
+REVOKE (Transact-SQL)
+sp_addlogin (Transact-SQL)
+sp_adduser (Transact-SQL)
+sp_changedbowner (Transact-SQL)
+sp_dropuser (Transact-SQL)
+sp_helprotect (Transact-SQL)
+sp_helpuser (Transact-SQL)
+*/
