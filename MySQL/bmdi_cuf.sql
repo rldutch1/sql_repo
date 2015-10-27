@@ -1,0 +1,105 @@
+
+-- create database bmdi;
+use bmdi;
+drop table wts;
+create table wts (id int(11) unsigned auto_increment primary key
+,FACILITY varchar(200) not null
+,SERVER varchar(200) not null
+,CODE_VALUE int(11) not null
+,DISPLAY varchar(200) not null
+,DISPLAY_KEY varchar(200) not null
+,DESCRIPTION varchar(200) null)
+engine=innodb;
+
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGMC and BIMC','PHX00386','830568033','49 A3N','49A3N','A3N - MOSU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGMC and BIMC','PHX00386','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGMC and BIMC','PHX00386','677374','01 02D','0102D','02D - Cardiovascular ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGMC and BIMC','PHX00386','677373','01 02C','0102C','02C - Coronary Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGMC and BIMC','PHX00386','677372','01 02B','0102B','02B - Trauma/Surg ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGMC and BIMC','PHX00386','677371','01 02A','0102A','02A - Cardiovascular ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00504','15594810','76 12A','7612A','12A - GS Med ICU/BMT Unit');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00504','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00504','677634','01 10D','0110D','10D - Neuro ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00504','677633','01 10C','0110C','10C - Neuro ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00504','677632','01 10B','0110B','10B -Neuro ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00504','677631','01 10A','0110A','10A - Medical ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00505','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00505','677638','01 11D','0111D','11D - Med/Surg ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00505','677637','01 11C','0111C','11C - Med/Surg ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00505','677636','01 11B','0111B','11B - Med/Surg ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00505','677635','01 11A','0111A','11A - Medical ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00513','124929208','50 NICU','50NICU','NICU - Neo-Natal ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00513','124922782','50 A3N','50A3N','A3N - ICU/CCU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00513','124918281','50 A2N','50A2N','A2N - ICU/CCU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00513','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00513','677374','01 02D','0102D','02D - Cardiovascular ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00513','677373','01 02C','0102C','02C - Coronary Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BGSMC','PHX00513','677372','01 02B','0102B','02B - Trauma/Surg ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BBMC','PHX01138','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BBMC','PHX01138','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BBMC','PHX01138','1663918','51 HICW','51HICW','HICW - 5th Floor ICU - West');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BBMC','PHX01138','1663843','51 HICE','51HICE','HICE - 5th Floor ICU - East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BBMC','PHX01138','1662911','48 VSCU','48VSCU','VSCU - Valley Special Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BEMC and BDWMC','PHX00249','477140632','42 3A','423A','3A - Intensive Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BEMC and BDWMC','PHX00249','477135480','42 2A','422A','2A - Intensive Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BEMC and BDWMC','PHX00249','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BEMC and BDWMC','PHX00249','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX00548','472958300','22 S02E','22S02E','S02E - South Tower 2 East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX00548','457102507','22 S03W','22S03W','S03W - South Tower 3 West');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX00548','457100290','22 S03E','22S03E','S03E - South Tower 3 East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX00548','457098861','22 S02W','22S02W','S02W - South Tower 2 West');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX00548','35799037','22 01C','2201C','01C - PICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX00548','674574','22 CCUW','22CCUW','CCUW - CCU West');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC','PHX00549','830568033','49 A3N','49A3N','A3N - MOSU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC','PHX00549','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC','PHX00549','677374','01 02D','0102D','02D - Cardiovascular ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC','PHX00549','677373','01 02C','0102C','02C - Coronary Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC','PHX00549','677372','01 02B','0102B','02B - Trauma/Surg ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC','PHX00549','677371','01 02A','0102A','02A - Cardiovascular ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','285779511','94 BURN','94BURN','BURN - Burn Unit');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','238228268','72 ICU','72ICU','ICU - Intensive Care Unit');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','221903516','94 NICU','94NICU','NICU - NICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','73208194','83 ICU','83ICU','ICU - Intensive Care Unit');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','1663918','51 HICW','51HICW','HICW - 5th Floor ICU - West');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','1663843','51 HICE','51HICE','HICE - 5th Floor ICU - East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('SRM','PHX00623','1662911','48 VSCU','48VSCU','VSCU - Valley Special Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','224264069','94 4SW4','944SW4','4SW4 - CVCU LA');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','224263337','94 4SW3','944SW3','4SW3 - CVCU LV');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','224262565','94 4SW2','944SW2','4SW2 - CVCU RV');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','224261214','94 4SW1','944SW1','4SW1 - CVCU RA');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','224246226','94 3SE2','943SE2','3SE2 - ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','224241102','94 3SE1','943SE1','3SE1 - ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','67776321','39 ICU','39ICU','ICU - ICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','1663918','51 HICW','51HICW','HICW - 5th Floor ICU - West');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','1663843','51 HICE','51HICE','HICE - 5th Floor ICU - East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('NCMC and WMC','PHX00624','1662911','48 VSCU','48VSCU','VSCU - Valley Special Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX07064','317141668','22 NCCN','22NCCN','NCCN - Neo-Natal Critical Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX07064','35799037','22 01C','2201C','01C - PICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX07064','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX07064','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BTMC','PHX07064','674858','22 NICU','22NICU','NICU - Newborn Intensive Care');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07089','502031620','05 PONC','05PONC','PONC - Ped''s Oncology');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07089','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07089','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07089','675212','05 PICU','05PICU','PICU - PICU');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07090','401004756','05 NICI','05NICI','NICI - NICI  (Beds 1-16)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07090','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07090','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07090','675304','05 NICB','05NICB','NICB - NICU (Beds 21-32)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07090','675277','05 NICC','05NICC','NICC - NICU (Beds 33-44)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07091','820944152','05 NICG','05NICG','NICG - NICU (BEDS 86 - 95)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07091','279321926','05 NICF','05NICF','NICF - NICU (Beds 76-85)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07091','279319446','05 NICE','05NICE','NICE - NICU (Beds 66-75)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07091','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07091','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BDMC Cardon','PHX07091','675250','05 NICD','05NICD','NICD - NICU (Beds 45-56)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BCCH','PHX07231','279321926','05 NICF','05NICF','NICF - NICU (Beds 76-85)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BCCH','PHX07231','279319446','05 NICE','05NICE','NICE - NICU (Beds 66-75)');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BCCH','PHX07231','32864239','28 ICU','28ICU','ICU - Intensive Care Unit');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BCCH','PHX07231','4208205','55 A3E','55A3E','A3E - ICU 3rd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BCCH','PHX07231','4207988','55 A2E','55A2E','A2E - CICU 2nd Floor East');
+insert into wts (facility, server, code_value, display, display_key, description) values ('BCCH','PHX07231','675250','05 NICD','05NICD','NICD - NICU (Beds 45-56)');

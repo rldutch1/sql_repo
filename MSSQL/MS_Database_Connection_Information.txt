@@ -1,0 +1,7 @@
+
+SQL Server Connection Strings for ASP.NET Web Applications
+	https://msdn.microsoft.com/en-us/library/jj653752.aspx
+
+Visual Studio LocalDB Connection
+	http://www.asp.net/mvc/overview/getting-started/introduction/creating-a-connection-string
+

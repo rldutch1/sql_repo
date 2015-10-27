@@ -65,3 +65,30 @@ Example:
 */
 
 exec usp_CoolStoredProcedure @column1 = 'data', @column2 = NULL, @column3 = NULL;
+
+/*Iview SP*/
+CREATE PROCEDURE "usp_IviewTermSearch" @term varchar(100) as
+select id, term, ccl_name, cs.code_snippet
+from code_snippet cs
+where
+	cs.term not like '1%'
+and
+	cs.term not like '2%'
+and
+	cs.term not like '3%'
+and
+	cs.term not like '4%'
+and
+	cs.term not like '5%'
+and
+	cs.term not like '6%'
+and
+	cs.term not like '7%'
+and
+	cs.term not like '8%'
+and
+	cs.term not like '9%'
+and
+	cs.term = @term
+order by cs.term
+
