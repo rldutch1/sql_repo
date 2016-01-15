@@ -16,6 +16,8 @@ mysql -u username -p --xml -e 'use databasename; select * from tablename' > outp
 -- You can also put the db_name in your script to avoid typing it on the command line.
 
 mysql -u username -p --xml < test.sql > output.xml
+mysql -u username -p < test.sql > output.out
+
 
 -- To Dump a database to a file and generate full insert statments:
 
