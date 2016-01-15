@@ -46,3 +46,10 @@ mysql -h mysql.example.com -u root -p
 -- Connect to a remote database server and directly to a database on that server.
 mysql -h databaseserver -u databaseuser -p -D databasename
 
+-- Check and Repair Database
+systemctl stop mariadb
+myisamchk -r -q database.frm
+myisamchk -r -q database.MYI
+myisamchk -r -q database.MYD
+systemctl start mariadb
+
