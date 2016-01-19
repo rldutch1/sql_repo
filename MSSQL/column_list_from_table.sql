@@ -1,7 +1,8 @@
 -- Stored Procedure (this does not give primary key information).
 	exec sp_columns YourTableNameHere;
 
--- Works on SQL 2008 and above. You will have to change the column names for SQL 2000.
+-- Works on SQL 2008 and above. This will give primary key information.
+-- You will have to change the column names for SQL 2000.
 	SELECT
 	    c.name 'Column Name',
 	    t.Name 'Data type',
