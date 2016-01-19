@@ -1,4 +1,4 @@
--- Stored Procedure
+-- Stored Procedure (this does not give primary key information).
 	exec sp_columns YourTableNameHere;
 
 -- Works on SQL 2008 and above. You will have to change the column names for SQL 2000.
