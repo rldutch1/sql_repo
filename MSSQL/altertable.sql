@@ -7,7 +7,7 @@
 	alter table tablename drop column columnname;
 
 -- Adding a column:
-alter table tablename add columnname varchar(20) null;
+	alter table tablename add columnname varchar(20) null;
 
 -- Adding a column with a constraint:
 	alter table tablename add columnname varchar(20) null
