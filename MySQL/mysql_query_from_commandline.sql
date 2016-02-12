@@ -31,6 +31,10 @@ mysqldump -p -c -e databasename tablename > TableName.sql
 
 mysqldump -p -c -e --all-databases > AllDatabases.sql
 
+-- To dump all databases on the database server without the data (just a skeleton).
+
+mysqldump -p -c -e --no-data --all-databases > AllDatabases_Skeleton.sql
+
 -- The contents of test.sql without the database name.
 
 select * from tablename order by columnName;
