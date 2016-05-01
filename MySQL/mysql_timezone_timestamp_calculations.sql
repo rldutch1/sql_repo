@@ -104,3 +104,12 @@ AZ=UTC AZ=IQ
 22=05  22=08
 23=06  23=09
 24=07  24=10
+
+Show the timezone offset based on the timezone name.
+SELECT Name,
+	TIMESTAMPDIFF(HOUR, UTC_TIMESTAMP(), CONVERT_TZ(UTC_TIMESTAMP(), "Etc/UTC", Name)) as Offset
+FROM 
+	mysql.time_zone_name 
+WHERE (Name IN ('America/Vancouver', 'Etc/UTC', 'America/Denver'));
+
+
