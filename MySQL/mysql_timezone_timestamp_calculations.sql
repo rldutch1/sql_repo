@@ -112,4 +112,10 @@ FROM
 	mysql.time_zone_name 
 WHERE (Name IN ('America/Vancouver', 'Etc/UTC', 'America/Denver'));
 
+This is a variation from the above that shows all of the timezone offsets from the mysql.time_zone_name table.
+SELECT Name,
+	TIMESTAMPDIFF(HOUR, UTC_TIMESTAMP(), CONVERT_TZ(UTC_TIMESTAMP(), "Etc/UTC", Name)) as Offset
+FROM 
+	mysql.time_zone_name 
+WHERE (Name IN (select name from mysql.time_zone_name));
 
