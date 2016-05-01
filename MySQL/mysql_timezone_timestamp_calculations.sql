@@ -1,4 +1,4 @@
-SELECT CONVERT_TZ(displaytime,'GMT','MET');          
+SELECT CONVERT_TZ(displaytime,'GMT','MET');
 should work if your column type is timestamp, or date
 You need to have the timezones loaded. See below if you don't have the timezones loaded.
 
@@ -105,17 +105,45 @@ AZ=UTC AZ=IQ
 23=06  23=09
 24=07  24=10
 
+Show the current time for all hourly timezones.
+  select utc_timestamp() - interval 0 hour UTC
+  , utc_timestamp() - interval 1 hour m1
+  , utc_timestamp() - interval 2 hour m2
+  , utc_timestamp() - interval 3 hour m3
+  , utc_timestamp() - interval 4 hour m4
+  , utc_timestamp() - interval 5 hour m5
+  , utc_timestamp() - interval 6 hour m6
+  , utc_timestamp() - interval 7 hour m7
+  , utc_timestamp() - interval 8 hour m8
+  , utc_timestamp() - interval 9 hour m9
+  , utc_timestamp() - interval 10 hour m10
+  , utc_timestamp() - interval 11 hour m11
+  , utc_timestamp() - interval 12 hour m12
+  , utc_timestamp() + interval 1 hour p1
+  , utc_timestamp() + interval 2 hour p2
+  , utc_timestamp() + interval 3 hour p3
+  , utc_timestamp() + interval 4 hour p4
+  , utc_timestamp() + interval 5 hour p5
+  , utc_timestamp() + interval 6 hour p6
+  , utc_timestamp() + interval 7 hour p7
+  , utc_timestamp() + interval 8 hour p8
+  , utc_timestamp() + interval 9 hour p9
+  , utc_timestamp() + interval 10 hour p10
+  , utc_timestamp() + interval 11 hour p11
+  , utc_timestamp() + interval 12 hour p12;
+
+
 Show the timezone offset based on the timezone name.
 SELECT Name,
 	TIMESTAMPDIFF(HOUR, UTC_TIMESTAMP(), CONVERT_TZ(UTC_TIMESTAMP(), "Etc/UTC", Name)) as Offset
-FROM 
-	mysql.time_zone_name 
+FROM
+	mysql.time_zone_name
 WHERE (Name IN ('America/Vancouver', 'Etc/UTC', 'America/Denver'));
 
 This is a variation from the above that shows all of the timezone offsets from the mysql.time_zone_name table.
 SELECT Name,
 	TIMESTAMPDIFF(HOUR, UTC_TIMESTAMP(), CONVERT_TZ(UTC_TIMESTAMP(), "Etc/UTC", Name)) as Offset
-FROM 
-	mysql.time_zone_name 
+FROM
+	mysql.time_zone_name
 WHERE (Name IN (select name from mysql.time_zone_name));
 
