@@ -24,3 +24,6 @@ NULL and spaces.
 
 -- Removing the unique index:
 ALTER TABLE tablename drop index column1; /* <-- Notice the missing parenthesis. */
+
+-- Rename a MySQL table. The "to" keyword is part of the command.
+rename table oldtable to newtable;
