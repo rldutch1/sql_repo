@@ -27,3 +27,23 @@ ALTER TABLE tablename drop index column1; /* <-- Notice the missing parenthesis.
 
 -- Rename a MySQL table. The "to" keyword is part of the command.
 rename table oldtable to newtable;
+
+-- Rename a Database;
+For InnoDB, the following seems to work: create the new empty database, then rename each table in turn into the new database:
+
+RENAME TABLE old_db.table TO new_db.table;
+You will need to adjust the permissions after that.
+
+For scripting in a shell, you can use either of the following:
+
+mysql -u username -ppassword old_db -sNe 'show tables' | while read table; \ 
+    do mysql -u username -ppassword -sNe "rename table old_db.$table to new_db.$table"; done
+Or
+
+for table in `mysql -u root -s -N -e "show tables from old_db"\`; do mysql -u root -s -N -e "rename table old_db.$table to new_db.$table"; done;`
+Notes: there is no space between the option -p and the password. If your database has no password, remove the -u username -ppassword part.
+
+Also, if you have stored procedures, you can copy them afterwards:
+
+mysqldump -R old_db | mysql new_db
+
