@@ -1,0 +1,10 @@
+-- Create user database.
+CREATE DATABASE us;
+-- Create local user.
+CREATE USER 'states'@'localhost' IDENTIFIED BY 'statesp';
+GRANT ALL PRIVILEGES ON us.* TO 'states'@'localhost' WITH GRANT OPTION;
+-- Create remote user.
+CREATE USER 'states'@'%' IDENTIFIED BY 'statesp';
+GRANT ALL PRIVILEGES ON us.* TO 'states'@'%' WITH GRANT OPTION;
+-- Tell the server to reload the GRANT TABLES.
+FLUSH PRIVILEGES;
