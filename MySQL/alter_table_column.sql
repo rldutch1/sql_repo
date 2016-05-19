@@ -9,6 +9,8 @@ alter table tablename modify column1 timestamp not null default current_timestam
 		creating a column.
 		Also you can use "change" instead of modify.
 */
+-- Adding a colum to a table:
+ALTER TABLE tablename add column columnname varchar(100) not null after id;
 
 -- Making a column unique:
 ALTER TABLE tablename add unique (column1);
