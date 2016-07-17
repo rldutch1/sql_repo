@@ -31,7 +31,9 @@ last_update_by varchar(500) null
 ) engine=innodb;
 */
 
---I combined all of the exported Bedrock .csv files into one large file called allfiles.dat by using sed to remove the first header row.
---Example: sed '1d' Exported_CSV_FILE.csv >> allfiles.dat
+-- I combined all of the exported Bedrock .csv files into one large file called allfiles.dat by using sed to remove the first header row.
+-- Example: sed '1d' Exported_CSV_FILE.csv >> allfiles.dat
+-- http://unix.stackexchange.com/questions/96226/delete-first-line-of-a-file
+
 load data local infile 'allfiles.dat' into table bedrock_csv fields terminated by ',' enclosed by '"' lines terminated by '\n' (audit_type, topic_name, filter_sequence, filter_meaning, filter_type_meaning, filter_name, flex_display, saved_value, description, event_set_name, code_value_id, value_type, value_sequence, value_group_sequence, qualifier,  map_type, mapped_to_code_1, mapped_to_description_1, mapped_to_code_2, mapped_to_description_2, last_update_date_time, last_update_by);
 
