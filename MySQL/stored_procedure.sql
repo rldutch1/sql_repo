@@ -35,3 +35,19 @@ DELIMITER ;
 
 -- Troubleshooting:
 	I made a mistake creating a procedure because I forgot to make the parameter that I used in the query the same name as I defined it.
+
+-- Create procedure with multiple parameters.
+DELIMITER //
+DROP PROCEDURE IF EXISTS updtjournal//
+CREATE PROCEDURE updtjournal
+(
+in udj mediumtext
+,in upid int(11)
+)
+BEGIN
+	UPDATE robdba5.journal4 SET entry = udj WHERE journal4.id = upid;
+END //
+DELIMITER ;
+
+-- Call procedure with multiple parameters.
+	call updtjournal ('Hello Robert Holland',3879);
