@@ -1,4 +1,5 @@
 https://www.youtube.com/watch?v=BeG4IHFjqVg
+https://www.youtube.com/watch?v=7dZKJxoGRGI
 Triggers are tied or attached to tables.
 
 show triggers;
