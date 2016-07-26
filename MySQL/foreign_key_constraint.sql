@@ -1,3 +1,4 @@
+http://www.mysqltutorial.org/mysql-foreign-key/
 mfg Table (from show create table mfg):
 CREATE TABLE `mfg` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
