@@ -18,6 +18,14 @@ alter table hserials add constraint mfg_id2hser_mfg_id foreign key (mfg_id) refe
 
 NOTE: The column data types have to be the same before you can add a foreign key constraint. I had a problem creating a constraint on an int(11) unsigned because one of the columns did not have the "Unsigned" attribute.
 
+To make it easier to reload dump files for tables that have foreign key relationships, mysqldump automatically includes a statement in the dump output to set foreign_key_checks to 0. This avoids problems with tables having to be reloaded in a particular order when the dump is reloaded. It is also possible to set this variable manually:
+
+	mysql> SET foreign_key_checks = 0;
+	mysql> SOURCE dump_file_name;
+	mysql> SET foreign_key_checks = 1;
+
+This enables you to import the tables in any order if the dump file contains tables that are not correctly ordered for foreign keys. 
+
 hserials Table (from show create table mfg): 
 CREATE TABLE `hserials` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
