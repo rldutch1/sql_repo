@@ -15,7 +15,7 @@ The default MySQL statement delimeter is a semi-colon.
 
 You have to use a different delimeter when creating a trigger.
 
-delimeter !
+delimeter |
 	create trigger triggername triggertime triggerevent on tablename
 	for each row triggerstatement;
 	statement1;
@@ -23,3 +23,11 @@ delimeter !
 	statementn;
 	end;
 	delimeter ;
+	
+Example:
+	delimeter |
+	create trigger insert_attempt after insert on employees
+	for each row BEGIN
+		insert into employees_update values(default);
+	end; |
+	delimeter |
