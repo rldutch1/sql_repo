@@ -5,6 +5,7 @@ http://stackoverflow.com/questions/4004205/mysql-show-constraints-on-tables-comm
 show create table xxxxx;
 
 show create table xxxxx\G
+
 All tables foreign key query:
 	use INFORMATION_SCHEMA;
 	select concat(TABLE_NAME,'.',COLUMN_NAME) as This_Table_Column,CONSTRAINT_NAME, concat(REFERENCED_TABLE_NAME,'.',REFERENCED_COLUMN_NAME) as References_This_Table_Column from KEY_COLUMN_USAGE where TABLE_SCHEMA = "videos" and referenced_table_name is not NULL;
@@ -15,8 +16,13 @@ Specific database and table foreign key query:
 	where TABLE_SCHEMA = "videos" and TABLE_NAME = "testnames1" 
 	and referenced_column_name is not NULL;
 
-
 alter table TableName add constraint TheConstraintName foreign key (TableNameID) references ForeignTable(id) on update cascade on delete restrict;
+
+Casecade only works if foreign_key_checks is ON. To see this information type:
+	show variables like 'foreign_key_checks';
+	
+	If you want to see all variables type:
+	show variables;
 
 http://www.mysqltutorial.org/mysql-foreign-key/
 mfg Table (from show create table mfg):
