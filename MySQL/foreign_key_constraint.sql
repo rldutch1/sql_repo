@@ -1,3 +1,20 @@
+
+Show foreign key constraints for a table:
+http://stackoverflow.com/questions/4004205/mysql-show-constraints-on-tables-command
+
+All tables foreign key query:
+	use INFORMATION_SCHEMA;
+	select concat(TABLE_NAME,'.',COLUMN_NAME) as This_Table_Column,CONSTRAINT_NAME, concat(REFERENCED_TABLE_NAME,'.',REFERENCED_COLUMN_NAME) as References_This_Table_Column from KEY_COLUMN_USAGE where TABLE_SCHEMA = "videos" and referenced_table_name is not NULL;
+
+Specific database and table foreign key query:
+	use INFORMATION_SCHEMA;
+	select concat(TABLE_NAME,'.',COLUMN_NAME) as This_Table_and_Column,CONSTRAINT_NAME, concat(REFERENCED_TABLE_NAME,'.',REFERENCED_COLUMN_NAME) as References_This_Table_and_Column from KEY_COLUMN_USAGE 
+	where TABLE_SCHEMA = "videos" and TABLE_NAME = "testnames1" 
+	and referenced_column_name is not NULL;
+
+
+alter table TableName add constraint TheConstraintName foreign key (TableNameID) references ForeignTable(id) on update cascade on delete restrict;
+
 http://www.mysqltutorial.org/mysql-foreign-key/
 mfg Table (from show create table mfg):
 CREATE TABLE `mfg` (
