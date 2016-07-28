@@ -2,6 +2,9 @@
 Show foreign key constraints for a table:
 http://stackoverflow.com/questions/4004205/mysql-show-constraints-on-tables-command
 
+show create table xxxxx;
+
+show create table xxxxx\G
 All tables foreign key query:
 	use INFORMATION_SCHEMA;
 	select concat(TABLE_NAME,'.',COLUMN_NAME) as This_Table_Column,CONSTRAINT_NAME, concat(REFERENCED_TABLE_NAME,'.',REFERENCED_COLUMN_NAME) as References_This_Table_Column from KEY_COLUMN_USAGE where TABLE_SCHEMA = "videos" and referenced_table_name is not NULL;
