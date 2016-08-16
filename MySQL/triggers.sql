@@ -32,3 +32,13 @@ Example:
 		insert into employees_update values(default);
 	end; |
 	delimeter |
+
+
+Manual speaks clear: "This means, for example, that you cannot set the default for a date column to be the value of a function such as NOW() or CURRENT_DATE". 
+http://dev.mysql.com/doc/refman/5.7/en/trigger-syntax.html
+delimeter |
+CREATE TRIGGER `triggername` BEFORE INSERT ON  `tablename` 
+FOR EACH ROW 
+SET NEW.datetimefield = NOW();
+END |
+delimeter ;
