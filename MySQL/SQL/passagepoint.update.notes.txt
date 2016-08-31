@@ -1,0 +1,54 @@
+|  89 |          3 | NONE           | 145569         |    11 |
+|  90 |          3 | NONE           | 145570         |    11 |
+|  91 |          3 | NONE           | 145571         |    11 |
+|  92 |          3 | NONE           | 145572         |    11 |
+|  93 |          3 | NONE           | 145573         |    11 |
+|  94 |          3 | NONE           | 145574         |    11 |
+|  95 |          3 | NONE           | 145575         |    11 |
+|  96 |          3 | NONE           | 145576         |    11 |
+|  97 |          3 | NONE           | 145577         |    11 |
+|  98 |          3 | NONE           | 145578         |    11 |
+|  99 |          3 | NONE           | 145579         |    11 |
+| 100 |          3 | NONE           | 145580         |    11 |
+| 101 |          3 | NONE           | 145581         |    11 |
+| 102 |          3 | NONE           | 145582         |    11 |
+| 103 |          3 | NONE           | 145583         |    11 |
+| 104 |          3 | NONE           | 145584         |    11 |
+| 105 |          3 | NONE           | 145585         |    11 |
+| 106 |          3 | NONE           | 145586         |    11 |
+| 107 |          3 | NONE           | 145587         |    11 |
+| 108 |          3 | NONE           | 145588         |    11 |
+| 109 |          3 | NONE           | 145589         |    11 |
+| 110 |          3 | NONE           | 145590         |    11 |
+| 111 |          3 | NONE           | 145591         |    11 |
+| 112 |          3 | NONE           | 145592         |    11 |
+| 113 |          3 | NONE           | 145593         |    11 |
+
+
+ADHESIVE DT BLANK BADGE DYMO 250 ROLL
+
+update hardware set name = "DYMO 450 PLUS TURBO PRINTER" where id = '5';
+
+update hardware set name = "ADHESIVE DT BLANK BADGE DYMO 250 ROLL" where id = '6';
+update hardware set name = "LOGITECH QUICK CAM ORBIT AF WEBCAM V-UCC22" where id = '7';
+update hardware set name = "STOPWARE INC." where id = '8';
+update hardware set name = "HP DL360G7 CTO CHASSIS" where id = '9';
+
+
+update hardware set mfg_id = '' where id = '1';
+update hardware set mfg_id = '' where id = '2';
+update hardware set mfg_id = '' where id = '3';
+update hardware set mfg_id = '' where id = '4';
+update hardware set mfg_id = '' where id = '5';
+update hardware set mfg_id = '10' where id = '6';
+update hardware set mfg_id = '8' where id = '7';
+update hardware set mfg_id = '1' where id = '8';
+update hardware set mfg_id = '4' where id = '9';
+update hardware set mfg_id = '11' where id = '10';
+
+
+update invoiceinfo set invoice_date = '2011-10-06' where id = '1';
+update invoiceinfo set invoice_date = '2011-11-01' where id = '2';
+update invoiceinfo set invoice_date = '2011-10-21' where id = '3';
+update invoiceinfo set invoice_date = '2011-11-14' where id = '4';
+select * from invoiceinfo;
