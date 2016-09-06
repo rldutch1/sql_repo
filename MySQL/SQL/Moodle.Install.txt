@@ -1,0 +1,75 @@
+CREATE USER 'moodle'@'%' IDENTIFIED BY  '***';
+
+GRANT USAGE ON * . * TO  'moodle'@'%' IDENTIFIED BY  '***' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+
+GRANT ALL PRIVILEGES ON  `moodle\_%` . * TO  'moodle'@'%';
+
+
+********
+CREATE USER 'moodle'@'localhost' IDENTIFIED BY  '***';
+
+GRANT USAGE ON * . * TO  'moodle'@'localhost' IDENTIFIED BY  '***' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+
+GRANT ALL PRIVILEGES ON  `moodle\_%` . * TO  'moodle'@'localhost';
+
+
+********
+CREATE USER 'moodle'@'localhost' IDENTIFIED BY  '***';
+
+GRANT USAGE ON * . * TO  'moodle'@'localhost' IDENTIFIED BY  '***' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+
+GRANT ALL PRIVILEGES ON  `moodle\_%` . * TO  'moodle'@'localhost';
+
+********
+REVOKE ALL PRIVILEGES ON  `moodle\_%` . * FROM  'moodle'@'%';
+
+GRANT ALL PRIVILEGES ON  `moodle\_%` . * TO  'moodle'@'%';
+
+********
+REVOKE ALL PRIVILEGES ON  `moodle\_%` . * FROM  'moodle'@'localhost';
+
+GRANT ALL PRIVILEGES ON  `moodle\_%` . * TO  'moodle'@'localhost';
+
+********Moodle Database********
+-- Create user database.
+CREATE DATABASE moodle;
+-- Create local user.
+CREATE USER 'moodle'@'localhost' IDENTIFIED BY 'moodlepassword';
+GRANT ALL PRIVILEGES ON moodle.* TO 'moodle'@'localhost' WITH GRANT OPTION;
+-- Create remote user.
+CREATE USER 'moodle'@'%' IDENTIFIED BY 'moodlepassword';
+GRANT ALL PRIVILEGES ON moodle.* TO 'moodle'@'%' WITH GRANT OPTION;
+-- Tell the server to reload the GRANT TABLES.
+FLUSH PRIVILEGES;
+********Moodle Database End********
+
+The moodle directory:
+	/Library/WebServer/Documents/moodle
+	
+	Permissions on the moodle directory inside the webroot are 775 (see below).
+		drwxrwxr-x  67 root     wheel   2.2K Sep  1 15:44 moodle/
+
+The moodledata directory:
+	/Library/WebServer/Documents/moodle
+	
+	Permissions on the moodledata directory outside the webroot are 775 (see below).
+		drwxrwxr-x   7 root  _www    238B Sep  1 15:42 moodledata/
+
+
+Error:
+	Fatal error: $CFG->dataroot is not configured properly, directory does not exist or is not accessible! Exiting.
+
+Solution:
+	I had to edit config.php and change the following line to point to the moodledata directory.
+	$CFG->dataroot  = '/Library/WebServer/moodledata';
+
+Error:
+	Fatal error: $CFG->wwwroot is not configured! Exiting.
+	
+Solution:
+	$CFG->wwwroot   = 'http://localhost/moodle';
+	
+Another Solution: (Point to the IP address for sites without proper DNS)
+	$CFG->wwwroot   = 'http://xxx.xxx.xxx.xxx/moodle';
+
+
