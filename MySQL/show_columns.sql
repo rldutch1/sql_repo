@@ -1,3 +1,4 @@
+-- http://stackoverflow.com/questions/5941809/include-headers-when-using-select-into-outfile
 -- Show columns
 select column_name
     from information_schema.columns
