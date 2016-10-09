@@ -7,3 +7,4 @@ select column_name
     order by ordinal_position;
 
 -- "describe tablename" also works.
+
