@@ -16,6 +16,11 @@ Specific database and table foreign key query:
 	where TABLE_SCHEMA = "videos" and TABLE_NAME = "testnames1" 
 	and referenced_column_name is not NULL;
 
+use information_schema;
+	select concat(table_name,'.',column_name) as
+	This_DB_Table_and_Column, constraint_name, concat(referenced_table_name,'.',referenced_column_name) as References_This_Table_and_Column from key_column_usage where referenced_column_name is not NULL
+	order by This_DB_Table_and_Column;
+
 alter table TableName add constraint TheConstraintName foreign key (TableNameID) references ForeignTable(id) on update cascade on delete restrict;
 
 Casecade only works if foreign_key_checks is ON. To see this information type:
