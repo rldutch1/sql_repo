@@ -28,9 +28,10 @@
       (SERVICE_NAME = <database service name>)
     )
   )
-AZB1.bdcp.bannerhealth.com =
+servername.domainname.com =
 (DESCRIPTION =
   (ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)
-    (Host=dcmd1vip.bdcp.bannerhealth.com)(Port=1521)))
+    (Host=servername.domainname.com)(Port=1521)))
   (CONNECT_DATA=(SID=AZB1))
 )
+
