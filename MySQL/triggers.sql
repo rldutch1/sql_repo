@@ -1,6 +1,6 @@
 https://www.youtube.com/watch?v=BeG4IHFjqVg
 https://www.youtube.com/watch?v=7dZKJxoGRGI
-Triggers are tied or attached to tables.
+Triggers are tied or attached to tables. This means that the trigger only works on the table your query is running in. If you switch databases the trigger will not appear in another database. 
 
 show triggers;
 drop trigger triggername;
