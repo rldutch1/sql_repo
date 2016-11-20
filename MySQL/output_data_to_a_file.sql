@@ -1,18 +1,32 @@
-/*
-From the mysql command prompt you can create an output file formatted with comma delimiters and fields enclosed by quotes.
+
+-- From the mysql command prompt you can create an output file formatted with comma delimiters and fields enclosed by quotes.
 
 select * into outfile 'outputfilename.txt' fields terminated by ',' optionally enclosed by '"' lines terminated by '\n' from yourtablename where columnname = 'whatever';
 
-The file will be located in the database folder. In my case (Fedora 12) it was located in /var/lib/mysql/play/nfaweapons.txt.
+-- The file will be located in the database folder. In my case (Fedora 12) it was located in /var/lib/mysql/play/nfaweapons.txt.
 
-From outside of the mysql command prompt (ie. the command line) you can also run a query and create an output file with the results of that query.
+-- You can specify where the output file will go:
+SELECT id, 
+   client,
+   project,
+   task,
+   description, 
+   time,
+   date  
+  INTO OUTFILE '/path/to/file.csv' --mysql user must have privileges to the location.
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
+  FROM ts
 
-Create a query that you want to run and save it as an .sql file. This example uses macaddress.sql.
 
-The content of the test.sql file looks like this:
+-- From outside of the mysql command prompt (ie. the command line) you can also run a query and create an output file with the results of that query.
+
+-- Create a query that you want to run and save it as an .sql file. This example uses macaddress.sql.
+
+-- The content of the test.sql file looks like this:
 	select * from tablename;
 
-To run test.sql type one of the following:
+-- To run test.sql type one of the following:
 
 -- Tab delimited output format (default):
 mysql databasename -u username -p < test.sql > output.tab
@@ -47,4 +61,4 @@ select * from tablename order by columnName;
 use database;
 select * from tablename order by columnName;
 
-*/
+

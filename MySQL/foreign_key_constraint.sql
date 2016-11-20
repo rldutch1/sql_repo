@@ -1,3 +1,34 @@
+
+Show foreign key constraints for a table:
+http://stackoverflow.com/questions/4004205/mysql-show-constraints-on-tables-command
+
+show create table xxxxx;
+
+show create table xxxxx\G
+
+All tables foreign key query:
+	use INFORMATION_SCHEMA;
+	select concat(TABLE_SCHEMA,'.',TABLE_NAME,'.',COLUMN_NAME) as This_DB_Table_and_Column, concat(TABLE_SCHEMA,'.',REFERENCED_TABLE_NAME,'.',REFERENCED_COLUMN_NAME) as References_DB_Table_and_Column,CONSTRAINT_NAME from KEY_COLUMN_USAGE where referenced_table_name is not NULL;
+
+Specific database and table foreign key query:
+	use INFORMATION_SCHEMA;
+	select concat(TABLE_NAME,'.',COLUMN_NAME) as This_Table_and_Column,CONSTRAINT_NAME, concat(REFERENCED_TABLE_NAME,'.',REFERENCED_COLUMN_NAME) as References_This_Table_and_Column from KEY_COLUMN_USAGE 
+	where TABLE_SCHEMA = "videos" and TABLE_NAME = "testnames1" 
+	and referenced_column_name is not NULL;
+
+use information_schema;
+	select concat(table_name,'.',column_name) as
+	This_DB_Table_and_Column, constraint_name, concat(referenced_table_name,'.',referenced_column_name) as References_This_Table_and_Column from key_column_usage where referenced_column_name is not NULL
+	order by This_DB_Table_and_Column;
+
+alter table TableName add constraint TheConstraintName foreign key (TableNameID) references ForeignTable(id) on update cascade on delete restrict;
+
+Casecade only works if foreign_key_checks is ON. To see this information type:
+	show variables like 'foreign_key_checks';
+	
+	If you want to see all variables type:
+	show variables;
+
 http://www.mysqltutorial.org/mysql-foreign-key/
 mfg Table (from show create table mfg):
 CREATE TABLE `mfg` (

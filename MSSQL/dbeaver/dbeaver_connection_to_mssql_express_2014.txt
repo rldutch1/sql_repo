@@ -1,0 +1,41 @@
+
+
+Re: SQLExpress
+Postby spenico » Fri May 01, 2015 6:31 pm
+
+You can connect to Microsoft SQLEXPRESS using DBeaver, but you need to change a few settings. I've done this with a SQL Server 2014 SQLEXPRESS database using a Trusted Connection.
+
+Most of this just repeats what is documented by the posts and links on this site, but there are a couple of tweaks. Also, it's updated for the 2014 version of SQLEXPRESS.
+
+In general terms 
+
+Make changes to SQLEXPRESS itself using the Sql Server Configuration Manager tool
+Enable TCP/IP for SQLEXPRESS
+For SQLEXPRESS TCP/IP, clear out the dynamic port and hardcode 1433
+When creating the connection in DBeaver, enter/tweak a parameter or two on the "Driver properties" tab.
+In more detail
+
+The first two items, above (1a and 1b) are set in the Sql Server Configuration Manager tool.
+In that tool, go to:
+SQL Server Network Configuration | Protocols for SQLEXPRESS | TCP/IP
+Enable the TCP/IP protocol in the Properties dialog for TCP/IP. (You can also enable it on the right-click menu.)
+Set the TCP/IP port -- which can only be done in the Properties dialog (i.e., can't do it with just a right-click). 
+On the "IP Addresses" tab of that Properties dialog, I used the IPAll settings at the bottom. Clear out TCP Dynamic Ports, then set TCP Port to 1433.
+After making these changes, I was able to use DBeaver to create either a jTDS or a "Microsoft Driver" connection for my 2014 SQLEXPRESS DB with Trusted Connection.
+
+To create a jTDS connection in DBeaver
+Create a new connection, specifying MS SQL Server | jTDS driver
+Fill out the info on the first (General) tab, complete with User name and Password.
+I was able to enter my User name as just my Windows user name, not domain\username. But domain\username worked too, and that may be required on some networks. (I'm not sure.)
+Go to the "Driver properties" tab and re-specify the DOMAIN and the USER as two separate parameters.
+I did not need to re-specify my PASSWORD on the "Driver properties" tab.
+And just to emphasize where to enter this: it's entered on the "Driver properties" tab -- not in the dialog box you get to by clicking the "Edit Driver Settings" button that's on the General tab.
+Click the "Test Connection..." button to make sure it works, click Next a couple of times, then click Finish.
+To create a "Microsoft Driver" connection in DBeaver
+Create a new connection, specifying MS SQL Server | Microsoft Driver
+Fill out the info on the first (General) tab, without specifying User name and Password (leave them blank).
+Go to the Driver properties tab and set integratedSecurity=true.
+And, once again, just to emphasize where to enter this: it's entered on the "Driver properties" tab -- not in the dialog box you get to by clicking the "Edit Driver Settings" button that's on the General tab.
+Click the "Test Connection..." button to make sure it works, click Next a couple of times, then click Finish.
+Which means, incidentally, that the "Microsoft Driver" connection is better than the jTDS connection because there's no need to change your password in the connection configuration -- and no risk that your domain account will get locked because you've forgotten that you have an out-of-date password.
+

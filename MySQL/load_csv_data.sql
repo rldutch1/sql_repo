@@ -37,3 +37,4 @@ last_update_by varchar(500) null
 
 load data local infile 'allfiles.dat' into table bedrock_csv fields terminated by ',' enclosed by '"' lines terminated by '\n' (audit_type, topic_name, filter_sequence, filter_meaning, filter_type_meaning, filter_name, flex_display, saved_value, description, event_set_name, code_value_id, value_type, value_sequence, value_group_sequence, qualifier,  map_type, mapped_to_code_1, mapped_to_description_1, mapped_to_code_2, mapped_to_description_2, last_update_date_time, last_update_by);
 
+load data infile 'allfiles.dat' replace into table bedrock_csv;

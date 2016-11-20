@@ -1,0 +1,49 @@
+********Moodle Database********
+-- Create user database.
+CREATE DATABASE moodle;
+-- Create local user.
+CREATE USER 'moodle'@'localhost' IDENTIFIED BY 'moodlepassword';
+GRANT ALL PRIVILEGES ON moodle.* TO 'moodle'@'localhost' WITH GRANT OPTION;
+-- Create remote user.
+CREATE USER 'moodle'@'%' IDENTIFIED BY 'moodlepassword';
+GRANT ALL PRIVILEGES ON moodle.* TO 'moodle'@'%' WITH GRANT OPTION;
+-- Tell the server to reload the GRANT TABLES.
+FLUSH PRIVILEGES;
+********Moodle Database End********
+
+The moodle directory:
+	/Library/WebServer/Documents/moodle
+	
+	Permissions on the moodle directory inside the webroot are 775 (see below).
+		drwxrwxr-x  67 root     wheel   2.2K Sep  1 15:44 moodle/
+
+The moodledata directory:
+	/Library/WebServer/Documents/moodle
+	
+	Permissions on the moodledata directory outside the webroot are 775 (see below).
+		drwxrwxr-x   7 root  _www    238B Sep  1 15:42 moodledata/
+
+
+Error:
+	Fatal error: $CFG->dataroot is not configured properly, directory does not exist or is not accessible! Exiting.
+
+Solution:
+	I had to edit config.php and change the following line to point to the moodledata directory.
+	$CFG->dataroot  = '/Library/WebServer/moodledata';
+
+Error:
+	Fatal error: $CFG->wwwroot is not configured! Exiting.
+	
+Solution:
+	$CFG->wwwroot   = 'http://localhost/moodle';
+
+
+I had to use the IP address of Tracy's server in the moodle config.php file:
+	wwwroot = http://76.181.148.117/moodle
+
+sudo apt-get install php5-curl
+sudo service apache2 restart
+
+
+apt-get -y install php5-xmlrpc
+apt-get -y install php5-intl
