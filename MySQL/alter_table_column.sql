@@ -38,7 +38,7 @@ You will need to adjust the permissions after that.
 
 For scripting in a shell, you can use either of the following:
 
-mysql -u username -ppassword old_db -sNe 'show tables' | while read table; \ 
+mysql -u username -ppassword old_db -sNe 'show tables' | while read table; \
     do mysql -u username -ppassword -sNe "rename table old_db.$table to new_db.$table"; done
 Or
 
@@ -48,4 +48,11 @@ Notes: there is no space between the option -p and the password. If your databas
 Also, if you have stored procedures, you can copy them afterwards:
 
 mysqldump -R old_db | mysql new_db
+
+-- Remove the primary key:
+-- Without an index, maintaining an autoincrement column becomes too expensive, that's why MySQL requires an autoincrement column to be a leftmost part of an index.
+-- You should remove the autoincrement property before dropping the key:
+
+ALTER TABLE tablename MODIFY id INT NOT NULL;
+ALTER TABLE tablename DROP PRIMARY KEY;
 
