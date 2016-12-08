@@ -11,7 +11,7 @@
 /*****************************************************/
 /* I didn't need this in AZTRN:                      */
 /* free define oraclesystem go                       */
-/* define oraclesystem 'custom/perf0rmance@aztrn' go */
+/* define oraclesystem 'custom/xxxxxxxxxxx@aztrn' go */
 /*****************************************************/
 
 insert into custom.cust_hcc_documentation chd
