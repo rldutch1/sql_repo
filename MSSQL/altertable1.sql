@@ -35,9 +35,7 @@ The SQL Server (Transact-SQL) ALTER TABLE statement is used to add, modify, or d
 --Let's look at an example that shows how to add multiple columns to a table in SQL Server using the ALTER TABLE statement.
 --For example:
 
-	ALTER TABLE employees
-  ADD last_name VARCHAR(50),
-      first_name VARCHAR(40);
+	ALTER TABLE employees ADD last_name VARCHAR(50), first_name VARCHAR(40);
 --This SQL Server ALTER TABLE example will add two columns, last_name as a VARCHAR(50) field and first_name as a VARCHAR(40) field to the employees table.
 
 --Modify column in table
