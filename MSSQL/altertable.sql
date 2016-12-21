@@ -36,19 +36,19 @@
 	GO
 
 
-	--* Add a PRIMARY KEY identity column.
+--* Add a PRIMARY KEY identity column.
 	ALTER TABLE tablename ADD
 	newcolumn INT IDENTITY
 	CONSTRAINT newcolumn_pk PRIMARY KEY,
 
-	--* Add a column that references another column in the same table.
+--* Add a column that references another column in the same table.
 	ALTER TABLE tablename ADD
 	newcolumn INT NULL
 	CONSTRAINT newcolumn_fk
 	REFERENCES tablename(columnname),
 
-	--* Add a column with a constraint to enforce that
-	--* nonnull data is in a valid telephone number format.
+--* Add a column with a constraint to enforce that
+--* nonnull data is in a valid telephone number format.
 	ALTER TABLE tablename ADD
 	newcolumn VARCHAR(16) NULL
 	CONSTRAINT newcolumn_chk
@@ -57,7 +57,7 @@
 	newcolumn LIKE
 	'([0-9][0-9][0-9]) [0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]'),
 
-	--* Add a nonnull column with a default.
+--* Add a nonnull column with a default.
 	ALTER TABLE tablename ADD
 	newcolumn DECIMAL(3,3)
 	CONSTRAINT newcolumn_default
@@ -68,3 +68,6 @@
 	DROP TABLE tablename ;
 	GO
 
+--* Rename a column.
+	exec sp_rename 'thetablename.theoldcolumnname', 'thenewcolumnname', 'column';
+	--You will probably see a warning message that renaming a table can break scripts and stored procedures.
