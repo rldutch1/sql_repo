@@ -72,7 +72,7 @@ The SQL Server (Transact-SQL) ALTER TABLE statement is used to add, modify, or d
 --Syntax
 --The syntax to rename a column in an existing table in SQL Server (Transact-SQL) is:
 
-	sp_rename 'table_name.old_column_name', 'new_column_name', 'COLUMN';
+	exec sp_rename 'table_name.old_column_name', 'new_column_name', 'COLUMN';
 
 --Example
 --Let's look at an example that shows how to rename a column in a table in SQL Server using sp_rename.
