@@ -54,7 +54,7 @@ insert into uspresidents (firstname, middlename, lastname, birth, death, preside
 ("James", "Earl", "Carter, Jr.", "1924-10-01", "0001-01-01", "1997-01-20", "1981-01-20", "Georgia", "Democrat", "Walter Mondale"),
 ("Ronald", "Wilson", "Reagan", "1911-02-06", "2004-06-05", "1981-01-20", "1989-01-20", "California", "Republican", "George H. W. Bush"),
 ("George", "Herbert Walker", "Bush", "1924-06-12", "0001-01-01", "1989-01-20", "1993-01-20", "Texas", "Republican", "Danforth Quayle"),
-("William", "Jefferson", "Clinton", "1946-8-19", "0001-01-01", "1993-01-20", "2001-01-20", "Arkansas", "Democrat", "Albert Gore"),
+("William", "Jefferson", "Clinton", "1946-08-19", "0001-01-01", "1993-01-20", "2001-01-20", "Arkansas", "Democrat", "Albert Gore"),
 ("George", "Walker", "Bush", "1946-07-06", "0001-01-01", "2001-01-20", "2009-01-20", "Texas", "Republican", "Richard Cheney"),
 ("Barack", "Hussein", "Obama II", "1961-08-04", "0001-01-01", "2009-01-20", "2016-01-20", "Illinois", "Democrat", "Joseph Biden"),
 ("Donald", "John", "Trump", "1946-06-14", "0001-01-01", "2016-01-20", "0001-01-01", "New York", "Republican", "Michael Pence");
