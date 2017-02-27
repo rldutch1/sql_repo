@@ -10,4 +10,4 @@ SELECT (CAST(CAST Col1 AS int) AS varchar(length)) AS Col1
 
 In this example, the ID column is an integer and I needed it to be a string before I concatinated the two columns.
 There is no "Concat" feature in MSSQL before version 2012. Below is how to concatinate two columns.
-select (cast(id as varchar(200)) + ' - ' + dta) from dta_search;
+select (cast(id as varchar(200)) + ' - ' + dta) as "Concatinated" from dta_search;
