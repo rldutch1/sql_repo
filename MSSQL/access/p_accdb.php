@@ -12,21 +12,13 @@
 try {
    // Connect
    //$handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb)};Dbq=.\db\icr.accdb;Uid=Admin");
-   $handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:/Users/rlholland/Downloads/__DBTesting/Database1.accdb;Uid=rlholland");
+   $handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:/Users/rlholland/Desktop/Github/sql_repo/MSSQL/access/Database1.accdb;Uid=rlholland");
     /*** The SQL SELECT statement ***/
-    $sql = "SELECT * FROM person";
-    foreach ($handler->query($sql) as $row)
-        {
-        print $row['firstname'] .' - '. $row['lastname'] .' - '. $row['zipcode'] . '
-';
-}
+    $sql=$handler->query("SELECT * FROM person;");
 
-    /*** close the database connection ***/
-    $handler = null;
-}
 
 //ONE: Output each column as row of data.
-//	while($r = $query0->fetch()) {
+//	while($r = $sql->fetch()) {
 //		echo $r[1]
 //		, ' ', $r[2]
 //		, ' ', $r[3]
@@ -52,28 +44,33 @@ try {
 //	}
 
 //TWO: Prints one array.
-//	$r = $query0->fetch(PDO::FETCH_ASSOC); //Will fetch the associative array only.
+//	$r = $sql->fetch(PDO::FETCH_ASSOC); //Will fetch the associative array only.
 //	echo '<pre>', print_r($r), '</pre>';
 
 //THREE: Column 1 followed by dashes.
-//	foreach($query0 as $r){
+//	foreach($sql as $r){
 //		echo $r[0] . "-----";
 //
 //	}
 
 //FOUR: Not sure what I was doing here.
-//	foreach($query0 as $key => $r){
+//	foreach($sql as $key => $r){
 //		$out = array_values($r);
 //		echo json_encode($out);
 //}
 
 //FIVE: Proper JSON.
-	$r = $query0->fetchAll(PDO::FETCH_ASSOC);
+	$r = $sql->fetchAll(PDO::FETCH_ASSOC);
 	//echo '<pre>', print_r($r), '</pre>';
 	echo json_encode($r);
+
+/*** close the database connection ***/
+    $handler = null;
+}
 
 catch(PDOException $e)
     {
     echo $e->getMessage();
     }
+
 ?>

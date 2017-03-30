@@ -1,4 +1,13 @@
 <?php
+/*
+*Program Author: Robert Holland
+*Program Name: p_accdb1.php
+*Creation Date:  Wednesday, March 29, 2017  17:06:37
+*Last Modified:
+*Copyright: (c)  Wednesday, March 29, 2017
+*Purpose: Connect to Mircosoft Access Database using PHP PDO.
+*Request #:
+*/
 try{
    // Connect
    //$handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb)};Dbq=.\db\icr.accdb;Uid=Admin");
