@@ -5,8 +5,8 @@
 *Creation Date:  Wednesday, March 29, 2017  17:06:37
 *Last Modified:
 *Copyright: (c)  Wednesday, March 29, 2017
-*Purpose:
-*Request #:
+*Purpose: Connect to Microsoft Access database using PHP PDO.
+*Source: http://stackoverflow.com/questions/13787686/accdb-and-pdo-php-connection-error
 */
 
 try {

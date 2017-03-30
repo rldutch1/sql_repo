@@ -6,7 +6,7 @@
 *Last Modified:
 *Copyright: (c)  Wednesday, March 29, 2017
 *Purpose: Connect to Mircosoft Access Database using PHP PDO.
-*Request #:
+*Source: http://stackoverflow.com/questions/13787686/accdb-and-pdo-php-connection-error
 */
 try{
    // Connect
@@ -17,7 +17,9 @@ try{
     $sql = "SELECT * FROM person";
     foreach ($handler->query($sql) as $row)
         {
-        print $row['firstname'] .' - '. $row['lastname'] .' - '. $row['zipcode'] . '
+//        print $row['firstname'] .' - '. $row['lastname'] .' - '. $row['zipcode'] . '
+//';
+        print $row[1] .' - '. $row[1] .' - '. $row[2] . '
 ';
         }
 
