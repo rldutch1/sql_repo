@@ -1,7 +1,7 @@
 <?php
 /*
 *Program Author: Robert Holland
-*Program Name: p_accdb.php
+*Program Name: database1_b.accdb.php
 *Creation Date:  Wednesday, March 29, 2017  17:06:37
 *Last Modified:
 *Copyright: (c)  Wednesday, March 29, 2017
@@ -11,8 +11,9 @@
 
 try {
    // Connect
-   //$handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb)};Dbq=.\db\icr.accdb;Uid=Admin");
-   $handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:/Users/rlholland/Desktop/Github/sql_repo/MSSQL/access/Database1.accdb;Uid=rlholland");
+   //$handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=.\db\icr.accdb;Uid=Admin");
+   //$handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:/Users/rlholland/Desktop/Github/sql_repo/MSSQL/access/Database1.accdb;Uid=rlholland");
+   $handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:/Users/rlholland/Desktop/Github/sql_repo/MSSQL/access/Database1.accdb;");
     /*** The SQL SELECT statement ***/
     $sql=$handler->query("SELECT * FROM person;");
 
