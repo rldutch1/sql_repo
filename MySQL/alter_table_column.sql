@@ -4,6 +4,9 @@ ALTER TABLE tablename CHANGE column1 column1newname MEDIUMTEXT NOT NULL
 -- ALTER THE COLUMN DEFINITION
 alter table tablename modify column1 timestamp not null default current_timestamp on update current_timestamp
 
+-- ALTER TABLE COMMENT
+ALTER TABLE  `weapons` CHANGE  `active_ind`  `active_ind` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '1 Disposed, 0 Not Disposed'
+
 /*
 		Note: Everything after the column name is ths same as
 		creating a column.
