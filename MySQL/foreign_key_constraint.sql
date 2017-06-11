@@ -105,21 +105,21 @@ Or you can add the unique constraint when you create the table:
 Simple foreign key constraint exercise:
 Source: (https://www.youtube.com/watch?v=eTK9TLciRpU) 
 
-First table is created here:
+-- First table is created here:
 	create table student(
 	stud_id int auto_increment,
 	name varchar(100) not null,
 	age int not null,
 	primary key(stud_id));
 
-Second table is created and references a column in the first table:
+-- Second table is created and references a column in the first table:
 	create table enrol(
 	rol_no int not null,
 	stud_id int not null,
 	primary key(rol_no),
 	foreign key(stud_id) references student(stud_id));
 
-The foreign key can also be added after the table has been created:
-The constraint name will be automatically created.
+-- The foreign key can also be added after the table has been created:
+-- The constraint name will be automatically created.
 	alter table enrol add foreign key(stud_id) references student(stud_id);
 	
