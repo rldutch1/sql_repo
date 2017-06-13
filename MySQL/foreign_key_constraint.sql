@@ -123,3 +123,22 @@ Source: (https://www.youtube.com/watch?v=eTK9TLciRpU)
 -- The constraint name will be automatically created.
 	alter table enrol add foreign key(stud_id) references student(stud_id);
 	
+USE information_schema;
+ 
+SELECT table_name
+FROM referential_constraints
+WHERE constraint_schema = 'database_name' AND
+      referenced_table_name = 'parent_table' AND
+      delete_rule = 'CASCADE';
+      
+USE information_schema;
+ 
+SELECT table_name
+FROM referential_constraints
+WHERE constraint_schema = 'fk_test' AND
+      referenced_table_name = 'buildings' AND
+      delete_rule = 'CASCADE';
+
+
+MySQL on Delete Cascade deletes data from Multiple Tables
+	http://www.mysqltutorial.org/mysql-on-delete-cascade/
