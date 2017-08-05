@@ -60,3 +60,10 @@ The last column now looks like this.
  +—-+———-+————-+
  20 rows in set (0.00 sec)
 */
+
+This is a query that I used to sequentially rename some video files so they would be in the correct order. I accidentally numbered them 1 to 32 and they were in alphabetical order instead of chronological order. I had to renumber them so they would be in chronolocial order:
+
+I used the concat and substring_index functions:
+
+	select concat('mv ',oldname,' ',newnum,'.',substring_index(oldname,'.',-2)) as Rename_Script from v_rename;
+
