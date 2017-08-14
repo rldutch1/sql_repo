@@ -2,3 +2,5 @@
 
 show table status;
 SHOW WARNINGS
+Can also type the word "status"
+

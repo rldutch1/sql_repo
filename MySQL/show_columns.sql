@@ -8,3 +8,7 @@ select column_name
 
 -- "describe tablename" also works.
 
+SELECT `COLUMN_NAME`
+FROM `INFORMATION_SCHEMA`.`COLUMNS`
+WHERE `TABLE_SCHEMA`='hillc1'
+AND `TABLE_NAME`='ffl_book1';
