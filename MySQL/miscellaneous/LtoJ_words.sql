@@ -665,3 +665,4 @@ insert into ltoj (word, unit, week) values ('prepaid',3,5);
 insert into ltoj (word, unit, week) values ('discount',3,5);
 insert into ltoj (word, unit, week) values ('choice',3,5);
 insert into ltoj (word, unit, week) values ('snowplow',3,5);
+
