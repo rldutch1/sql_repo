@@ -19,3 +19,7 @@ KEY_COLUMN_USAGE KCU
 join REFERENTIAL_CONSTRAINTS RC on (rc.CONSTRAINT_NAME= kcu.CONSTRAINT_NAME)
 where kcu.referenced_table_name is not NULL order by This_DB_Table_and_Column;
 -- The order by clause may not work on all DB's. If there is an error remove it and run again.
+-- On Tracy's Ubuntu MySQL server I got this error message: Unknown column 'kcu.TABLE_SCHEMA' in 'field list'
+
+-- This is a quick way to view all of the contraints:
+SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS
