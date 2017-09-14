@@ -18,7 +18,11 @@ try {
    $handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=//phx00027/unix/CSM/Database Management/CIDB.MDB;");
    /*** The SQL SELECT statement ***/
    //$sql=$handler->query("SELECT * FROM person;");
-   $sql=$handler->query("select * from euc_pkgdefinition where pkgname = 'Nexus -- Orders: Privilege Exceptions Correction';");
+   //$sql=$handler->query("select pkgNum, pkgversion, pkgname, updt_dt_tm from euc_pkgdefinition where pkgname = 'Nexus -- Orders: Privilege Exceptions Correction';");
+
+   //The joins do not seem to be working:
+   //$static_content_url=$handler->query("select ev.StaticContentServiceURL, ev.EnvName from euc_env ev order by ev.StaticContentServiceURL;");
+   //$package_num_lookup=$handler->query("select evp.PkgNum, ev.EnvName, evp.InstallDate, epd.PkgName from euc_env ev join euc_envpkg evp on (ev.env_id = evp.env_id) join euc_pkgdefinition epd on (evp.pkgnum = epd.pkgnum) where evp.PkgNum = 78242 order by evp.PkgNum, ev.EnvName;");
 
 //ONE: Output each column as row of data.
 //	while($r = $sql->fetch()) {
@@ -63,9 +67,20 @@ try {
 //}
 
 //FIVE: Proper JSON.
-	$r = $sql->fetchAll(PDO::FETCH_ASSOC);
+//	$r = $sql->fetchAll(PDO::FETCH_ASSOC);
+//	//echo '<pre>', print_r($r), '</pre>';
+//	echo json_encode($r);
+
+
+//static_content_url: This works.
+	$r = $static_content_url->fetchAll(PDO::FETCH_ASSOC);
 	//echo '<pre>', print_r($r), '</pre>';
 	echo json_encode($r);
+
+//package_num_lookup: The joins do not seem to be working:
+//	$r = $package_num_lookup->fetchAll(PDO::FETCH_ASSOC);
+//	//echo '<pre>', print_r($r), '</pre>';
+//	echo json_encode($r);
 
 /*** close the database connection ***/
     $handler = null;
