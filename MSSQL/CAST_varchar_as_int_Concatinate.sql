@@ -14,4 +14,14 @@ select (cast(id as varchar(200)) + ' - ' + dta) as "Concatinated" from dta_searc
 
 
 -- This method uses the plus sign without casting. It is the old school way that I did it many moons ago:
-select [columnname], 'blah', 'blah', 'blah', [columnname] from vw_tablename order by columnname;
+SELECT ('Hello ' + LastName + ', ' + FirstName) AS Name
+FROM Person
+ORDER BY LastName ASC, FirstName ASC;
+
+-- Example using convert so that the data types are the same during concatination.
+select 'update into custom.mig_meds set medication_name = "' + rtrim(ltrim([medication_name])) +
+'", sig = "' + rtrim(ltrim(convert(varchar(999),[SIG]))) +
+'", request_dispense_amount = "' + rtrim(ltrim(convert(varchar(50),[request_dispense_amount]))) +
+'", request_dispense_units = "' + rtrim(ltrim(convert(varchar(50),[request_dispense_units])))
+as UPDATE_QUERY
+from vw_update_cust_mig_meds_cernercolumns where filler_order_number = '99110485';
