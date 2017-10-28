@@ -13,6 +13,10 @@
 	alter table tablename add columnname varchar(20) null
     constraint constraintname unique;
 
+--* Adding a unique constraint to an existing column.
+	alter table tablename add constraint constraintname unique([column name]);
+	alter table dbo.MasterMedlist_20170929_A add constraint ordmed_id unique([order med id]);
+
 --* Dropping a contraint:
 	alter table tablename drop constraint constraintname;
 
