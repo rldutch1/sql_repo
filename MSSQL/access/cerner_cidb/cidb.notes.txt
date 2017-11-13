@@ -1,0 +1,45 @@
+
+
+
+
+[Env_id]
+,[EnvGUID]
+,[EnvName]
+,[StaticContentServiceURL]
+  FROM [cidb_rh].[dbo].[EUC_Env]
+
+SELECT [Env_id]
+      ,[PkgNum]
+      ,[PkgVersion]
+      ,[InstallDate]
+      ,[Migration_flag]
+      ,[UPDT_CNT]
+      ,[UPDT_DESCRIPTION]
+      ,[UPDT_DT_TM]
+  FROM [cidb_rh].[dbo].[EUC_EnvPkg]
+  where pkgnum = 
+
+select 
+ev.env_id,
+from
+cidb_rh.dbo.euc_env ev
+join
+cidb_rh.dbo.euc_envpkg evp on (ev.env_id = evp.env_id)
+
+
+select distinct(ev.StaticContentServiceURL), ev.EnvName from cidb_rh.dbo.euc_env ev order by ev.StaticContentServiceURL
+
+select 
+evp.PkgNum,
+ev.EnvName,
+evp.InstallDate,
+epd.PkgName
+from
+cidb_rh.dbo.euc_env ev
+join
+cidb_rh.dbo.euc_envpkg evp on (ev.env_id = evp.env_id)
+join
+cidb_rh.dbo.euc_pkgdefinition epd on (evp.pkgnum = epd.pkgnum)
+where evp.PkgNum = 78242
+order by evp.PkgNum, ev.EnvName
+
