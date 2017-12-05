@@ -1,0 +1,3 @@
+To use PHP on an IIS 7 server to connect to an Access database, you will need to install the Microsoft Access Database Engine 2010 Redistributable package. 
+
+
