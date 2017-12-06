@@ -9,11 +9,12 @@
 *Source: http://stackoverflow.com/questions/13787686/accdb-and-pdo-php-connection-error
 */
 
+
 try {
    // Connect
    //$handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=.\db\icr.accdb;Uid=Admin");
    //$handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:/Users/rlholland/Desktop/Github/sql_repo/MSSQL/access/Database1.accdb;Uid=rlholland");
-   $handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=C:/Users/rlholland/Desktop/Github/sql_repo/MSSQL/access/Database1.accdb;");
+   $handler = new PDO("odbc:Driver={Microsoft Access Driver (*.mdb, *.accdb)};Dbq=./database1.accdb;");
     /*** The SQL SELECT statement ***/
     //$sql=$handler->query("SELECT * FROM person;");
     $sql=$handler->query("SELECT * FROM vehicle;");
