@@ -9,7 +9,7 @@
 // Purpose: Display the databases on MSSQL Server.
 // ----------------------------------------------------------------------------
 
-$handler = new PDO("sqlsrv:server=backup; Database=master", "sa", "Holland");
+$handler = new PDO("sqlsrv:server=backup; Database=master", "sa", "rldutch1");
 
 	if($handler) {
 		echo "Connection established.<br />";
