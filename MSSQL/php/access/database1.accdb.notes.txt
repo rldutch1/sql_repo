@@ -1,0 +1,13 @@
+Two tables:
+	Person Table Rows:
+		id
+		firstname
+		lastname
+		zipcode
+
+	Vehicle Table Rows:
+		id
+		make
+		model
+		yearmade
+
