@@ -1,0 +1,45 @@
+--Create a connection from Visual Studio 2010 to Microsoft Access 2010 https://www.youtube.com/watch?v=X4yp2_wfGO0
+-- select * from EUC_Admin;
+-- select * from EUC_Baseline;
+-- select * from EUC_BaselineDMNameValues;
+-- select * from EUC_BaselineProdCds;
+-- select * from EUC_Comp;
+-- select * from EUC_DistributedWh;
+-- select * from EUC_DMDnsRecord;
+-- select * from EUC_DMHostDevice;
+-- select * from EUC_DMSvcConfig;
+-- select * from EUC_Domain;
+-- select * from EUC_DomainNode; /*Has location of certemp directory for each domain.*/
+-- select * from EUC_Env; /*euc_env.env_id = euc_envpkg.env_id (euc_env.envname)*/
+-- select * from EUC_EnvBEPkgDir;
+-- select * from EUC_EnvComp;
+-- select * from EUC_EnvCompPkg;
+-- select * from EUC_EnvironmentWarehouse;
+-- select * from EUC_EnvironmentWarehouseAttributes;
+-- select * from EUC_EnvMigration;
+-- select * from EUC_EnvPkg;
+-- select * from EUC_EnvServer;
+-- select * from EUC_EnvStepTiming;
+-- select * from EUC_Node; /*euc_node.node_id = euc_domain.dbhostnode_id*/
+-- select * from EUC_Pkg; /*euc_pkg.pkgnum and euc_pkg.pkgversion*/
+-- select * from EUC_PkgComp;
+-- select * from EUC_PkgCompDM;
+-- select * from EUC_PkgCompServer;
+-- select * from EUC_PkgDefinition; /*euc_pkgdefinition.pkgnum, euc_pkgdefinition.pkgversion, euc_pkgdefinition.pkgname, euc_pkgdefinition.pkgtypecd*/
+-- select * from EUC_PkgDefRelease;
+-- select * from EUC_PkgSatisfy; /*euc_pkgsatisfy.pkgnum, euc_pkgsatisfy.pkgsatisfiesnum*/
+-- select * from EUC_PkgServer;
+-- select * from EUC_PkgType; /*euc_pkgtype.pkgtypecd = euc_pkgdefinition.pkgtypecd, euc_pkgtype.pkgtypedescription*/
+-- select * from EUC_Plan;
+-- select * from EUC_PlanPhase;
+-- select * from EUC_PlanPkg;
+-- select * from EUC_PlanStep;
+-- select * from EUC_PlanStepTiming;
+-- select * from EUC_Release; /*select * from EUC_Release where release_display like 'MPage%';*/
+-- select * from EUC_SharedLibrary;
+-- select * from EUC_StepAction;
+-- select * from EUC_TempGeneric;
+-- select * from EUC_TimingData;
+-- select * from EUC_UnmetEnforcedDependency;
+-- select * from GreatestPackageVersions; /*greatestpackageversion.pkgnum, greatestpackageversion.pkgversion*/
+--
