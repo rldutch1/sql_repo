@@ -15,3 +15,14 @@ INSERT INTO foo (id,text)
     VALUES(NULL,'filename');         # generate ID by inserting NULL
 INSERT INTO foo2 (id,foo_id,text)
     VALUES(NULL,LAST_INSERT_ID(),'last_insert_id.sql');  # use ID in second table
+
+
+-- Using PDO:
+-- https://stackoverflow.com/questions/10680943/pdo-get-the-last-id-inserted
+$stmt = $db->prepare("...");
+$stmt->execute();
+$id = $db->lastInsertId();
+If you want to do it with SQL instead of the PDO API, you would do it like a normal select query:
+
+$stmt = $db->query("SELECT LAST_INSERT_ID()");
+$lastId = $stmt->fetchColumn();
