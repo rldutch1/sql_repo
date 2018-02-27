@@ -1,3 +1,7 @@
+See all posts from a particular author:
+  http://www.robholland.com/?author=2
+
+
 -- Find all Wordpress posts where comments are allowed.
 SELECT *
 FROM  xx_posts
