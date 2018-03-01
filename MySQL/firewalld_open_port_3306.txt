@@ -1,0 +1,17 @@
+Fedora: Add New Rule to Firewalld
+  firewall-cmd --permanent --zone=public --add-service=mysql
+    ## OR ##
+  firewall-cmd --permanent --zone=public --add-port=3306/tcp
+
+Restart firewalld service:
+  systemctl restart firewalld.service
+
+Old school method:
+  Edit: etc/sysconfig/iptables
+  Add: -A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT
+  Run: service iptables restart
+    ## OR ##
+    /etc/init.d/iptables restart
+
+Test remote connection:
+  mysql -h RemoteServerName -u myusername -p
