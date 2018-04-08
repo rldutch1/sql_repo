@@ -16,6 +16,7 @@
 --* Adding a unique constraint to an existing column.
 	alter table tablename add constraint constraintname unique([column name]);
 	alter table dbo.MasterMedlist_20170929_A add constraint ordmed_id unique([order med id]);
+	alter table ecoach add constraint rh_updt_dt_tm default getdate() for updt_dt_tm; --Column has to be datetime, cannot be timestamp.
 
 --* Dropping a contraint:
 	alter table tablename drop constraint constraintname;
