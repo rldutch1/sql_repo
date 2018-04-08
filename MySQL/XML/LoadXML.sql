@@ -14,5 +14,5 @@ create table xmlimport (id int(11) unsigned auto_increment primary key
 ,start_time varchar(15) not null
 ,end_time varchar(15) not null
 ,employee_category varchar(100)
-) engine=myisam;
+) engine=innodb;
 */
