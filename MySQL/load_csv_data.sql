@@ -43,3 +43,55 @@ load data infile 'allfiles.dat' replace into table bedrock_csv;
 -- Using the local keyword helped me get past the error message: "The MySQL server is running with the --secure-file-priv option so it cannot execute this statement".
 -- https://stackoverflow.com/questions/32737478/how-should-i-tackle-secure-file-priv-in-mysql
 load data local infile 'US_States.csv' into table us_states fields terminated by '|' lines terminated by '\n' (state,abbreviation,capital,largest_city,established,population,sq_mi,sq_km,land_area_mi,land_area_km,water_area_mi,water_area_km,representatives);
+
+/*Another example:
+I was stuck on a problem where the ImportXML3.xml file would not get imported into the database because
+the XML tag names were in different case on some of the lines. Once I made them the same case it was imported.
+--
+This online link was helpful. http://dev.mysql.com/doc/refman/5.5/en/load-xml.html
+This statement supports three different XML formats:
+
+Column names as attributes and column values as attribute values:
+  <row column1="value1" column2="value2" .../>
+
+Column names as tags and column values as the content of these tags:
+  <row>
+    <column1>value1</column1>
+    <column2>value2</column2>
+    </row>
+
+Column names are the name attributes of <field> tags, and values are the contents of these tags:
+  <row>
+    <field name='column1'>value1</field>
+    <field name='column2'>value2</field>
+    </row>
+This is the format used by other MySQL tools, such as mysqldump.
+
+All three formats can be used in the same XML file; the import routine automatically detects the format for each row and interprets it correctly. Tags are matched based on the tag or attribute name and the column name.
+*/
+
+LOAD XML LOCAL INFILE 'ImportXML3.xml'
+INTO TABLE xmlimport3
+ROWS IDENTIFIED BY '<myfields>';
+
+/*The ImportXML3.xml file looks like this:
+<rlh>
+<myfields><lastname>firstname01</lastname><firstname>lastname01</firstname></myfields>
+<myfields><lastname>firstname02</lastname><firstname>lastname02</firstname></myfields>
+<myfields><lastname>firstname03</lastname><firstname>lastname03</firstname></myfields>
+<myfields><lastname>firstname04</lastname><firstname>lastname04</firstname></myfields>
+<myfields><lastname>firstname05</lastname><firstname>lastname05</firstname></myfields>
+<myfields><lastname>firstname06</lastname><firstname>lastname06</firstname></myfields>
+<myfields><lastname>firstname07</lastname><firstname>lastname07</firstname></myfields>
+<myfields><lastname>firstname08</lastname><firstname>lastname08</firstname></myfields>
+<myfields><lastname>firstname09</lastname><firstname>lastname09</firstname></myfields>
+<myfields><lastname>firstname10</lastname><firstname>lastname10</firstname></myfields>
+<myfields><lastname>firstname11</lastname><firstname>lastname11</firstname></myfields>
+<myfields><lastname>firstname12</lastname><firstname>lastname12</firstname></myfields>
+<myfields><lastname>firstname13</lastname><firstname>lastname13</firstname></myfields>
+<myfields><lastname>firstname14</lastname><firstname>lastname14</firstname></myfields>
+<myfields><lastname>firstname15</lastname><firstname>lastname15</firstname></myfields>
+<myfields><lastname>firstname16</lastname><firstname>lastname16</firstname></myfields>
+<myfields><lastname>firstname17</lastname><firstname>lastname17</firstname></myfields>
+</rlh>
+*/
