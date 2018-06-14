@@ -103,8 +103,8 @@ Example of CCL that inserts data into table from DVDev.
 
 Insert using execute from DVDev:
 free define oraclesystem go ;
-define oraclesystem 'custom/perf0rmance@prod2' go ;@prod2 ;
-execute 1_gic_post_hcc_doc ^MINE^,^Documented in Encounter^,^Psychiatric Condition^,^^,^102406222^,^button^,^39596649^ go
+define oraclesystem 'custom/password@domainname' go ; ;
+execute 1_gic_post_hcc_doc ^MINE^,^Documented in Encounter^,^Psychiatric Condition^,^^,^123456789^,^button^,^12345678^ go
 
 /*INSERT FROM PIPE DELIMITED CSV FILE (BPME_a_count_500_1000.dat is the csv file)*/
 bh_mig_med_test_epic "mine","BPME_a_count_500_1000.dat","EPICBUMCT","1000" go
