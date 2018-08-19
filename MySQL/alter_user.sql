@@ -67,3 +67,7 @@ ERROR 1820 (HY000): You must reset your password using ALTER USER statement befo
   	REQUIRE SSL WITH MAX_CONNECTIONS_PER_HOUR 20;
 
 -- http://dev.mysql.com/doc/refman/5.7/en/alter-user.html
+
+-- Lock User Account on MySQL 8.0.x.x.:
+UPDATE `user` SET `account_locked` = 'Y' WHERE `user`.`Host` = 'localhost' AND `user`.`User` = 'robdba5';
+
