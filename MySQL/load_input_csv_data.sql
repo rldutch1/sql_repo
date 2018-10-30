@@ -18,6 +18,9 @@ mysql> show global variables like 'local_infile';
 +---------------+-------+
 1 row in set (0.00 sec)
 
+Afterward, you will have to start the MySQL client with:
+/usr/local/mysql/bin/mysql -u USERNAME -p --local-infile DATABASENAME
+Source: https://stackoverflow.com/questions/10762239/mysql-enable-load-data-local-infile
 
 -- From the MySQL command prompt.
 -- It is easier to have the file you want to import located in the same directory where you start mysql. Then run load data local infile once you log in.
