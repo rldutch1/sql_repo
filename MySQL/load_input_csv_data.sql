@@ -1,3 +1,24 @@
+MySQL 8.0 has the load data local_infile option off by default. You can enable it by logging into the MySQL server and running:
+mysql> show global variables like 'local_infile';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| local_infile  | OFF   |
++---------------+-------+
+1 row in set (0.01 sec)
+
+mysql> set global local_infile = true;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> show global variables like 'local_infile';
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| local_infile  | ON    |
++---------------+-------+
+1 row in set (0.00 sec)
+
+
 -- From the MySQL command prompt.
 -- It is easier to have the file you want to import located in the same directory where you start mysql. Then run load data local infile once you log in.
 -- I loaded the exported Bedrock .csv files into a database using the following:
