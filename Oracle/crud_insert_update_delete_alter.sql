@@ -56,6 +56,9 @@ ASSESS_POSTED_IND                                  NUMBER
  
 SQL> oragen3 'custom.cust_hcc_documentation' go
 
+alter table cust_samt.cust_hcc_preferences modify (preferences_value varchar(355)) go;
+oragen3 'cust_samt.cust_hcc_preferences' go
+
 
 /*DROP*/
 DROP CCLUSER PKSLY go
@@ -146,7 +149,7 @@ update into ce_string_result
 	where event_id = 23794802910.00 go
 commit go
 
-Update statement I ran in AZB, CERT1, and PROD for Donna Barger on 20 Feb 2017 (AZB), 7 Mar 2017 (CERT1 and PROD).
+update statement I ran in AZB, CERT1, and PROD for Donna Barger on 20 Feb 2017 (AZB), 7 Mar 2017 (CERT1 and PROD).
 	update into nomenclature   n
 	set n.end_effective_dt_tm = sysdate-1
 	, n.updt_dt_tm = sysdate
@@ -238,6 +241,10 @@ and cv.code_set = 16529
 go
 commit
 go
+
+update into cust_samt.cust_hcc_preferences
+set preference_value = "\\\\samtaznas\\samtaz\\P1805\\winintel\\static_content\\custom_mpage_content\\custom-components\\js\\ABC\\"
+where preference_id = 66.00 go;
 
 /*SELECT INTO FILENAME*/
 select into value("ccluserdir:test.txt")
