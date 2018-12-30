@@ -1,0 +1,19 @@
+wget -c https://dev.mysql.com/get/mysql-apt-config_0.8.10-1_all.deb
+sudo dpkg -i mysql-apt-config_0.8.10-1_all.deb
+sudo apt -y update
+sudo apt -y install mysql-server
+sudo mysql_secure_installation
+sudo systemctl status mysql
+sudo systemctl enable mysql
+
+I got a message telling me
+E: Package 'libmysqlclient18' has no installation candidate
+so I installed libmysqlclient21 instead.
+
+sudo apt -y install mysql-workbench-community libmysqlclient21
+
+
+
+
+https://www.tecmint.com/install-mysql-8-in-ubuntu/
+https://dev.mysql.com/doc/apis-php/en/
