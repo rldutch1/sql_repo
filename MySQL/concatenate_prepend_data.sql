@@ -67,3 +67,33 @@ I used the concat and substring_index functions:
 
 	select concat('mv ',oldname,' ',newnum,'.',substring_index(oldname,'.',-2)) as Rename_Script from v_rename;
 
+
+Concatenate multiple MySQL rows into one field?
+You can use GROUP_CONCAT:
+
+SELECT person_id, GROUP_CONCAT(hobbies SEPARATOR ', ')
+FROM peoples_hobbies
+GROUP BY person_id;
+As Ludwig stated in his comment, you can add the DISTINCT operator to avoid duplicates:
+
+SELECT person_id, GROUP_CONCAT(DISTINCT hobbies SEPARATOR ', ')
+FROM peoples_hobbies 
+GROUP BY person_id;
+As Jan stated in their comment, you can also sort the values before imploding it using ORDER BY:
+
+SELECT person_id, GROUP_CONCAT(hobbies ORDER BY hobbies ASC SEPARATOR ', ')
+FROM peoples_hobbies
+GROUP BY person_id;
+As Dag stated in his comment, there is a 1024 byte limit on the result. To solve this, run this query before your query:
+
+SET group_concat_max_len = 2048;
+Of course, you can change 2048 according to your needs. To calculate and assign the value:
+
+SET group_concat_max_len = CAST(
+    (SELECT SUM(LENGTH(hobbies)) + COUNT(*) * LENGTH(', ')
+    FROM peoples_hobbies 
+    GROUP BY person_id)
+    AS UNSIGNED
+);
+
+Source: https://stackoverflow.com/questions/276927/can-i-concatenate-multiple-mysql-rows-into-one-field?rq=1
