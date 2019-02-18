@@ -101,6 +101,8 @@ Or you can add the unique constraint when you create the table:
 	unique key fname_lname_index(firstname, lastname)
 	) engine=innodb;
 
+You can also drop the unique constraint. To find the constraint/index name, type show create table.
+alter table thetablename drop index constraint_indexname;
 
 Simple foreign key constraint exercise:
 Source: (https://www.youtube.com/watch?v=eTK9TLciRpU) 
