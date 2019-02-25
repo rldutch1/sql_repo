@@ -119,3 +119,15 @@ ROWS IDENTIFIED BY '<myfields>';
 <myfields><lastname>firstname17</lastname><firstname>lastname17</firstname></myfields>
 </rlh>
 */
+
+I got an error when I tried to load some data exported from an Excel spreadsheetin .csv format. The error message was "ERROR 1300 (HY000): Invalid utf8mb4 character string:"
+
+I wasn't able to manually correct all of the invalid characters in the .csv filebecause there were too many. There is a command on Linux called "file" that will tell you the file type. When I ran it "file -i filename.csv" it displayed a message telling me unknown. 
+
+file -i mpages1.csv
+
+I found a website that suggested that the file might be latin so I used another Linux command called "iconv" to convert it from latin to UTF8 and I was able to import the .csv into MySQL.
+
+iconv -f latin1 -t utf8 < mpages1.csv > mpages2.csv
+This worked: (Source: https://unix.stackexchange.com/questions/141539/iconv-illegal-input-sequence-why).
+

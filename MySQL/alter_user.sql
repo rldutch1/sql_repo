@@ -71,3 +71,6 @@ ERROR 1820 (HY000): You must reset your password using ALTER USER statement befo
 -- Lock User Account on MySQL 8.0.x.x.:
 UPDATE `user` SET `account_locked` = 'Y' WHERE `user`.`Host` = 'localhost' AND `user`.`User` = 'robdba5';
 
+-- Change the authentication method from auth_socket to mysql_native_password:
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
