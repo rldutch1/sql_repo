@@ -4,6 +4,9 @@ The normal way to rename a database is to dump it then import the data to a new 
 To rename a table type:
 	RENAME TABLE tb1 TO tb2;
 
+The new way to rename a table;
+ALTER TABLE exampletable RENAME TO new_table_name;
+
 The commands below are what I copied from a Stack Exchange article but they did not work for me. I am only leaving them here so that I can study them at some other time.
 
 /*
