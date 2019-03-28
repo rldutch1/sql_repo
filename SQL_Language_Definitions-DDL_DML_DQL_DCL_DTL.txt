@@ -1,11 +1,11 @@
 DDL (Data Definition Language) refers to the CREATE, ALTER and DROP statements
-DDL allows to add / modify / delete the logical structures which contain the data or which allow users to access / mantain the data (databases, tables, keys, views...). DDL is about "metadata".
+DDL allows to add / modify / delete the logical structures which contain the data or which allow users to access / maintain the data (databases, tables, keys, views...). DDL is about "metadata".
 
 DML (Data Manipulation Language) refers to the INSERT, UPDATE and DELETE statements
 DML allows to add / modify / delete data itself.
 
 DQL (Data Query Language) refers to the SELECT, SHOW and HELP statements (queries)
-SELECT is the main DQL instruction. It retrieves data you need. SHOW retrieves infos about the metadata. HELP... is for people who need help.
+SELECT is the main DQL instruction. It retrieves data you need. SHOW retrieves information about the metadata. HELP... is for people who need help.
 
 DCL (Data Control Language) refers to the GRANT and REVOKE statements
 DCL is used to grant / revoke permissions on databases and their contents. DCL is simple, but MySQL's permissions are rather complex. DCL is about security.
@@ -21,8 +21,8 @@ DROP - delete objects from the database
 TRUNCATE - remove all records from a table, including all spaces allocated for the records are removed. The operation cannot be rolled back.
 COMMENT - add comments to the data dictionary
 RENAME - rename an object
-DML
 
+DML
 Data Manipulation Language (DML) statements are used for managing data within schema objects. Some examples:
 SELECT - retrieve data from the a database
 INSERT - insert data into a table
@@ -32,10 +32,8 @@ MERGE - UPSERT operation (insert or update)
 CALL - call a PL/SQL or Java subprogram
 EXPLAIN PLAN - explain access path to data
 LOCK TABLE - control concurrency
+
 DCL
-
-DROP and TRUNCATE are DDL commands, whereas DELETE is a DML command. Therefore DELETE operations can be rolled back (undone), while DROP and TRUNCATE operations cannot be rolled back.
-
 Data Control Language (DCL) statements. Some examples:
 GRANT - gives user's access privileges to database
 REVOKE - withdraw access privileges given with the GRANT command
@@ -47,4 +45,5 @@ SAVEPOINT - identify a point in a transaction to which you can later roll back
 ROLLBACK - restore database to original since the last COMMIT
 SET TRANSACTION - Change transaction options like isolation level and what rollback segment to use
 
-
+Note:
+DROP and TRUNCATE are DDL commands, whereas DELETE is a DML command. Therefore DELETE operations can be rolled back (undone), while DROP and TRUNCATE operations cannot be rolled back.
