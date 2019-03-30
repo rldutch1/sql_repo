@@ -58,3 +58,8 @@ mysqldump -R old_db | mysql new_db
 
 ALTER TABLE tablename MODIFY id INT NOT NULL; -- Removing autoincrement.
 ALTER TABLE tablename DROP PRIMARY KEY;
+
+-- Set field value to default to nothing instead of NULL:
+alter table ffl_customers modify address2 varchar(100) null default "";
+
+
