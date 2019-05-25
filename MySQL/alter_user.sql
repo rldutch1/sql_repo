@@ -74,3 +74,11 @@ UPDATE `user` SET `account_locked` = 'Y' WHERE `user`.`Host` = 'localhost' AND `
 -- Change the authentication method from auth_socket to mysql_native_password:
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
 
+--  Switch to caching_sha2_password authentication for MySQL 8 upgrades:
+  ALTER USER 'umptyfratz'@'%'
+    IDENTIFIED WITH caching_sha2_password
+    BY 'password';
+
+  ALTER USER 'root'@'localhost'
+    IDENTIFIED WITH mysql_native_password
+    BY 'password';
