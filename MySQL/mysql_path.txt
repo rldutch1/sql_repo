@@ -1,1 +1,13 @@
-On my MAC: /usr/local/mysql/bin/mysql
+On my MAC:
+MySQL program:
+  /usr/local/mysql/bin/mysql
+
+Databases:
+  /usr/local/mysql/data/
+
+On Ubuntu:
+MySQL program:
+  /usr/bin/mysql
+
+Databases (need to be root):
+  /var/lib/mysql/

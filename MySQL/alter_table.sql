@@ -21,6 +21,9 @@ ALTER TABLE tablename add unique (column1);
 -- Giving the unique index a name:
 ALTER TABLE tablename add unique uniquename (column1);
 
+-- Create a unique index with a name and a comment (MySQL v8):
+CREATE UNIQUE INDEX `idx_videos_videoname`  ON `videos`.`videos` (videoname) COMMENT 'Unique videoname' ALGORITHM DEFAULT LOCK DEFAULT
+
 /*
 Also you might get ERROR 1062 Duplicate entry '' for key ??? if
 the column you are trying to make unique, already has duplicate data. This includes
