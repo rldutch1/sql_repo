@@ -20,3 +20,10 @@ UPDATE `user` SET `Select_priv` = 'Y', `Insert_priv` = 'Y', `Update_priv` = 'Y',
 MySQL 8.0.X.X. Create user with mysql_native_password authentication;
 CREATE USER username@localhost identified with mysql_native_password by 'password';
 
+https://lefred.be/content/how-to-grant-privileges-to-users-in-mysql-8-0/
+Grant Privileges for a user to a database;
+grant alter,create,delete,drop,index,insert,select,update,trigger,alter routine,
+create routine, execute, create temporary tables on user1.* to 'user1';
+
+grant alter,create,delete,drop,index,insert,select,update,trigger,alter routine,
+create routine, execute, create temporary tables on hillc1.* to 'robdba5';
