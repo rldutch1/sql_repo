@@ -18,4 +18,9 @@ ELSE 'Alien'
 END AS race
 FROM user
 
-This code checks the value in the num_heads coumln and deduces race from the values presented. CASE statements may also be nested in the same way as IF statements.
+This code checks the value in the num_heads column and deduces race from the values presented. CASE statements may also be nested in the same way as IF statements.
+
+I used this to prepend a zero in front of values that were less than 10.
+select concat("update yt_video_rename set day = ",if(day<10, concat("0",day),day)," where id = ", id,";") xyz from yt_video_rename order by day;
+
+
