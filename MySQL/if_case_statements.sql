@@ -23,4 +23,5 @@ This code checks the value in the num_heads column and deduces race from the val
 I used this to prepend a zero in front of values that were less than 10.
 select concat("update yt_video_rename set day = ",if(day<10, concat("0",day),day)," where id = ", id,";") xyz from yt_video_rename order by day;
 
-
+Count the number of presidents from each party:
+select sum(if(party = 1, 1,0)) as Federalist, sum(if(party = 2, 1,0)) as "Democratic-Repulican", sum(if(party = 3,1,0)) as Democrat, sum(if(party = 4,1,0)) as Whig, sum(if(party = 5,1,0)) Repulican, sum(if(party = 6,1,0)) "Democratic-Union", sum(if(party = 7,1,0)) Republican1 from us_presidents;
