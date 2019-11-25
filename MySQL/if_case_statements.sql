@@ -11,12 +11,19 @@ SELECT IF(score > 100, 100, IF(score < 0, 0, score)) FROM exam_results
 
 CASE statements (switch statements for those C programmers) are much like if statements. For example:
 
+CREATE TABLE `headcount` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `num_heads` int(11) NOT NULL,
+  `active_ind` int(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB;
+
 SELECT CASE num_heads
 WHEN 0 THEN 'Zombie'
 WHEN 1 THEN 'Human'
 ELSE 'Alien'
 END AS race
-FROM user
+FROM headcount;
 
 This code checks the value in the num_heads column and deduces race from the values presented. CASE statements may also be nested in the same way as IF statements.
 
@@ -25,3 +32,4 @@ select concat("update yt_video_rename set day = ",if(day<10, concat("0",day),day
 
 Count the number of presidents from each party:
 select sum(if(party = 1, 1,0)) as Federalist, sum(if(party = 2, 1,0)) as "Democratic-Repulican", sum(if(party = 3,1,0)) as Democrat, sum(if(party = 4,1,0)) as Whig, sum(if(party = 5,1,0)) Repulican, sum(if(party = 6,1,0)) "Democratic-Union", sum(if(party = 7,1,0)) Republican1 from us_presidents;
+
