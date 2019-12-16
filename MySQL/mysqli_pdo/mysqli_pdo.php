@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
 ////PDO connect method locally in the file. The include method below works too.
 //		$connect = new mysqli('localhost','mysqlitest','mysqlitest','mysqlitest');
 
-include('connect_pdo.php'); //This works so I am going to use it.
+include('connect_mysqli.php'); //This works so I am going to use it.
 //Old query methd:
 //	$sql = "select id, name, pass from blah where name = '$_POST[name]' and pass = '$_POST[password]';";
 
