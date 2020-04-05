@@ -6,20 +6,29 @@ show create table xxxxx;
 
 show create table xxxxx\G
 
-All tables foreign key query:
-	use INFORMATION_SCHEMA;
-	select concat(TABLE_SCHEMA,'.',TABLE_NAME,'.',COLUMN_NAME) as This_DB_Table_and_Column, concat(TABLE_SCHEMA,'.',REFERENCED_TABLE_NAME,'.',REFERENCED_COLUMN_NAME) as References_DB_Table_and_Column,CONSTRAINT_NAME from KEY_COLUMN_USAGE where referenced_table_name is not NULL;
+-- All databases and tables foreign key constraints:
+	use information_schema;
+	select concat(kcu.TABLE_SCHEMA,'.',kcu.TABLE_NAME,'.',kcu.COLUMN_NAME) as This_DB_Table_and_Column, concat(kcu.TABLE_SCHEMA,'.',kcu.REFERENCED_TABLE_NAME,'.',kcu.REFERENCED_COLUMN_NAME) as References_This_DB_Table_and_Column, kcu.CONSTRAINT_NAME from KEY_COLUMN_USAGE kcu where kcu.referenced_table_name is not NULL;
 
-Specific database and table foreign key query:
-	use INFORMATION_SCHEMA;
-	select concat(TABLE_NAME,'.',COLUMN_NAME) as This_Table_and_Column,CONSTRAINT_NAME, concat(REFERENCED_TABLE_NAME,'.',REFERENCED_COLUMN_NAME) as References_This_Table_and_Column from KEY_COLUMN_USAGE 
-	where TABLE_SCHEMA = "videos" and TABLE_NAME = "testnames1" 
-	and referenced_column_name is not NULL;
+-- Specific database and specific table foreign key constraints:
+	use information_schema;
+	select concat(kcu.TABLE_NAME,'.',kcu.COLUMN_NAME) as This_Table_and_Column, concat(kcu.REFERENCED_TABLE_NAME,'.',kcu.REFERENCED_COLUMN_NAME) as References_This_Table_and_Column, kcu.CONSTRAINT_NAME from KEY_COLUMN_USAGE kcu where kcu.TABLE_SCHEMA = "hillc1_test" and kcu.TABLE_NAME = "ffl_book1" and kcu.referenced_column_name is not NULL;
 
-use information_schema;
-	select concat(table_name,'.',column_name) as
-	This_DB_Table_and_Column, constraint_name, concat(referenced_table_name,'.',referenced_column_name) as References_This_Table_and_Column from key_column_usage where referenced_column_name is not NULL
-	order by This_DB_Table_and_Column;
+-- Specific database foreign key constraints:
+	use information_schema;
+	select concat(kcu.table_schema,'.',kcu.table_name,'.',kcu.column_name) as This_DB_Table_and_column, concat(kcu.table_schema,'.',kcu.referenced_table_name,'.',kcu.referenced_column_name) as References_This_DB_Table_and_Column, kcu.constraint_name from key_column_usage kcu where kcu.referenced_table_name is not NULL and kcu.table_schema = "hillc1_test";
+
+-- Not using the "USE INFORMATION_SCHEMA" command:
+-- All databases and tables foreign key constraints:
+	select concat(kcu.TABLE_SCHEMA,'.',kcu.TABLE_NAME,'.',kcu.COLUMN_NAME) as This_DB_Table_and_Column, concat(kcu.TABLE_SCHEMA,'.',kcu.REFERENCED_TABLE_NAME,'.',kcu.REFERENCED_COLUMN_NAME) as References_This_DB_Table_and_Column, kcu.CONSTRAINT_NAME from INFORMATION_SCHEMA.KEY_COLUMN_USAGE kcu where kcu.referenced_table_name is not NULL;
+
+-- Not using the "USE INFORMATION_SCHEMA" command:
+-- Specific database and specific table foreign key constraints:
+	select concat(kcu.TABLE_NAME,'.',kcu.COLUMN_NAME) as This_Table_and_Column, concat(kcu.REFERENCED_TABLE_NAME,'.',kcu.REFERENCED_COLUMN_NAME) as References_This_Table_and_Column, kcu.CONSTRAINT_NAME from INFORMATION_SCHEMA.KEY_COLUMN_USAGE kcu where kcu.TABLE_SCHEMA = "hillc1_test" and kcu.TABLE_NAME = "ffl_book1" and kcu.referenced_column_name is not NULL;
+
+-- Not using the "USE INFORMATION_SCHEMA" command:
+-- Specific database foreign key constraints:
+	select concat(kcu.table_schema,'.',kcu.table_name,'.',kcu.column_name) as This_DB_Table_and_column, concat(kcu.table_schema,'.',kcu.referenced_table_name,'.',kcu.referenced_column_name) as References_This_DB_Table_and_Column, kcu.constraint_name from information_schema.key_column_usage kcu where kcu.referenced_table_name is not NULL and kcu.table_schema = "hillc1_test";
 
 alter table TableName add constraint TheConstraintName foreign key (TableNameID) references ForeignTable(id) on update cascade on delete restrict;
 
