@@ -20,6 +20,7 @@ mysql> show global variables like 'local_infile';
 
 Afterward, you will have to start the MySQL client with:
 /usr/local/mysql/bin/mysql -u USERNAME -p --local-infile DATABASENAME
+mysql -u USERNAME -p --local-infile DATABASENAME
 Source: https://stackoverflow.com/questions/10762239/mysql-enable-load-data-local-infile
 
 -- From the MySQL command prompt.
