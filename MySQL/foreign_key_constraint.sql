@@ -18,6 +18,20 @@ show create table xxxxx\G
 	use information_schema;
 	select concat(kcu.table_schema,'.',kcu.table_name,'.',kcu.column_name) as This_DB_Table_and_column, concat(kcu.table_schema,'.',kcu.referenced_table_name,'.',kcu.referenced_column_name) as References_This_DB_Table_and_Column, kcu.constraint_name from key_column_usage kcu where kcu.referenced_table_name is not NULL and kcu.table_schema = "hillc1_test";
 
+-- This works but I want to modify it so that I can select specific databases/tables. BEGIN:
+use information_schema;
+select
+	concat(kcu.table_schema,'.',kcu.table_name,'.',kcu.column_name) as this_db_table_and_column,
+	concat(kcu.table_schema,'.',kcu.referenced_table_name,'.',kcu.referenced_column_name) as references_this_db_table_and_column,
+	kcu.constraint_name,
+	rc.update_rule,
+	rc.delete_rule
+from
+	key_column_usage kcu
+join referential_constraints rc on (rc.constraint_name= kcu.constraint_name)
+where kcu.referenced_table_name is not null order by this_db_table_and_column;
+-- This works but I want to modify it so that I can select specific databases/tables. END:
+
 -- Not using the "USE INFORMATION_SCHEMA" command:
 -- All databases and tables foreign key constraints:
 	select concat(kcu.TABLE_SCHEMA,'.',kcu.TABLE_NAME,'.',kcu.COLUMN_NAME) as This_DB_Table_and_Column, concat(kcu.TABLE_SCHEMA,'.',kcu.REFERENCED_TABLE_NAME,'.',kcu.REFERENCED_COLUMN_NAME) as References_This_DB_Table_and_Column, kcu.CONSTRAINT_NAME from INFORMATION_SCHEMA.KEY_COLUMN_USAGE kcu where kcu.referenced_table_name is not NULL;
@@ -29,6 +43,12 @@ show create table xxxxx\G
 -- Not using the "USE INFORMATION_SCHEMA" command:
 -- Specific database foreign key constraints:
 	select concat(kcu.table_schema,'.',kcu.table_name,'.',kcu.column_name) as This_DB_Table_and_column, concat(kcu.table_schema,'.',kcu.referenced_table_name,'.',kcu.referenced_column_name) as References_This_DB_Table_and_Column, kcu.constraint_name from information_schema.key_column_usage kcu where kcu.referenced_table_name is not NULL and kcu.table_schema = "hillc1_test";
+
+-- This is a quick way to view all of the contraints:
+select * from information_schema.referential_constraints;
+
+-- This is a quick way to view constraints from a specific database:
+select * from information_schema.referential_constraints where constraint_schema = 'thedatabasename';
 
 alter table TableName add constraint TheConstraintName foreign key (TableNameID) references ForeignTable(id) on update cascade on delete restrict;
 
