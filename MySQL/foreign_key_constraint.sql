@@ -2,6 +2,9 @@
 Show foreign key constraints for a table:
 http://stackoverflow.com/questions/4004205/mysql-show-constraints-on-tables-command
 
+The queries below can be put into a file and run from the commandline.
+-- mysql -u rob -p < display_foreign_key_references.sql > current_fk_refs.txt
+
 show create table xxxxx;
 
 show create table xxxxx\G
@@ -43,6 +46,22 @@ where kcu.referenced_table_name is not null order by this_db_table_and_column;
 -- Not using the "USE INFORMATION_SCHEMA" command:
 -- Specific database foreign key constraints:
 	select concat(kcu.table_schema,'.',kcu.table_name,'.',kcu.column_name) as This_DB_Table_and_column, concat(kcu.table_schema,'.',kcu.referenced_table_name,'.',kcu.referenced_column_name) as References_This_DB_Table_and_Column, kcu.constraint_name from information_schema.key_column_usage kcu where kcu.referenced_table_name is not NULL and kcu.table_schema = "hillc1_test";
+
+-- Not using the "USE INFORMATION_SCHEMA" command:
+-- View Constraints and Cascade Rules:
+	select 
+		concat(kcu.table_schema,'.',kcu.table_name,'.',kcu.column_name) as "This_DB.Table.and_column", 
+    	concat(kcu.table_schema,'.',kcu.referenced_table_name,'.',kcu.referenced_column_name) as "References_This_DB.Table.and_Column", 
+    	kcu.constraint_name,
+    	rc.update_rule,
+    	rc.delete_rule
+	from 
+		information_schema.key_column_usage kcu 
+	join information_schema.referential_constraints rc on (kcu.table_name = rc.table_name)
+	where 
+		kcu.referenced_table_name is not NULL 
+	and 
+		kcu.table_schema = "hillc1_test";
 
 -- This is a quick way to view all of the contraints:
 select * from information_schema.referential_constraints;
