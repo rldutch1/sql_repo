@@ -35,6 +35,9 @@ FLUSH PRIVILEGES;
 -- ALTER USER ==
 ERROR 1820 (HY000): You must reset your password using ALTER USER statement before executing this statement.
 
+--If you started MySQL using "mysql -u root -p" use this method to reset your password:
+	ALTER USER 'root'@'localhost' IDENTIFIED BY 'Your New Password';
+
 -- This worked for me from the MySQL DB prompt:
 	SET PASSWORD = PASSWORD("your_new_password");
 
