@@ -1,0 +1,33 @@
+Question:
+Got error "SQLSTATE[HY000] [2002] Permission denied" on webpage using PHP to connect to database.
+
+Answer:
+This happen because selinux avoid db connections from the httpd server to the remote db server. To solve it you need to access your server trough ssh or just open a console if you have pretencial acces and do the follow:
+
+You must check in the SELinux if the port 80 is managed in. You can check it typing # semanage port -l | grep http_port_t for list and check:
+
+http_port_t                    tcp      443, 488, 8008, 8009, 8443, 9000
+
+If you need to add the required port, just type:
+
+# semanage port -a -t http_port_t -p tcp 80
+
+Type the command to ckeck once again:
+
+# semanage port -l | grep http_port_t
+
+.
+
+http_port_t                    tcp      80, 443, 488, 8008, 8009, 8443, 9000
+
+Then you should notify SELinux you want to allow network connections from the httpd server to the db remote server, seting the boolean variables that set it:
+
+Down the httpd service # service httpd stop
+# setsebool httpd_can_network_connect 1
+# setsebool httpd_can_network_connect_db 1
+Up the httpd service # service httpd start
+Now your httpd service should be capable to get data from the db server.
+
+I hope that can be usefull for the gang that search solve errors like this.
+
+From Chile, best regards.
