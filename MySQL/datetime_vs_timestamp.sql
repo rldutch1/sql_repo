@@ -13,3 +13,6 @@ CREATE TABLE `test1` (
 
 --Date Format:
 	http://www.mysqltutorial.org/mysql-date/
+
+-- Alter table and add a datetime column that defaults to the current timestamp. 
+alter table code_value add column updt_dt_tm datetime not null default current_timestamp on update current_timestamp;

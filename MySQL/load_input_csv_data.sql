@@ -1,3 +1,5 @@
+insert into cv (id,content) values ("1",LOAD_FILE('cv.doc'));
+
 MySQL 8.0 has the load data local_infile option off by default. You can enable it by logging into the MySQL server and running:
 mysql> show global variables like 'local_infile';
 +---------------+-------+
