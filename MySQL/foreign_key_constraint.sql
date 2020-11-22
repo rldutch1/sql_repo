@@ -1,4 +1,17 @@
 
+Learning MySQL - FOREIGN KEY CONSTRAINTS https://www.youtube.com/watch?v=UQK9_gKQHZg
+	create table races (
+		race_id tinyint unsigned not null auto_increment primary key,
+		race_name varchar(30) not NULL
+		) engine=innodb;
+		
+	create table characters (
+		character_id int unsigned auto_increment PRIMARY KEY,
+		character_name varchar(50) not null,
+		race_id tinyint unsigned not null
+	) engine=innodb;
+
+
 Show foreign key constraints for a table:
 http://stackoverflow.com/questions/4004205/mysql-show-constraints-on-tables-command
 
