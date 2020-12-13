@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<!--[if IE 7]>
+<html class="ie ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>How to create multiple accounts for an app? | MySQL Server Blog</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://mysqlserverteam.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="https://mysqlserverteam.com/wp-content/themes/twentythirteen/js/html5.js"></script>
+	<![endif]-->
+	<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="MySQL Server Blog &raquo; Feed" href="https://mysqlserverteam.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="MySQL Server Blog &raquo; Comments Feed" href="https://mysqlserverteam.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="MySQL Server Blog &raquo; How to create multiple accounts for an app? Comments Feed" href="https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/mysqlserverteam.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.1.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='crayon-css'  href='https://mysqlserverteam.com/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-classic-css'  href='https://mysqlserverteam.com/wp-content/plugins/crayon-syntax-highlighter/themes/classic/classic.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-monaco-css'  href='https://mysqlserverteam.com/wp-content/plugins/crayon-syntax-highlighter/fonts/monaco.css?ver=_2.7.2_beta' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://mysqlserverteam.com/wp-content/plugins/gutenberg/build/block-library/style.css?ver=1555923397' type='text/css' media='all' />
+<link rel='stylesheet' id='ssb-front-css-css'  href='https://mysqlserverteam.com/wp-content/plugins/simple-social-buttons/assets/css/front.css?ver=2.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='toc-screen-css'  href='https://mysqlserverteam.com/wp-content/plugins/table-of-contents-plus/screen.min.css?ver=1509' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-polls-css'  href='https://mysqlserverteam.com/wp-content/plugins/wp-polls/polls-css.css?ver=2.75.2' type='text/css' media='all' />
+<style id='wp-polls-inline-css' type='text/css'>
+.wp-polls .pollbar {
+	margin: 1px;
+	font-size: 6px;
+	line-height: 8px;
+	height: 8px;
+	background-image: url('https://mysqlserverteam.com/wp-content/plugins/wp-polls/images/default/pollbg.gif');
+	border: 1px solid #c8c8c8;
+}
+
+</style>
+<link rel='stylesheet' id='twentythirteen-fonts-css'  href='//fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://mysqlserverteam.com/wp-content/plugins/jetpack/_inc/genericons/genericons/genericons.css?ver=3.1' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-style-css'  href='https://mysqlserverteam.com/wp-content/themes/twentythirteen-child/style.css?ver=2013-07-18' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='https://mysqlserverteam.com/wp-content/themes/twentythirteen/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='tablepress-default-css'  href='https://mysqlserverteam.com/wp-content/tablepress-combined.min.css?ver=52' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://mysqlserverteam.com/wp-content/plugins/jetpack/css/jetpack.css?ver=7.2.1' type='text/css' media='all' />
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js?ver=1.11.3'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"_2.7.2_beta","is_admin":"0","ajaxurl":"https:\/\/mysqlserverteam.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"Press %s to Copy, %s to Paste","minimize":"Click To Expand Code"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=_2.7.2_beta'></script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-content/plugins/simple-social-buttons/assets/js/front.js?ver=2.1.0'></script>
+<link rel='https://api.w.org/' href='https://mysqlserverteam.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://mysqlserverteam.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://mysqlserverteam.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='MySQL 8.0.16: mysql_upgrade is going away' href='https://mysqlserverteam.com/mysql-8-0-16-mysql_upgrade-is-going-away/' />
+<link rel='next' title='The SYSTEM_USER Dynamic Privilege' href='https://mysqlserverteam.com/the-system_user-dynamic-privilege/' />
+<meta name="generator" content="WordPress 5.1.1" />
+<link rel="canonical" href="https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/" />
+<link rel='shortlink' href='https://wp.me/p4oaqh-3kU' />
+<link rel="alternate" type="application/json+oembed" href="https://mysqlserverteam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmysqlserverteam.com%2Fhow-to-create-multiple-accounts-for-an-app%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://mysqlserverteam.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fmysqlserverteam.com%2Fhow-to-create-multiple-accounts-for-an-app%2F&#038;format=xml" />
+ <style media="screen">
+
+         /*inline margin*/
+        .simplesocialbuttons.simplesocialbuttons_inline.simplesocial-sm-round button{
+      margin: ;
+    }
+  
+  
+  
+  
+  
+  
+          /*margin-digbar*/
+
+  
+  
+  
+  
+ 
+   
+   
+
+</style>
+<style type="text/css">div#toc_container ul li {font-size: 80%;}</style>
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+			<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(https://mysqlserverteam.com/wp-content/uploads/2014/07/cropped-header.png) no-repeat scroll top;
+			background-size: 1600px auto;
+		}
+		@media (max-width: 767px) {
+			.site-header {
+				background-size: 768px auto;
+			}
+		}
+		@media (max-width: 359px) {
+			.site-header {
+				background-size: 360px auto;
+			}
+		}
+		</style>
+	
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to create multiple accounts for an app?" />
+<meta property="og:url" content="https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/" />
+<meta property="og:description" content="This is a 3 part blog series: Part 1: The SYSTEM_USER Dynamic Privilege Part 2 : Partial Revokes from Database Objects Part 3 :&nbsp;How to create multiple accounts for an app? You can now grant CR…" />
+<meta property="article:published_time" content="2019-05-02T11:54:46+00:00" />
+<meta property="article:modified_time" content="2019-05-02T16:47:25+00:00" />
+<meta property="og:site_name" content="MySQL Server Blog" />
+<meta property="og:image" content="https://mysqlserverteam.com/wp-content/uploads/2018/01/MySQL_Icon_256x256.png" />
+<meta property="og:image:width" content="256" />
+<meta property="og:image:height" content="256" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:text:title" content="How to create multiple accounts for an app?" />
+<meta name="twitter:image" content="https://mysqlserverteam.com/wp-content/uploads/2018/01/MySQL_Icon_256x256.png?w=240" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+			<style type="text/css" id="wp-custom-css">
+				/*
+Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt
+*/
+/*
+MLord added/modified the below on Sept 21, 2015
+*/
+/*
+#blog_subscription-4 {
+	background-color: rgba(239,239,239,0.6);
+}
+*/
+#rss_links-3 {
+	background-color: rgba(239,239,239,0.6);
+}
+
+#recent-posts-2 {
+	background-color: rgba(239,239,239,0.6);
+}
+
+#recent-comments-2 {
+	background-color: rgba(239,239,239,0.6);
+}
+
+#archives-2 {
+	background-color: rgba(239,239,239,0.6);
+}
+
+#categories-2 {
+	background-color: rgba(239,239,239,0.6);
+}			</style>
+		</head>
+
+<body class="post-template-default single single-post postid-12828 single-format-standard sidebar">
+	<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+			<a class="home-link" href="https://mysqlserverteam.com/" title="MySQL Server Blog" rel="home">
+				<h1 class="site-title">MySQL Server Blog</h1>
+				<h2 class="site-description">News from the MySQL Server Team</h2>
+			</a>
+
+			<div id="navbar" class="navbar">
+				<nav id="site-navigation" class="navigation main-navigation" role="navigation">
+					<h3 class="menu-toggle">Menu</h3>
+					<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>
+					<div class="nav-menu"><ul>
+<li class="page_item page-item-2"><a href="https://mysqlserverteam.com/about/">About</a></li>
+<li class="page_item page-item-5"><a href="https://mysqlserverteam.com/resources/">Resources</a></li>
+</ul></div>
+					<form role="search" method="get" class="search-form" action="https://mysqlserverteam.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>				</nav><!-- #site-navigation -->
+			</div><!-- #navbar -->
+		</header><!-- #masthead -->
+
+		<div id="main" class="site-main">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+						
+				
+<article id="post-12828" class="post-12828 post type-post status-publish format-standard has-post-thumbnail hentry category-mysql category-security category-user-management">
+	<header class="entry-header">
+				<div class="entry-thumbnail">
+					</div>
+		
+				<h1 class="entry-title">How to create multiple accounts for an app?</h1>
+		
+		<div class="entry-meta">
+			<span class="date"><a href="https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/" title="Permalink to How to create multiple accounts for an app?" rel="bookmark"><time class="entry-date" datetime="2019-05-02T11:54:46+00:00">May 2, 2019</time></a></span><span class="categories-links"><a href="https://mysqlserverteam.com/category/mysql/" rel="category tag">MySQL</a>, <a href="https://mysqlserverteam.com/category/security/" rel="category tag">Security</a>, <a href="https://mysqlserverteam.com/category/security/user-management/" rel="category tag">User management</a></span><span class="author vcard"><a class="url fn n" href="https://mysqlserverteam.com/author/rsisondi/" title="View all posts by Rahul Sisondia" rel="author">Rahul Sisondia</a></span>					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+		<div class="entry-content">
+		<p>This is a 3 part blog series:</p>
+<ul>
+<li>Part 1: <a href="https://wp.me/p4oaqh-3kb">The SYSTEM_USER Dynamic Privilege</a></li>
+<li>Part 2 : <a href="https://wp.me/p4oaqh-3kn">Partial Revokes from Database Objects</a></li>
+<li>Part 3 : <a href="https://wp.me/p4oaqh-3kU">How to create multiple accounts for an app?</a></li>
+</ul>
+<p>You can now grant CREATE USER so that your web apps would be able to use multiple accounts without you risking the end user hijacking the database by changing your root credentials for example.  Wouldn&#8217;t it be nice, if you could grant a user privileges to create or modify users except a few users? If you have such use cases, then this blog post will interest you.</p>
+<p>First, let us understand how you can modify a user&#8217;s specifications. There are following two ways to do that.</p>
+<ol>
+<li>Through a DDL statements if you have ‘CREATE USER’ privilege.</li>
+</ol>
+<p>For instance:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f0f5982798593" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; CREATE USER foo;
+mysql&gt; GRANT CREATE USER ON *.* TO foo WITH GRANT OPTION;</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f0f5982798593-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f0f5982798593-2">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f0f5982798593-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">CREATE </span><span class="crayon-e">USER </span><span class="crayon-v">foo</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f0f5982798593-2"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-e">CREATE </span><span class="crayon-e">USER </span><span class="crayon-e ">ON *</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-e">foo </span><span class="crayon-e">WITH </span><span class="crayon-e">GRANT </span><span class="crayon-v">OPTION</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0007 seconds] -->
+<p>Now, foo has the ability to do the following:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f0fe382168682" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; CREATE USER bar;
+mysql&gt; ALTER USER root@localhost IDENTIFIED BY 'gibberish';
+mysql&gt; DROP USER root@localhost;</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f0fe382168682-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f0fe382168682-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f0fe382168682-3">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f0fe382168682-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">CREATE </span><span class="crayon-e">USER </span><span class="crayon-v">bar</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f0fe382168682-2"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">ALTER </span><span class="crayon-e">USER </span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-e">localhost </span><span class="crayon-e">IDENTIFIED </span><span class="crayon-i">BY</span><span class="crayon-h"> </span><span class="crayon-s">'gibberish'</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cd751fa7f0fe382168682-3"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">DROP </span><span class="crayon-e">USER </span><span class="crayon-v">root</span><span class="crayon-sy">@</span><span class="crayon-v">localhost</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0008 seconds] -->
+<p></p>
+<ol start="2">
+<li>Through a DML statements if you have DB-level privileges on the mysql database.</li>
+</ol>
+<p>For instance:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f102481398530" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; GRANT SELECT, UPDATE, DELETE ON mysql.* TO foo WITH GRANT OPTION;</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f102481398530-1">1</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f102481398530-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-v">SELECT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">UPDATE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">DELETE </span><span class="crayon-e">ON </span><span class="crayon-v">mysql</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-e">foo </span><span class="crayon-e">WITH </span><span class="crayon-e">GRANT </span><span class="crayon-v">OPTION</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p>Now, foo has the ability to do the following:</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f106697937619" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; UPDATE mysql.user SET authentication_string='gibberish' WHERE  
+     &gt; user='root';
+mysql&gt; DELETE FROM mysql.user WHERE user='root';</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f106697937619-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f106697937619-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f106697937619-3">3</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f106697937619-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">UPDATE </span><span class="crayon-v">mysql</span><span class="crayon-sy">.</span><span class="crayon-e">user </span><span class="crayon-e">SET </span><span class="crayon-v">authentication_string</span><span class="crayon-o">=</span><span class="crayon-s">'gibberish'</span><span class="crayon-h"> </span><span class="crayon-i">WHERE</span> <span class="crayon-h"> </span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f106697937619-2"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">user</span><span class="crayon-o">=</span><span class="crayon-s">'root'</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cd751fa7f106697937619-3"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">DELETE </span><span class="crayon-e">FROM </span><span class="crayon-v">mysql</span><span class="crayon-sy">.</span><span class="crayon-e">user </span><span class="crayon-e">WHERE </span><span class="crayon-v">user</span><span class="crayon-o">=</span><span class="crayon-s">'root'</span><span class="crayon-sy">;</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0009 seconds] -->
+<p>In both cases, foo was able to modify the root account. What if you  want to protect accounts such as root from being modified by other users?</p>
+<p>In MySQL 8.0.16, we have added the following two capabilities.</p>
+<ul>
+<li>A SYSTEM_USER privilege. It prevents users who have that privilege from being modified by the users who have privileges to create or modify users, but do not have the SYSTEM_USER privilege.  You may read more about SYSTEM_USER in <a href="SYSTEM_USER">this blog post</a>.</li>
+<li>Revoke privileges from database objects, even if the user is granted global privileges. You may read more about privilege restrictions in <a href="https://wp.me/p4oaqh-3kn">this blog post</a>.</li>
+</ul>
+<p>This is the final blog post in the series that shows how to protect users leveraging the preceding two capabilities.  Let us understand doing that through the following example.</p>
+<p>The discussion here assumes that ‘partial_revokes’ system variable is ON.</p>
+<h5>We create two users and grant the CREATE USER privilege to them.</h5>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f10a991048042" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; CREATE USER foo_admin, bar_admin;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; GRANT CREATE USER ON *.* TO foo_admin, bar_admin;
+Query OK, 0 rows affected (0.01 sec)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f10a991048042-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f10a991048042-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f10a991048042-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f10a991048042-4">4</div><div class="crayon-num" data-line="crayon-5cd751fa7f10a991048042-5">5</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f10a991048042-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">CREATE </span><span class="crayon-e">USER </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">bar_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f10a991048042-2"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5cd751fa7f10a991048042-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f10a991048042-4"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-e">CREATE </span><span class="crayon-e">USER </span><span class="crayon-e ">ON *</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">bar_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cd751fa7f10a991048042-5"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0011 seconds] -->
+<p></p>
+<h5>Grant the SYSTEM_USER privilege to one user.</h5>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f10e386668658" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; GRANT SYSTEM_USER ON *.* TO foo_admin;
+Query OK, 0 rows affected (0.01 sec)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f10e386668658-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f10e386668658-2">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f10e386668658-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-e">SYSTEM_USER </span><span class="crayon-e ">ON *</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f10e386668658-2"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0006 seconds] -->
+<p></p>
+<h5>Grant the global update privilege to other user, but revoke privileges on the mysql database.</h5>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f112027430377" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; GRANT UPDATE ON *.*  TO bar_admin;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; REVOKE UPDATE ON mysql.* FROM bar_admin;
+Query OK, 0 rows affected (0.01 sec)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f112027430377-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f112027430377-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f112027430377-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f112027430377-4">4</div><div class="crayon-num" data-line="crayon-5cd751fa7f112027430377-5">5</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f112027430377-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-e">UPDATE </span><span class="crayon-e ">ON *</span><span class="crayon-sy">.</span><span class="crayon-o">*</span> <span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-v">bar_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f112027430377-2"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5cd751fa7f112027430377-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f112027430377-4"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">REVOKE </span><span class="crayon-e">UPDATE </span><span class="crayon-e">ON </span><span class="crayon-v">mysql</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-e">FROM </span><span class="crayon-v">bar_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cd751fa7f112027430377-5"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0011 seconds] -->
+<p></p>
+<h5>bar_admin cannot change foo_admin using DDL statements because foo_admin has SYSTEM_USER but bar_admin does not.</h5>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f116399146063" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; ALTER USER foo_admin IDENTIFIED BY 'gibberish';
+ERROR 1227 (42000): Access denied; you need (at least one of) the SYSTEM_USER privilege(s) for this operation
+
+mysql&gt; DROP USER foo_admin;
+ERROR 1227 (42000): Access denied; you need (at least one of) the SYSTEM_USER privilege(s) for this operation</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f116399146063-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f116399146063-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f116399146063-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f116399146063-4">4</div><div class="crayon-num" data-line="crayon-5cd751fa7f116399146063-5">5</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f116399146063-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">ALTER </span><span class="crayon-e">USER </span><span class="crayon-e">foo_admin </span><span class="crayon-e">IDENTIFIED </span><span class="crayon-i">BY</span><span class="crayon-h"> </span><span class="crayon-s">'gibberish'</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f116399146063-2"><span class="crayon-i">ERROR</span><span class="crayon-h"> </span><span class="crayon-cn">1227</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">42000</span><span class="crayon-sy">)</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Access </span><span class="crayon-v">denied</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-e">you </span><span class="crayon-e">need</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-e">at </span><span class="crayon-e">least </span><span class="crayon-e">one </span><span class="crayon-v">of</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-e">the </span><span class="crayon-e">SYSTEM_USER </span><span class="crayon-e">privilege</span><span class="crayon-sy">(</span><span class="crayon-v">s</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-r">this</span><span class="crayon-h"> </span><span class="crayon-e">operation</span></div><div class="crayon-line" id="crayon-5cd751fa7f116399146063-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f116399146063-4"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">DROP </span><span class="crayon-e">USER </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cd751fa7f116399146063-5"><span class="crayon-i">ERROR</span><span class="crayon-h"> </span><span class="crayon-cn">1227</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">42000</span><span class="crayon-sy">)</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">Access </span><span class="crayon-v">denied</span><span class="crayon-sy">;</span><span class="crayon-h"> </span><span class="crayon-e">you </span><span class="crayon-e">need</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-e">at </span><span class="crayon-e">least </span><span class="crayon-e">one </span><span class="crayon-v">of</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-e">the </span><span class="crayon-e">SYSTEM_USER </span><span class="crayon-e">privilege</span><span class="crayon-sy">(</span><span class="crayon-v">s</span><span class="crayon-sy">)</span><span class="crayon-h"> </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-r">this</span><span class="crayon-h"> </span><span class="crayon-v">operation</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0018 seconds] -->
+<p></p>
+<h5>bar_admin cannot change foo_admin because privileges on the mysql database have been revoked.</h5>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f11d818337590" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; UPDATE mysql.user SET authentication_string ='gibberish' WHERE
+     &gt; user='foo_admin';
+ERROR 1142 (42000): UPDATE command denied to user 'bar_admin'@'localhost' for table 'user'
+
+mysql&gt; DELETE  FROM mysql.user WHERE user = 'foo_admin';
+ERROR 1142 (42000): DELETE command denied to user 'bar_admin'@'localhost' for table 'user'</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f11d818337590-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f11d818337590-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f11d818337590-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f11d818337590-4">4</div><div class="crayon-num" data-line="crayon-5cd751fa7f11d818337590-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f11d818337590-6">6</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f11d818337590-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">UPDATE </span><span class="crayon-v">mysql</span><span class="crayon-sy">.</span><span class="crayon-e">user </span><span class="crayon-e">SET </span><span class="crayon-v">authentication_string</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-s">'gibberish'</span><span class="crayon-h"> </span><span class="crayon-v">WHERE</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f11d818337590-2"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">user</span><span class="crayon-o">=</span><span class="crayon-s">'foo_admin'</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cd751fa7f11d818337590-3"><span class="crayon-i">ERROR</span><span class="crayon-h"> </span><span class="crayon-cn">1142</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">42000</span><span class="crayon-sy">)</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">UPDATE </span><span class="crayon-e">command </span><span class="crayon-e">denied </span><span class="crayon-st">to</span><span class="crayon-h"> </span><span class="crayon-i">user</span><span class="crayon-h"> </span><span class="crayon-s">'bar_admin'</span><span class="crayon-sy">@</span><span class="crayon-s">'localhost'</span><span class="crayon-h"> </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">table</span><span class="crayon-h"> </span><span class="crayon-s">'user'</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f11d818337590-4">&nbsp;</div><div class="crayon-line" id="crayon-5cd751fa7f11d818337590-5"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-i">DELETE</span> <span class="crayon-h"> </span><span class="crayon-e">FROM </span><span class="crayon-v">mysql</span><span class="crayon-sy">.</span><span class="crayon-e">user </span><span class="crayon-e">WHERE </span><span class="crayon-v">user</span><span class="crayon-h"> </span><span class="crayon-o">=</span><span class="crayon-h"> </span><span class="crayon-s">'foo_admin'</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f11d818337590-6"><span class="crayon-i">ERROR</span><span class="crayon-h"> </span><span class="crayon-cn">1142</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">42000</span><span class="crayon-sy">)</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">DELETE </span><span class="crayon-e">command </span><span class="crayon-e">denied </span><span class="crayon-st">to</span><span class="crayon-h"> </span><span class="crayon-i">user</span><span class="crayon-h"> </span><span class="crayon-s">'bar_admin'</span><span class="crayon-sy">@</span><span class="crayon-s">'localhost'</span><span class="crayon-h"> </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-i">table</span><span class="crayon-h"> </span><span class="crayon-s">'user'</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0018 seconds] -->
+<p>Thus, you created a user ‘foo_admin’ who cannot be modified by another user even though the latter has privileges to modify some users. For bar_admin to modify foo_admin, bar_admin must also have the SYSTEM_USER privilege.</p>
+<h5>Let us create another user who has ‘CREATE USER’ and ‘SYSTEM_USER’ privileges. This user can modify the properties of user ‘foo_admin’.</h5>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f123053727383" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; CREATE USER baz_admin;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; GRANT CREATE USER, SYSTEM_USER ON *.* TO baz_admin;
+Query OK, 0 rows affected (0.00 sec)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f123053727383-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f123053727383-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f123053727383-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f123053727383-4">4</div><div class="crayon-num" data-line="crayon-5cd751fa7f123053727383-5">5</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f123053727383-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">CREATE </span><span class="crayon-e">USER </span><span class="crayon-v">baz_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f123053727383-2"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5cd751fa7f123053727383-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f123053727383-4"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-e">CREATE </span><span class="crayon-v">USER</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">SYSTEM_USER </span><span class="crayon-e ">ON *</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-v">baz_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cd751fa7f123053727383-5"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.00</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0012 seconds] -->
+<p></p>
+<h5>baz_admin can change the password of foo_admin.</h5>
+<p></p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f126881449625" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; ALTER USER foo_admin IDENTIFIED BY 'gibberish';
+Query OK, 0 rows affected (0.01 sec)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f126881449625-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f126881449625-2">2</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f126881449625-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">ALTER </span><span class="crayon-e">USER </span><span class="crayon-e">foo_admin </span><span class="crayon-e">IDENTIFIED </span><span class="crayon-i">BY</span><span class="crayon-h"> </span><span class="crayon-s">'gibberish'</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f126881449625-2"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0007 seconds] -->
+<p>As we saw, in order to modify the properties of a user who is granted the SYSTEM_USER privilege, you need to have CREATE USER as well as SYSTEM_USER privilege.</p>
+<p>Based on the preceding observations, we may visualize users with respect to the SYSTEM_USER and CREATE USER privileges as following.</p>
+<p><img class="alignnone wp-image-12829" src="https://mysqlserverteam.com/wp-content/uploads/2019/04/system_user-300x256.jpg" alt="" width="376" height="321" srcset="https://mysqlserverteam.com/wp-content/uploads/2019/04/system_user-300x256.jpg 300w, https://mysqlserverteam.com/wp-content/uploads/2019/04/system_user.jpg 393w" sizes="(max-width: 376px) 100vw, 376px" /></p>
+<h5><strong>System Users:  </strong></h5>
+<p>Users who are granted at least ‘SYSTEM_USER’ privilege, but not the CREATE USER privilege. These users themselves have no capability to modify other users. These users can only be modified by power users.</p>
+<h5>Privileged Users</h5>
+<p>The users who are granted at least ‘CREATE USER’ privilege, but not the ‘SYSTEM_USER’ privilege. These users can modify the all users except system users.</p>
+<h5>Non-privileged Users</h5>
+<p>The users who have neither ‘SYSTEM_USER’ nor ‘CREATE USER’ privilege, but may be granted other privileges. These users cannot modify any other users.</p>
+<h5>Power Users:</h5>
+<p>The users who are granted at least the ‘SYSTEM_USER’ and ‘CREATE USER’ privileges.  These users can modify any user available in the database. These users are most powerful users hence named as power users.</p>
+<h3>The strategy to create the immutable users</h3>
+<ul>
+<li>Evaluate carefully which users really need to be granted the SYSTEM_USER privilege. There should not be many users who will need the SYSTEM_USER privilege.</li>
+<li>To protect users against being modified through DDL statements, grant them the SYSTEM_USER privilege. This prevents them from being modified by users who do not have SYSTEM_USER. Your root account will definitely be one of them. Not surprisingly, it is granted the SYSTEM_USER privilege by default.</li>
+<li>To protect against being modified through DML statements, impose a partial revoke on the mysql database on administrative users. First, you may create an administrative user who has DB-related privileges, granted globally but revoked for mysql database.  You may use this administrative user to grant privileges to other users.  You could achieve the same effect through roles and making them default as well. Whatever suits you best?</li>
+</ul>
+<p>Let us see how to do that through a role.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f132887460485" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; CREATE ROLE administrator;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; GRANT SELECT, CREATE, ALTER, DROP, DELETE, INSERT, UPDATE ON *.*    
+     &gt; TO administrator;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; REVOKE SELECT, CREATE, ALTER, DROP, DELETE, INSERT, UPDATE ON 
+     &gt; mysql.* FROM administrator;
+Query OK, 0 rows affected (0.01 sec)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f132887460485-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f132887460485-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f132887460485-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f132887460485-4">4</div><div class="crayon-num" data-line="crayon-5cd751fa7f132887460485-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f132887460485-6">6</div><div class="crayon-num" data-line="crayon-5cd751fa7f132887460485-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f132887460485-8">8</div><div class="crayon-num" data-line="crayon-5cd751fa7f132887460485-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f132887460485-10">10</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f132887460485-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">CREATE </span><span class="crayon-e">ROLE </span><span class="crayon-v">administrator</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f132887460485-2"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5cd751fa7f132887460485-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f132887460485-4"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-v">SELECT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">CREATE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">ALTER</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">DROP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">DELETE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">INSERT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">UPDATE </span><span class="crayon-e ">ON *</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp;</span></div><div class="crayon-line" id="crayon-5cd751fa7f132887460485-5"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-v">administrator</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f132887460485-6"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5cd751fa7f132887460485-7">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f132887460485-8"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">REVOKE </span><span class="crayon-v">SELECT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">CREATE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">ALTER</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">DROP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">DELETE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">INSERT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">UPDATE </span><span class="crayon-v">ON</span><span class="crayon-h"> </span></div><div class="crayon-line" id="crayon-5cd751fa7f132887460485-9"><span class="crayon-h">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-v">mysql</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-e">FROM </span><span class="crayon-v">administrator</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f132887460485-10"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0026 seconds] -->
+<p>Create an administrator user who needs the global access of DB-level privileges.  We can achieve this by granting the previously created role to the user.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f13b525806945" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; CREATE USER foo_admin;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql&gt; GRANT administrator TO foo_admin;
+Query OK, 0 rows affected (0.01 sec)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f13b525806945-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f13b525806945-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f13b525806945-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f13b525806945-4">4</div><div class="crayon-num" data-line="crayon-5cd751fa7f13b525806945-5">5</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f13b525806945-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">CREATE </span><span class="crayon-e">USER </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f13b525806945-2"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5cd751fa7f13b525806945-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f13b525806945-4"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-e">administrator </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">;</span></div><div class="crayon-line" id="crayon-5cd751fa7f13b525806945-5"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.01</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0009 seconds] -->
+<p>Connect as the administrator and activate the role to get the required privileges.</p><!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+
+		<div id="crayon-5cd751fa7f140055942996" class="crayon-syntax crayon-theme-classic crayon-font-monaco crayon-os-pc print-yes notranslate" data-settings=" minimize scroll-mouseover" style=" margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important;">
+		
+			<div class="crayon-toolbar" data-settings=" mouseover hide delay" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+			<div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button" title="Toggle Line Numbers"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-wrap-button" title="Toggle Line Wrap"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon"></div></div></div></div>
+			<div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+			<div class="crayon-plain-wrap"><textarea wrap="soft" class="crayon-plain print-no" data-settings="dblclick" readonly style="-moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4; font-size: 12px !important; line-height: 15px !important;">
+mysql&gt; SET ROLE administrator;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql&gt; SHOW GRANTS\G
+*************************** 1. row ***************************
+Grants for foo_admin@%: GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON *.* TO `foo_admin`@`%`
+*************************** 2. row ***************************
+Grants for foo_admin@%: REVOKE SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER ON `mysql`.* FROM `foo_admin`@`%`
+*************************** 3. row ***************************
+Grants for foo_admin@%: GRANT `administrator`@`%` TO `foo_admin`@`%`
+3 rows in set (0.00 sec)</textarea></div>
+			<div class="crayon-main" style="">
+				<table class="crayon-table">
+					<tr class="crayon-row">
+				<td class="crayon-nums " data-settings="show">
+					<div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-5cd751fa7f140055942996-1">1</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f140055942996-2">2</div><div class="crayon-num" data-line="crayon-5cd751fa7f140055942996-3">3</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f140055942996-4">4</div><div class="crayon-num" data-line="crayon-5cd751fa7f140055942996-5">5</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f140055942996-6">6</div><div class="crayon-num" data-line="crayon-5cd751fa7f140055942996-7">7</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f140055942996-8">8</div><div class="crayon-num" data-line="crayon-5cd751fa7f140055942996-9">9</div><div class="crayon-num crayon-striped-num" data-line="crayon-5cd751fa7f140055942996-10">10</div><div class="crayon-num" data-line="crayon-5cd751fa7f140055942996-11">11</div></div>
+				</td>
+						<td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-5cd751fa7f140055942996-1"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">SET </span><span class="crayon-e">ROLE </span><span class="crayon-v">administrator</span><span class="crayon-sy">;</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f140055942996-2"><span class="crayon-e">Query </span><span class="crayon-v">OK</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-cn">0</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-e">affected</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.00</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div><div class="crayon-line" id="crayon-5cd751fa7f140055942996-3">&nbsp;</div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f140055942996-4"><span class="crayon-v">mysql</span><span class="crayon-o">&gt;</span><span class="crayon-h"> </span><span class="crayon-e">SHOW </span><span class="crayon-v">GRANTS</span><span class="crayon-sy">\</span><span class="crayon-e ">G</span></div><div class="crayon-line" id="crayon-5cd751fa7f140055942996-5"><span class="crayon-e ">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-cn">1.</span><span class="crayon-h"> </span><span class="crayon-e ">row *</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f140055942996-6"><span class="crayon-e">Grants </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">@</span><span class="crayon-o">%</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">GRANT </span><span class="crayon-v">SELECT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">INSERT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">UPDATE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">DELETE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">CREATE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">DROP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">ALTER </span><span class="crayon-e ">ON *</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-sy">`</span><span class="crayon-v">foo_admin</span><span class="crayon-sy">`</span><span class="crayon-sy">@</span><span class="crayon-sy">`</span><span class="crayon-o">%</span><span class="crayon-sy">`</span></div><div class="crayon-line" id="crayon-5cd751fa7f140055942996-7"><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-cn">2.</span><span class="crayon-h"> </span><span class="crayon-e ">row *</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f140055942996-8"><span class="crayon-e">Grants </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">@</span><span class="crayon-o">%</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-e">REVOKE </span><span class="crayon-v">SELECT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">INSERT</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">UPDATE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">DELETE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">CREATE</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-v">DROP</span><span class="crayon-sy">,</span><span class="crayon-h"> </span><span class="crayon-e">ALTER </span><span class="crayon-i">ON</span><span class="crayon-h"> </span><span class="crayon-sy">`</span><span class="crayon-v">mysql</span><span class="crayon-sy">`</span><span class="crayon-sy">.</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-i">FROM</span><span class="crayon-h"> </span><span class="crayon-sy">`</span><span class="crayon-v">foo_admin</span><span class="crayon-sy">`</span><span class="crayon-sy">@</span><span class="crayon-sy">`</span><span class="crayon-o">%</span><span class="crayon-sy">`</span></div><div class="crayon-line" id="crayon-5cd751fa7f140055942996-9"><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-h"> </span><span class="crayon-cn">3.</span><span class="crayon-h"> </span><span class="crayon-e ">row *</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span><span class="crayon-o">*</span></div><div class="crayon-line crayon-striped-line" id="crayon-5cd751fa7f140055942996-10"><span class="crayon-e">Grants </span><span class="crayon-st">for</span><span class="crayon-h"> </span><span class="crayon-v">foo_admin</span><span class="crayon-sy">@</span><span class="crayon-o">%</span><span class="crayon-o">:</span><span class="crayon-h"> </span><span class="crayon-i">GRANT</span><span class="crayon-h"> </span><span class="crayon-sy">`</span><span class="crayon-v">administrator</span><span class="crayon-sy">`</span><span class="crayon-sy">@</span><span class="crayon-sy">`</span><span class="crayon-o">%</span><span class="crayon-sy">`</span><span class="crayon-h"> </span><span class="crayon-st">TO</span><span class="crayon-h"> </span><span class="crayon-sy">`</span><span class="crayon-v">foo_admin</span><span class="crayon-sy">`</span><span class="crayon-sy">@</span><span class="crayon-sy">`</span><span class="crayon-o">%</span><span class="crayon-sy">`</span></div><div class="crayon-line" id="crayon-5cd751fa7f140055942996-11"><span class="crayon-cn">3</span><span class="crayon-h"> </span><span class="crayon-e">rows </span><span class="crayon-st">in</span><span class="crayon-h"> </span><span class="crayon-e">set</span><span class="crayon-h"> </span><span class="crayon-sy">(</span><span class="crayon-cn">0.00</span><span class="crayon-h"> </span><span class="crayon-v">sec</span><span class="crayon-sy">)</span></div></div></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+<!-- [Format Time: 0.0057 seconds] -->
+<p></p>
+<h3><strong>Conclusion</strong></h3>
+<p>In this blog post we learned to create users who are can be protected from getting modified by the users who usually create and modify users.</p>
+<p>We hope you found this blog post series informative and interesting.  Please give the techniques described here a try and let us know your feedback.</p>
+<p>Thank you for using MySQL</p>
+<div class="simplesocialbuttons simplesocial-sm-round simplesocialbuttons_inline simplesocialbuttons-align-left post-12828 post  simplesocialbuttons-inline-no-animation">
+<button class="simplesocial-fb-share" target="_blank" data-href="https://www.facebook.com/sharer/sharer.php?u=https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="simplesocialtxt">Facebook </span> </button>
+<button class="simplesocial-twt-share" data-href="https://twitter.com/share?text=How+to+create+multiple+accounts+for+an+app%3F&url=https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/" rel="nofollow" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="simplesocialtxt">Twitter</span> </button>
+<button class="simplesocial-gplus-share" data-href="https://plus.google.com/share?url=https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="simplesocialtxt">Google+</span></button>
+<button target="popup" class="simplesocial-linkedin-share" data-href="https://www.linkedin.com/cws/share?url=https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/" onclick="javascript:window.open(this.dataset.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="simplesocialtxt">LinkedIn</span></button>
+</div>
+	</div><!-- .entry-content -->
+	
+	<footer class="entry-meta">
+		
+					
+<div class="author-info">
+	<div class="author-avatar">
+		<img alt='' src='https://secure.gravatar.com/avatar/3334c52c23b0284aa8a4ca4cb2b67e40?s=74&#038;d=mm&#038;r=g' srcset='https://secure.gravatar.com/avatar/3334c52c23b0284aa8a4ca4cb2b67e40?s=148&#038;d=mm&#038;r=g 2x' class='avatar avatar-74 photo' height='74' width='74' />	</div><!-- .author-avatar -->
+	<div class="author-description">
+		<h2 class="author-title">About Rahul Sisondia</h2>
+		<p class="author-bio">
+			Rahul has been working with MySQL Database team since 2014.
+He worked for MySQL Enterprise Backup(MEB) for quite a while. 
+These days he is enjoying strengthening the security of MySQL.			<a class="author-link" href="https://mysqlserverteam.com/author/rsisondi/" rel="author">
+				View all posts by Rahul Sisondia <span class="meta-nav">&rarr;</span>			</a>
+		</p>
+	</div><!-- .author-description -->
+</div><!-- .author-info -->			</footer><!-- .entry-meta -->
+</article><!-- #post -->
+					<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Post navigation</h1>
+		<div class="nav-links">
+
+			<a href="https://mysqlserverteam.com/mysql-8-0-16-mysql_upgrade-is-going-away/" rel="prev"><span class="meta-nav">&larr;</span> MySQL 8.0.16: mysql_upgrade is going away</a>			<a href="https://mysqlserverteam.com/the-system_user-dynamic-privilege/" rel="next">The SYSTEM_USER Dynamic Privilege <span class="meta-nav">&rarr;</span></a>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+					
+<div id="comments" class="comments-area">
+
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/how-to-create-multiple-accounts-for-an-app/#respond" style="display:none;">Cancel reply</a></small></h3>			<form action="https://mysqlserverteam.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate>
+				<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required='required' /></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required='required' /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<div class="gglcptch gglcptch_v2"><div id="gglcptch_recaptcha_1435857354" class="gglcptch_recaptcha"></div>
+				<noscript>
+					<div style="width: 302px;">
+						<div style="width: 302px; height: 422px; position: relative;">
+							<div style="width: 302px; height: 422px; position: absolute;">
+								<iframe src="https://www.google.com/recaptcha/api/fallback?k=6LdwJREUAAAAAFIBni0ssKQKgeSlalzYZijEVSA0" frameborder="0" scrolling="no" style="width: 302px; height:422px; border-style: none;"></iframe>
+							</div>
+						</div>
+						<div style="border-style: none; bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px; background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px; height: 60px; width: 300px;">
+							<textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px !important; height: 40px !important; border: 1px solid #c1c1c1 !important; margin: 10px 25px !important; padding: 0px !important; resize: none !important;"></textarea>
+						</div>
+					</div>
+				</noscript></div><p class="form-submit"><p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='12828' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>			</form>
+			</div><!-- #respond -->
+	
+</div><!-- #comments -->
+			
+		</div><!-- #content -->
+	</div><!-- #primary -->
+
+	<div id="tertiary" class="sidebar-container" role="complementary">
+		<div class="sidebar-inner">
+			<div class="widget-area">
+						<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+											<li>
+					<a href="https://mysqlserverteam.com/openssl-fips-support-in-mysql-8-0/">OpenSSL FIPS support in MySQL 8.0</a>
+									</li>
+											<li>
+					<a href="https://mysqlserverteam.com/partial-revokes-from-database-objects/">Partial Revokes from Database Objects</a>
+									</li>
+											<li>
+					<a href="https://mysqlserverteam.com/the-system_user-dynamic-privilege/">The SYSTEM_USER Dynamic Privilege</a>
+									</li>
+											<li>
+					<a href="https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/">How to create multiple accounts for an app?</a>
+									</li>
+											<li>
+					<a href="https://mysqlserverteam.com/mysql-8-0-16-mysql_upgrade-is-going-away/">MySQL 8.0.16: mysql_upgrade is going away</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">Satya Bodapati</span> on <a href="https://mysqlserverteam.com/mysql-8-0-16-mysql_upgrade-is-going-away/#comment-99449">MySQL 8.0.16: mysql_upgrade is going away</a></li><li class="recentcomments"><span class="comment-author-link">Chaithra Gopalareddy</span> on <a href="https://mysqlserverteam.com/removal-of-implicit-and-explicit-sorting-for-group-by/#comment-98558">Removal of implicit and explicit sorting for GROUP BY</a></li><li class="recentcomments"><span class="comment-author-link"><a href='https://federico-razzoli.com' rel='external nofollow' class='url'>Federico Razzoli</a></span> on <a href="https://mysqlserverteam.com/removal-of-implicit-and-explicit-sorting-for-group-by/#comment-96696">Removal of implicit and explicit sorting for GROUP BY</a></li><li class="recentcomments"><span class="comment-author-link">Bruce Wang</span> on <a href="https://mysqlserverteam.com/mysql-5-6-17-improved-online-optimize-table-for-innodb-and-partitioned-innodb-tables/#comment-94281">MySQL 5.6.17: Improved Online Optimize Table For INNODB and PARTITIONED INNODB Tables</a></li><li class="recentcomments"><span class="comment-author-link">Satya Bodapati</span> on <a href="https://mysqlserverteam.com/mysql-8-0-new-storage-format-for-compressed-blobs/#comment-90541">MySQL 8.0: New Storage Format for Compressed BLOBs</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<label class="screen-reader-text" for="archives-dropdown-2">Archives</label>
+		<select id="archives-dropdown-2" name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+			
+			<option value="">Select Month</option>
+				<option value='https://mysqlserverteam.com/2019/05/'> May 2019 </option>
+	<option value='https://mysqlserverteam.com/2019/04/'> April 2019 </option>
+	<option value='https://mysqlserverteam.com/2019/03/'> March 2019 </option>
+	<option value='https://mysqlserverteam.com/2019/02/'> February 2019 </option>
+	<option value='https://mysqlserverteam.com/2019/01/'> January 2019 </option>
+	<option value='https://mysqlserverteam.com/2018/11/'> November 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/10/'> October 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/09/'> September 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/08/'> August 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/07/'> July 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/06/'> June 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/05/'> May 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/04/'> April 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/03/'> March 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/02/'> February 2018 </option>
+	<option value='https://mysqlserverteam.com/2018/01/'> January 2018 </option>
+	<option value='https://mysqlserverteam.com/2017/12/'> December 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/11/'> November 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/10/'> October 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/09/'> September 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/08/'> August 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/07/'> July 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/06/'> June 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/05/'> May 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/04/'> April 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/03/'> March 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/02/'> February 2017 </option>
+	<option value='https://mysqlserverteam.com/2017/01/'> January 2017 </option>
+	<option value='https://mysqlserverteam.com/2016/12/'> December 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/11/'> November 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/10/'> October 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/09/'> September 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/08/'> August 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/06/'> June 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/05/'> May 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/04/'> April 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/03/'> March 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/02/'> February 2016 </option>
+	<option value='https://mysqlserverteam.com/2016/01/'> January 2016 </option>
+	<option value='https://mysqlserverteam.com/2015/12/'> December 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/11/'> November 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/10/'> October 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/09/'> September 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/08/'> August 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/07/'> July 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/06/'> June 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/05/'> May 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/04/'> April 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/03/'> March 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/02/'> February 2015 </option>
+	<option value='https://mysqlserverteam.com/2015/01/'> January 2015 </option>
+	<option value='https://mysqlserverteam.com/2014/12/'> December 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/11/'> November 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/10/'> October 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/09/'> September 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/07/'> July 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/06/'> June 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/05/'> May 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/04/'> April 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/03/'> March 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/02/'> February 2014 </option>
+	<option value='https://mysqlserverteam.com/2014/01/'> January 2014 </option>
+	<option value='https://mysqlserverteam.com/2013/12/'> December 2013 </option>
+	<option value='https://mysqlserverteam.com/2013/11/'> November 2013 </option>
+	<option value='https://mysqlserverteam.com/2013/10/'> October 2013 </option>
+	<option value='https://mysqlserverteam.com/2013/09/'> September 2013 </option>
+
+		</select>
+		</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3><form action="https://mysqlserverteam.com" method="get"><label class="screen-reader-text" for="cat">Categories</label><select  name='cat' id='cat' class='postform' >
+	<option value='-1'>Select Category</option>
+	<option class="level-0" value="137">Audit</option>
+	<option class="level-0" value="185">Authentication</option>
+	<option class="level-0" value="217">Authorization</option>
+	<option class="level-0" value="122">Backup</option>
+	<option class="level-0" value="109">Benchmarking</option>
+	<option class="level-0" value="172">Bootstrapping</option>
+	<option class="level-0" value="123">CJK</option>
+	<option class="level-0" value="162">Community</option>
+	<option class="level-0" value="98">Compilation</option>
+	<option class="level-0" value="63">Compression</option>
+	<option class="level-0" value="140">Configuration</option>
+	<option class="level-0" value="47">Datatypes</option>
+	<option class="level-0" value="91">Debugging</option>
+	<option class="level-0" value="139">Defaults</option>
+	<option class="level-0" value="124">DevOps</option>
+	<option class="level-0" value="85">Dictionary</option>
+	<option class="level-0" value="171">Document Store</option>
+	<option class="level-0" value="125">Enterprise</option>
+	<option class="level-0" value="50">Event</option>
+	<option class="level-0" value="71">Events</option>
+	<option class="level-0" value="82">Fabric</option>
+	<option class="level-0" value="36">Full Text Search</option>
+	<option class="level-0" value="55">GIS</option>
+	<option class="level-0" value="83">High Availability</option>
+	<option class="level-0" value="148">HowTo</option>
+	<option class="level-0" value="120">HTTP</option>
+	<option class="level-0" value="15">InnoDB</option>
+	<option class="level-0" value="108">Internals</option>
+	<option class="level-0" value="198">IO</option>
+	<option class="level-0" value="106">JavaScript</option>
+	<option class="level-0" value="48">Job</option>
+	<option class="level-0" value="116">JSON</option>
+	<option class="level-0" value="38">Linux</option>
+	<option class="level-0" value="92">Logging</option>
+	<option class="level-0" value="17">MySQL</option>
+	<option class="level-0" value="18">News</option>
+	<option class="level-0" value="5">Optimizer</option>
+	<option class="level-0" value="183">Oracle Cloud</option>
+	<option class="level-0" value="62">Parser</option>
+	<option class="level-0" value="2">Performance</option>
+	<option class="level-0" value="39">Performance Schema</option>
+	<option class="level-0" value="138">Perl</option>
+	<option class="level-0" value="95">Plugins</option>
+	<option class="level-0" value="61">Prepared Statements</option>
+	<option class="level-0" value="216">Privileges</option>
+	<option class="level-0" value="4">Process</option>
+	<option class="level-0" value="6">QA</option>
+	<option class="level-0" value="35">Replication</option>
+	<option class="level-0" value="119">REST</option>
+	<option class="level-0" value="207">Router</option>
+	<option class="level-0" value="3">Security</option>
+	<option class="level-0" value="186">Shell</option>
+	<option class="level-0" value="184">SQL</option>
+	<option class="level-0" value="79">SSL</option>
+	<option class="level-0" value="7">Stored Routines</option>
+	<option class="level-0" value="150">Syntax</option>
+	<option class="level-0" value="110">Sys Schema</option>
+	<option class="level-0" value="8">Triggers</option>
+	<option class="level-0" value="1">Uncategorized</option>
+	<option class="level-0" value="121">Upgrades</option>
+	<option class="level-0" value="176">User management</option>
+	<option class="level-0" value="149">UUID</option>
+	<option class="level-0" value="49">Windows</option>
+	<option class="level-0" value="69">Workbench</option>
+</select>
+</form>
+<script type='text/javascript'>
+/* <![CDATA[ */
+(function() {
+	var dropdown = document.getElementById( "cat" );
+	function onCatChange() {
+		if ( dropdown.options[ dropdown.selectedIndex ].value > 0 ) {
+			dropdown.parentNode.submit();
+		}
+	}
+	dropdown.onchange = onCatChange;
+})();
+/* ]]> */
+</script>
+
+			</aside>			</div><!-- .widget-area -->
+		</div><!-- .sidebar-inner -->
+	</div><!-- #tertiary -->
+
+		</div><!-- #main -->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+				<div id="secondary" class="sidebar-container" role="complementary">
+		<div class="widget-area">
+			<aside id="search-2" class="widget widget_search"><form role="search" method="get" class="search-form" action="https://mysqlserverteam.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form></aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="https://mysqlserverteam.com/wp-login.php">Log in</a></li>
+			<li><a href="https://mysqlserverteam.com/feed/">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://mysqlserverteam.com/comments/feed/">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+			</aside><aside id="blog_subscription-4" class="widget widget_blog_subscription jetpack_subscription_widget"><h3 class="widget-title">Subscribe via Email</h3>
+            <form action="#" method="post" accept-charset="utf-8" id="subscribe-blog-blog_subscription-4">
+				                    <div id="subscribe-text"><p>Enter your email address to receive notifications of new posts by email.</p>
+</div>                    <p id="subscribe-email">
+                        <label id="jetpack-subscribe-label"
+                               class="screen-reader-text"
+                               for="subscribe-field-blog_subscription-4">
+							Email Address                        </label>
+                        <input type="email" name="email" required="required" class="required"
+                               value=""
+                               id="subscribe-field-blog_subscription-4"
+                               placeholder="Email Address"/>
+                    </p>
+
+                    <p id="subscribe-submit">
+                        <input type="hidden" name="action" value="subscribe"/>
+                        <input type="hidden" name="source" value="https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/"/>
+                        <input type="hidden" name="sub-type" value="widget"/>
+                        <input type="hidden" name="redirect_fragment" value="blog_subscription-4"/>
+						                        <button type="submit"
+	                        		                    	                        name="jetpack_subscriptions_widget"
+	                    >
+	                        Subscribe                        </button>
+                    </p>
+				            </form>
+		
+</aside>		</div><!-- .widget-area -->
+	</div><!-- #secondary -->
+
+			<div class="site-info">
+								<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+		<div style="display:none">
+	<div class="grofile-hash-map-3334c52c23b0284aa8a4ca4cb2b67e40">
+	</div>
+	</div>
+<link rel='stylesheet' id='gglcptch-css'  href='https://mysqlserverteam.com/wp-content/plugins/google-captcha/css/gglcptch.css?ver=1.43' type='text/css' media='all' />
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201919'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var tocplus = {"visibility_show":"show","visibility_hide":"hide","visibility_hide_by_default":"1","width":"Auto"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-content/plugins/table-of-contents-plus/front.min.js?ver=1509'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"https:\/\/mysqlserverteam.com\/wp-admin\/admin-ajax.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-content/plugins/wp-polls/polls-js.js?ver=2.75.2'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2019Mayaa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=5.1.1'></script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-includes/js/comment-reply.min.js?ver=5.1.1'></script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2b'></script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-content/themes/twentythirteen/js/functions.js?ver=20150330'></script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-includes/js/wp-embed.min.js?ver=5.1.1'></script>
+<script type='text/javascript' data-cfasync="false" async="async" defer="defer" src='https://www.google.com/recaptcha/api.js?render=explicit&#038;ver=1.43'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var gglcptch = {"options":{"version":"v2","sitekey":"6LdwJREUAAAAAFIBni0ssKQKgeSlalzYZijEVSA0","theme":"light","error":"<strong>Warning<\/strong>:&nbsp;More than one reCAPTCHA has been found in the current form. Please remove all unnecessary reCAPTCHA fields to make it work properly."},"vars":{"visibility":false}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://mysqlserverteam.com/wp-content/plugins/google-captcha/js/script.js?ver=1.43'></script>
+<script type="text/javascript">		var ssb_admin_ajax = 'https://mysqlserverteam.com/wp-admin/admin-ajax.php';
+		var ssb_post_id = 12828 ;
+		var ssb_post_url = 'https://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/';
+		var ssb_alternate_post_url = 'http://mysqlserverteam.com/how-to-create-multiple-accounts-for-an-app/';
+		jQuery( document ).ready(function(){
+		var is_ssb_used = jQuery('.simplesocialbuttons');
+		if( is_ssb_used ) {
+
+			var data = {
+			'action': 'ssb_fetch_data',
+			'postID': ssb_post_id
+		};
+			jQuery.post(ssb_admin_ajax, data, function(data, textStatus, xhr) {
+				var array = JSON.parse(data);
+
+				jQuery.each( array, function( index, value ){
+
+					if( index == 'total' ){
+						jQuery('.ssb_'+ index +'_counter').html(value + '<span>Shares</span>');
+					}else{
+						jQuery('.ssb_'+ index +'_counter').html(value);
+					}
+				});
+
+			});
+		}
+		})
+
+		document.addEventListener("DOMContentLoaded", function() {
+			var if_ssb_exist = document.getElementsByClassName( "simplesocialbuttons" ).length > 0;
+			if (if_ssb_exist) {
+				ssbPlugin.fetchFacebookShares();
+			}
+		});
+
+
+		</script><script type='text/javascript'>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://static1.twitcount.com/js/twitcount.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitcount_plugins');</script><script type='text/javascript' src='https://stats.wp.com/e-201919.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:7.2.1',blog:'64865285',post:'12828',tz:'0',srv:'mysqlserverteam.com'} ]);
+	_stq.push([ 'clickTrackerInit', '64865285', '12828' ]);
+</script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-44543708-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
