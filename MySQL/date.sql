@@ -31,4 +31,5 @@ mysql> SELECT DATEDIFF('2007-12-31 23:59:59','2007-12-30');
 mysql> SELECT DATEDIFF('2010-11-30 23:59:59','2010-12-31');
         -> -31
 
+select year(date_field) as year from table;
 
