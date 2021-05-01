@@ -73,6 +73,7 @@ Source: https://stackoverflow.com/questions/9620198/how-to-get-the-sizes-of-the-
 show status;
 show table status;
 show table status from databasename;
+SHOW STATUS LIKE 'My%'; 
 SHOW WARNINGS
 Can also type the word "status"
 
