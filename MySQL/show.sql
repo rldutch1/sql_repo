@@ -63,6 +63,14 @@ round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB`
 FROM information_schema.TABLES 
 ORDER BY (data_length + index_length) DESC;
 
+-- Create a view that displays the tablesize in the current database:
+create view vw_tablesize as SELECT 
+table_name AS `Table`, 
+round(((data_length + index_length) / 1024 / 1024), 2) `Size_in_MB` 
+FROM information_schema.TABLES 
+WHERE table_schema = (select database() from dual)
+ORDER BY (data_length + index_length) DESC;
+
 
 Source: https://stackoverflow.com/questions/9620198/how-to-get-the-sizes-of-the-tables-of-a-mysql-database?rq=1
 
@@ -73,6 +81,7 @@ Source: https://stackoverflow.com/questions/9620198/how-to-get-the-sizes-of-the-
 show status;
 show table status;
 show table status from databasename;
+SHOW STATUS LIKE 'My%'; 
 SHOW WARNINGS
 Can also type the word "status"
 
