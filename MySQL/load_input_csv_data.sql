@@ -67,7 +67,7 @@ load data local infile 'allfiles.dat' into table bedrock_csv fields terminated b
 
 load data infile 'allfiles.dat' replace into table bedrock_csv;
 
--- Using the local keyword helped me get past the error message: "The MySQL server is running with the --secure-file-priv option so it cannot execute this statement".
+-- Using the "local" keyword helped me get past the error message: "The MySQL server is running with the --secure-file-priv option so it cannot execute this statement".
 -- https://stackoverflow.com/questions/32737478/how-should-i-tackle-secure-file-priv-in-mysql
 load data local infile 'US_States.csv' into table us_states fields terminated by '|' lines terminated by '\n' (state,abbreviation,capital,largest_city,established,population,sq_mi,sq_km,land_area_mi,land_area_km,water_area_mi,water_area_km,representatives);
 
@@ -123,9 +123,9 @@ ROWS IDENTIFIED BY '<myfields>';
 </rlh>
 */
 
-I got an error when I tried to load some data exported from an Excel spreadsheetin .csv format. The error message was "ERROR 1300 (HY000): Invalid utf8mb4 character string:"
+I got an error when I tried to load some data exported from an Excel spreadsheet in .csv format. The error message was "ERROR 1300 (HY000): Invalid utf8mb4 character string:"
 
-I wasn't able to manually correct all of the invalid characters in the .csv filebecause there were too many. There is a command on Linux called "file" that will tell you the file type. When I ran it "file -i filename.csv" it displayed a message telling me unknown. 
+I wasn't able to manually correct all of the invalid characters in the .csv file because there were too many. There is a command on Linux called "file" that will tell you the file type. When I ran it "file -i filename.csv" it displayed a message telling me unknown. 
 
 file -i mpages1.csv
 

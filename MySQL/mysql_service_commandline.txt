@@ -16,6 +16,7 @@ or
  service mysql start
  service mysql stop
  service mysql restart
+
 On macOS Sierra & OS to start/stop/restart MySQL post 5.7  from the command line:
 Start:
 sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist

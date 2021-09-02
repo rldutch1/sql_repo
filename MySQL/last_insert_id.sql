@@ -3,13 +3,13 @@ drop database lastinsert_id;
 create database lastinsert_id;
 use lastinsert_id;
 create table foo (id int(11) auto_increment primary key
-, text varchar(50) not null)engine=myisam;
+, text varchar(50) not null)engine=innodb;
 
 create table foo2 (id int(11) auto_increment primary key
-, foo_id int(11) not null, text varchar(50) not null)engine=myisam;
+, foo_id int(11) not null, text varchar(50) not null)engine=innodb;
 */
 
--- http://dev.mysql.com/doc/refman/5.0/en/getting-unique-id.html
+-- https://dev.mysql.com/doc/c-api/5.6/en/getting-unique-id.html
 
 INSERT INTO foo (id,text)
     VALUES(NULL,'filename');         # generate ID by inserting NULL

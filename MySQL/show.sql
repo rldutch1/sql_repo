@@ -32,13 +32,13 @@ MACs use the decimal system, 1000kb = 1 MB. So divide by / 1000 / 1000 to get MB
 -- Show the database name:
 	select database();
 
--- Show the size of one table (largest first).
-SELECT 
-table_name AS `Table`, 
-round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB` 
-FROM information_schema.TABLES 
-WHERE table_schema = "bakbone"
-AND table_name in "backups";
+-- Show the size of specified table.
+SELECT
+table_name AS `Table`,  
+round(((data_length + index_length) / 1024 / 1024), 2) `Size in MB`
+FROM information_schema.TABLES  
+WHERE table_schema = "bakbone" 
+AND table_name = "backups";
 
 -- Show the size of a couple of tables (largest first);
 SELECT 
