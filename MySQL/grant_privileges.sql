@@ -1,2 +1,2 @@
-grant all on *.* to 'rob'@'localhost';
-
+GRANT ALL PRIVILEGES ON *.* TO 'rob'@'%' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'rob'@'localhost' WITH GRANT OPTION;
