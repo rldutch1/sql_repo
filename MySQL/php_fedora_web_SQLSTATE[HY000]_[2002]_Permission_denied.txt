@@ -31,3 +31,12 @@ Now your httpd service should be capable to get data from the db server.
 I hope that can be usefull for the gang that search solve errors like this.
 
 From Chile, best regards.
+
+SQLSTATE[HY000] [2002] Permission denied
+  systemctl stop httpd
+  setsebool -P httpd_can_network_connect 1
+  setsebool -P httpd_can_network_connect_db 1
+  systemctl start httpd
+
+Use the "-P" option to make the setsebool settings permanent. Otherwise, the settings will go away after reboot. 
+
