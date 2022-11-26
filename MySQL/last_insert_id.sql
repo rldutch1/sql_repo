@@ -26,3 +26,10 @@ If you want to do it with SQL instead of the PDO API, you would do it like a nor
 
 $stmt = $db->query("SELECT LAST_INSERT_ID()");
 $lastId = $stmt->fetchColumn();
+
+Use last_insert_id in a transaction:
+START TRANSACTION;
+insert into users (firstname, lastname) values ('Current','President'); 
+insert into address (users_id, address, city, state, zipcode, phone) values 
+((select last_insert_id()), '1600 Pennsylvania Ave. NW', 'Washington', 'D.C.', '20500', '2024561111');
+COMMIT;
