@@ -13,6 +13,9 @@ You can also drop the unique constraint. To find the constraint/index name, type
 Drop Column:
 	alter table thetablename drop thecolumnname;
 
+Drop Stored Procedure:
+	drop procedure theprocedurename;
+	
 Drop Table:
 	drop thetablename;
 
