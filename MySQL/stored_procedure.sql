@@ -1,6 +1,21 @@
+-- The_Basics_of_MySQL_Stored_Procedures.pdf
+-- https://www.sqlshack.com/learn-mysql-the-basics-of-mysql-stored-procedures/
+-- https://phoenixnap.com/kb/mysql-stored-procedure#:~:text=MySQL%20stored%20procedures%20are%20pre,any%20additional%20runtime%2Denvironment%20packages.
+
 -- http://dev.mysql.com/doc/connector-net/en/connector-net-tutorials-stored-procedures.html
+
 -- To view all procedures.
 	show procedure status;
+
+-- Create view to show all procedures in a database:
+    create view vw_showprocedures as 
+    SELECT 
+        routine_name
+    FROM
+        information_schema.routines
+    WHERE
+        routine_type = 'PROCEDURE'
+    AND routine_schema = 'test';
 
 -- Stored procedure with parameter.
 DELIMITER //
