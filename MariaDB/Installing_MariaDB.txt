@@ -1,0 +1,34 @@
+
+Installing MariaDB or MySQL Server on Fedora:
+https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/
+https://fedoraproject.org/wiki/MariaDB
+
+sudo dnf -y install mariadb-server
+
+Change the OS root password from whatever it may be after the OS install to a password that you choose:
+	sudo passwd root
+
+Start the mariaDB server: 
+	systemctl start mariadb
+
+Start the MariaDB server on boot:
+	systemctl enable mariadb
+	
+Then start the mysql_secure_installation process. Make sure to set the database root user password during the mysql_secure_installation. Otherwise, you will have to log into mysql using: sudo mysql.
+	[rob@gemini ~]$ sudo mysql_secure_installation
+
+Log in as root:
+	mysql -u root -p
+
+Create your own user and password:
+	% = remote user (used when logging in from another system)
+	localhost = local user
+
+CREATE USER 'theusername'@'%' IDENTIFIED BY 'SomePassword';
+	GRANT ALL PRIVILEGES ON *.* TO 'theusername'@'%'
+	WITH GRANT OPTION;
+
+	CREATE USER 'theusername'@'localhost' IDENTIFIED BY 'SomePassword';
+	GRANT ALL PRIVILEGES ON *.* TO 'theusername'@'localhost'
+	WITH GRANT OPTION;
+
