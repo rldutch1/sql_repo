@@ -43,6 +43,26 @@ MariaDB operates on port 3306 (or whatever else you set in your my.cnf). In fire
 	In case of iptables:
 		$ iptables -A INPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
 
+How to disable the .mysql_history file from being created:
+Sometimes it’s a good idea to prevent mysql from writing a history file. The mysql history file contains all the commands you type across all sessions.
+
+	Your default mysql history file is ~/.mysql_history.
+	As this is an obvious security risk, it is sometimes a good idea to disable this file.
+	To disable mysql history do the following:
+	Delete your existing ~/.mysql_history file.
+	Edit your ~/.profile file and add the following:
+	
+	export MYSQL_HISTFILE=/dev/null
+	This directs your mysql history to /dev/null
+
+	Apply your changes with:
+	source ~/.profile
+	Login into mysql and run some commands.
+
+	Logout.
+
+	Verify that the ~/.mysql_history file has not been created :)
+
 Default installation and configuration files:
 The configuration files are stored in the /etc/my.cnf.d/ directory and the main configuration file is /etc/my.cnf
 
