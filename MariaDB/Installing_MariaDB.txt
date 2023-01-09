@@ -24,11 +24,30 @@ Create your own user and password:
 	% = remote user (used when logging in from another system)
 	localhost = local user
 
-CREATE USER 'theusername'@'%' IDENTIFIED BY 'SomePassword';
+	CREATE USER 'theusername'@'%' IDENTIFIED BY 'SomePassword';
 	GRANT ALL PRIVILEGES ON *.* TO 'theusername'@'%'
 	WITH GRANT OPTION;
 
 	CREATE USER 'theusername'@'localhost' IDENTIFIED BY 'SomePassword';
 	GRANT ALL PRIVILEGES ON *.* TO 'theusername'@'localhost'
 	WITH GRANT OPTION;
+
+Firewall
+MariaDB operates on port 3306 (or whatever else you set in your my.cnf). In firewalld you can open it like this:
+
+	$ #Make it last after reboot
+		$ sudo firewall-cmd --permanent --add-port=3306/tcp
+	$ #Change runtime configuration
+		$ sudo firewall-cmd --add-port=3306/tcp
+
+	In case of iptables:
+		$ iptables -A INPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+Default installation and configuration files:
+The configuration files are stored in the /etc/my.cnf.d/ directory and the main configuration file is /etc/my.cnf
+
+The default log file is /var/log/mariadb/mariadb.log
+The default installation directory is /var/lib/mysql
+The default PID file is /var/run/mariadb/mariadb.pid
+The default unix socket file is /var/lib/mysql/mysql.sock
 
