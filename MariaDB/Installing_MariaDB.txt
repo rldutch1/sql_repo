@@ -1,0 +1,73 @@
+
+Installing MariaDB or MySQL Server on Fedora:
+https://docs.fedoraproject.org/en-US/quick-docs/installing-mysql-mariadb/
+https://fedoraproject.org/wiki/MariaDB
+
+sudo dnf -y install mariadb-server
+
+Change the OS root password from whatever it may be after the OS install to a password that you choose:
+	sudo passwd root
+
+Start the mariaDB server: 
+	systemctl start mariadb
+
+Start the MariaDB server on boot:
+	systemctl enable mariadb
+	
+Then start the mysql_secure_installation process. Make sure to set the database root user password during the mysql_secure_installation. Otherwise, you will have to log into mysql using: sudo mysql.
+	[rob@gemini ~]$ sudo mysql_secure_installation
+
+Log in as root:
+	mysql -u root -p
+
+Create your own user and password:
+	% = remote user (used when logging in from another system)
+	localhost = local user
+
+	CREATE USER 'theusername'@'%' IDENTIFIED BY 'SomePassword';
+	GRANT ALL PRIVILEGES ON *.* TO 'theusername'@'%'
+	WITH GRANT OPTION;
+
+	CREATE USER 'theusername'@'localhost' IDENTIFIED BY 'SomePassword';
+	GRANT ALL PRIVILEGES ON *.* TO 'theusername'@'localhost'
+	WITH GRANT OPTION;
+
+Firewall
+MariaDB operates on port 3306 (or whatever else you set in your my.cnf). In firewalld you can open it like this:
+
+	$ #Make it last after reboot
+		$ sudo firewall-cmd --permanent --add-port=3306/tcp
+	$ #Change runtime configuration
+		$ sudo firewall-cmd --add-port=3306/tcp
+
+	In case of iptables:
+		$ iptables -A INPUT -p tcp --dport 3306 -m state --state NEW,ESTABLISHED -j ACCEPT
+
+How to disable the .mysql_history file from being created:
+Sometimes it’s a good idea to prevent mysql from writing a history file. The mysql history file contains all the commands you type across all sessions.
+
+	Your default mysql history file is ~/.mysql_history.
+	As this is an obvious security risk, it is sometimes a good idea to disable this file.
+	To disable mysql history do the following:
+	Delete your existing ~/.mysql_history file.
+	Edit your ~/.profile file and add the following:
+	
+	export MYSQL_HISTFILE=/dev/null
+	This directs your mysql history to /dev/null
+
+	Apply your changes with:
+	source ~/.profile
+	Login into mysql and run some commands.
+
+	Logout.
+
+	Verify that the ~/.mysql_history file has not been created :)
+
+Default installation and configuration files:
+The configuration files are stored in the /etc/my.cnf.d/ directory and the main configuration file is /etc/my.cnf
+
+The default log file is /var/log/mariadb/mariadb.log
+The default installation directory is /var/lib/mysql
+The default PID file is /var/run/mariadb/mariadb.pid
+The default unix socket file is /var/lib/mysql/mysql.sock
+
