@@ -7,6 +7,20 @@ MAX_CONNECTIONS_PER_HOUR 0
 MAX_UPDATES_PER_HOUR 0
 MAX_USER_CONNECTIONS 0;
 
+--This worked on a fresh install of MariaDB. 
+When using the "identified via mysql_native_password option using" option, I got an error saying, "You must SET PASSWORD/Password hash should be a 41-digit hexadecimal number". To solve I used the "PASSWORD()" function which will correctly hash the password according to the method configured in "old_passwords".
+https://dev.mysql.com/doc/refman/5.7/en/set-password.html
+
+	This worked:
+	CREATE USER 'TheUserName'@'%';
+	SET PASSWORD FOR 'TheUserName'@'%' = PASSWORD('ThePassword');
+	grant all privileges on TheUserName.* to 'TheUserName'@'%' 
+	require none with grant option
+	max_queries_per_hour 0
+	max_connections_per_hour 0
+	max_updates_per_hour 0
+	max_user_connections 0;
+	flush privileges;
+
 GRANT ALL PRIVILEGES ON `TheDatabaseName`.* TO 'TheUserName'@'%';
 GRANT ALL PRIVILEGES ON `TheDatabaseName\_%`.* TO 'TheUserName'@'%';
-
