@@ -1,0 +1,20 @@
+-- To see comment and metadata about columns:
+-- https://mariadb.com/kb/en/show-columns/
+-- Syntax:
+	SHOW [FULL] {COLUMNS | FIELDS} FROM tbl_name [FROM db_name]
+    [LIKE 'pattern' | WHERE expr]
+
+-- Example:
+show full columns from deleteme from united_states;
+
+-- Show table status:
+-- Syntax:
+	SHOW TABLE STATUS [{FROM | IN} db_name]
+    [LIKE 'pattern' | WHERE expr]
+
+-- Example:
+	show table status from united_states;
+	show table status in united_states where comment like 'VIEW';
+
+-- Extended Show:
+-- https://mariadb.com/kb/en/extended-show/
