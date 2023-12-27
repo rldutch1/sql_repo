@@ -26,6 +26,7 @@ https://dev.mysql.com/doc/refman/5.7/en/set-password.html
 
 	GRANT ALL PRIVILEGES ON `TheDatabaseName`.* TO 'TheUserName'@'%';
 	GRANT ALL PRIVILEGES ON `TheDatabaseName\_%`.* TO 'TheUserName'@'%';
+*** Don't forget the localhost user and if you want to enable user privileges for all databases, remove the backtick from the `*`.*.
 
 ERROR 1372 (HY000): Password hash should be a 41-digit hexadecimal
 https://mariadb.com/kb/en/create-user/
